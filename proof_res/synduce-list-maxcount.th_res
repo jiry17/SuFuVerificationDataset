@@ -1,0 +1,93 @@
+11:11:52 [0m[33m[WARN] [0mCollecting statistics
+(gq zero ?x) => false
+(gq (succ ?x) zero) => true
+(gq (succ ?x) (succ ?y)) => (gq ?x ?y)
+(ite true ?x ?y) => ?x
+(ite false ?x ?y) => ?y
+(max ?tv0 ?tv1) => (ite (gq ?tv0 ?tv1) ?tv0 ?tv1)
+(fst_2 (makeTuple2 ?x0 ?x1)) => ?x0
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(snd_2 (makeTuple2 ?x0 ?x1)) => ?x1
+(nat_eq zero zero) => true
+(nat_eq zero (succ ?x)) => false
+(nat_eq (succ ?x) zero) => false
+(nat_eq (succ ?x) (succ ?y)) => (nat_eq ?x ?y)
+(tf1 (elt ?tv5)) => (makeTuple2 ?tv5 (succ zero))
+(tf1 (cons ?tv6 ?tv7)) => (makeTuple2 (max (fst_2 (tf0 ?tv7)) ?tv6) (ite (gq ?tv6 (fst_2 (tf0 ?tv7))) (succ zero) (plus (snd_2 (tf0 ?tv7)) (ite (nat_eq ?tv6 (fst_2 (tf0 ?tv7))) (succ zero) zero))))
+(tf0 ?tv3) => (tf1 ?tv3)
+(spec ?tv2) => (snd_2 (tf0 ?tv2))
+(tf3 ?tv13 (elt ?tv14)) => (cons ?tv14 ?tv13)
+(tf3 ?tv13 (cons ?tv15 ?tv16)) => (cons ?tv15 (tf2 ?tv16 ?tv13))
+(tf2 ?tv10 ?tv11) => (tf3 ?tv11 ?tv10)
+(cat ?tv8 ?tv9) => (tf2 ?tv8 ?tv9)
+(tf5 (single ?tv20)) => (elt ?tv20)
+(tf5 (concat ?tv21 ?tv22)) => (cat (tf4 ?tv21) (tf4 ?tv22))
+(tf4 ?tv18) => (tf5 ?tv18)
+(repr ?tv17) => (tf4 ?tv17)
+(main ?tv23) => (spec (repr ?tv23))
+(lq zero (succ ?x)) => true
+(lq ?x zero) => false
+(lq (succ ?x) (succ ?y)) => (lq ?x ?y)
+(tf7 (single ?tv27)) => (makeTuple2 (succ zero) ?tv27)
+(tf7 (concat ?tv28 ?tv29)) => (makeTuple2 (ite (nat_eq (snd_2 (tf6 ?tv29)) (snd_2 (tf6 ?tv28))) (plus (fst_2 (tf6 ?tv29)) (fst_2 (tf6 ?tv28))) (ite (lq (snd_2 (tf6 ?tv29)) (snd_2 (tf6 ?tv28))) (fst_2 (tf6 ?tv28)) (fst_2 (tf6 ?tv29)))) (max (snd_2 (tf6 ?tv29)) (snd_2 (tf6 ?tv28))))
+(tf6 ?tv25) => (tf7 ?tv25)
+(repr_ ?tv24) => (tf6 ?tv24)
+(main_ ?tv30) => (fst_2 (repr_ ?tv30))
+Searcher: (gq ?autovar6 zero)
+Searcher: (gq ?autovar6 (succ ?autovar3))
+Searcher: (gq (succ ?autovar4) ?autovar7)
+Searcher: (gq (succ ?autovar5) ?autovar7)
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar1))
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar4))
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq (succ ?autovar5) ?autovar8)
+Searcher: (nat_eq (succ ?autovar6) ?autovar8)
+Searcher: (lq ?autovar5 (succ ?autovar1))
+Searcher: (lq ?autovar5 (succ ?autovar3))
+Searcher: (lq zero ?autovar6)
+Searcher: (lq (succ ?autovar4) ?autovar6)
+11:11:52 [0m[33m[WARN] [0m ex is: true
+11:11:52 [0m[33m[WARN] [0m ex is: false
+11:11:52 [0m[33m[WARN] [0m ex is: zero
+11:11:52 [0m[33m[WARN] [0m ex is: (succ zero)
+11:11:52 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:11:52 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+11:11:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+11:11:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+11:11:52 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+11:11:52 [0m[33m[WARN] [0m ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+11:11:52 [0m[33m[WARN] [0m ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+11:11:52 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:11:52 [0m[33m[WARN] [0mProof mode: true
+11:11:52 [0m[33m[WARN] [0m ex is: true
+11:11:52 [0m[33m[WARN] [0m ex is: false
+11:11:52 [0m[33m[WARN] [0m ex is: zero
+11:11:52 [0m[33m[WARN] [0m ex is: (succ zero)
+11:11:52 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:11:52 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+11:11:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+11:11:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+11:11:52 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+11:11:52 [0m[33m[WARN] [0m ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+11:11:52 [0m[33m[WARN] [0m ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+11:11:52 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:11:52 [0m[33m[WARN] [0mProof mode: true
+11:11:53 [0m[33m[WARN] [0mproved: (max ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+11:11:53 [0m[33m[WARN] [0mproved: (max ?ts_ph_Nat_0 ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+11:11:53 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 ?ts_ph_Nat_0)
+11:11:53 [0m[33m[WARN] [0mproved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0)
+11:11:53 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => (max ?ts_ph_Nat_0 zero)
+11:11:53 [0m[33m[WARN] [0mproved: (max ?ts_ph_Nat_0 zero) => (plus ?ts_ph_Nat_0 zero)
+11:11:53 [0m[33m[WARN] [0mproved: (nat_eq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+11:11:53 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 zero) => (nat_eq zero ?ts_ph_Nat_0)
+11:11:53 [0m[33m[WARN] [0mproved: (lq zero ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 zero)
+11:11:53 [0m[33m[WARN] [0mproved: (gq ?ts_ph_Nat_0 zero) => (lq zero ?ts_ph_Nat_0)
+11:11:53 [0m[33m[WARN] [0mproved: (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_1) => ?ts_ph_pvar0_1
+11:11:53 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+11:11:53 [0m[33m[WARN] [0mproved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+11:11:53 [0m[33m[WARN] [0mproved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+11:11:53 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true

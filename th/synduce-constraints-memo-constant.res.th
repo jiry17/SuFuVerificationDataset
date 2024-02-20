@@ -1,0 +1,2 @@
+(=> "(main ?ts_ph_TreeMemo_0) => (main_ ?ts_ph_TreeMemo_0)" (main ?ts_ph_TreeMemo_0) (main_ ?ts_ph_TreeMemo_0))
+(=> "(main_ ?ts_ph_TreeMemo_0) => (main ?ts_ph_TreeMemo_0)" (main_ ?ts_ph_TreeMemo_0) (main ?ts_ph_TreeMemo_0))

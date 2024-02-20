@@ -1,0 +1,6 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Nat. v1: Tree. (Succ (tf1 v0 v1)) === (tf1 (Succ v0) v1)
+prove lemma forall v0: Nat. v1: Tree. (plus v0 (tf1 Zero v1)) === (tf1 v0 v1)
+prove lemma forall v0: Nat. v1: Tree. (plus v0 (tf1 Zero (tf3 v1))) === (tf1 v0 (tf3 v1))
+prove lemma forall v0: Nat. v1: Tree. (Succ (plus v0 (tf1 Zero v1))) === (tf1 (Succ v0) v1)

@@ -1,0 +1,42 @@
+10:59:52 [WARN] Collecting statistics
+10:59:52 [WARN]  ex is: true
+10:59:52 [WARN]  ex is: false
+10:59:52 [WARN]  ex is: zero
+10:59:52 [WARN]  ex is: (succ zero)
+10:59:52 [WARN]  ex is: (succ (succ zero))
+10:59:52 [WARN]  ex is: (leaf autovar_Nat_0)
+10:59:52 [WARN]  ex is: (node (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:59:52 [WARN]  ex is: (node (node (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:59:52 [WARN]  ex is: null
+10:59:52 [WARN]  ex is: (nil autovar_Unit_0)
+10:59:52 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+10:59:52 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+10:59:52 [WARN] Running exploration without proof mode, but goals were given
+10:59:52 [WARN] Proof mode: true
+10:59:52 [WARN]  ex is: true
+10:59:52 [WARN]  ex is: false
+10:59:52 [WARN]  ex is: zero
+10:59:52 [WARN]  ex is: (succ zero)
+10:59:52 [WARN]  ex is: (succ (succ zero))
+10:59:52 [WARN]  ex is: (leaf autovar_Nat_0)
+10:59:52 [WARN]  ex is: (node (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:59:52 [WARN]  ex is: (node (node (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:59:52 [WARN]  ex is: null
+10:59:52 [WARN]  ex is: (nil autovar_Unit_0)
+10:59:52 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+10:59:52 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+10:59:52 [WARN] Running exploration without proof mode, but goals were given
+10:59:52 [WARN] Proof mode: true
+10:59:53 [WARN] proved: (nil ?ts_ph_Unit_0) => (nil null)
+10:59:53 [WARN] proved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+10:59:53 [WARN] proved: (max ?ts_ph_Nat_0 ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+10:59:53 [WARN] proved: (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+10:59:53 [WARN] proved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+10:59:53 [WARN] proved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+10:59:53 [WARN] proved: (nat_eq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+10:59:53 [WARN] proved: (nat_eq ?ts_ph_Nat_0 zero) => (nat_eq zero ?ts_ph_Nat_0)
+10:59:53 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => (max zero ?ts_ph_Nat_0)
+10:59:53 [WARN] proved: (max zero ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 zero)
+10:59:53 [WARN] proved: (lq zero ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 zero)
+10:59:53 [WARN] proved: (gq ?ts_ph_Nat_0 zero) => (lq zero ?ts_ph_Nat_0)
+10:59:53 [WARN] proved: (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_1) => ?ts_ph_pvar0_1

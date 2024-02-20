@@ -1,0 +1,6 @@
+09:29:13 [0m[33m[WARN] [0mCollecting statistics
+(main ?ts_ph_List_0) => (main_ ?ts_ph_List_0)
+(main_ ?ts_ph_List_0) => (main ?ts_ph_List_0)
+09:29:13 [0m[33m[WARN] [0mProof mode: false
+09:29:13 [0m[33m[WARN] [0mProof mode: false
+done in 0

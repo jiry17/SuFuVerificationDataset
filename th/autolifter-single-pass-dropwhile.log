@@ -1,0 +1,25 @@
+14:25:15 [WARN] Collecting statistics
+14:25:15 [WARN]  ex is: true
+14:25:15 [WARN]  ex is: false
+14:25:15 [WARN]  ex is: null
+14:25:15 [WARN]  ex is: (nil autovar_Unit_0)
+14:25:15 [WARN]  ex is: (cons autovar_Bool_0 (nil autovar_Unit_0))
+14:25:15 [WARN]  ex is: (cons autovar_Bool_1 (cons autovar_Bool_0 (nil autovar_Unit_0)))
+14:25:15 [WARN]  ex is: zero
+14:25:15 [WARN]  ex is: (succ zero)
+14:25:15 [WARN]  ex is: (succ (succ zero))
+14:25:15 [WARN] Running exploration without proof mode, but goals were given
+14:25:15 [WARN] Proof mode: true
+14:25:15 [WARN]  ex is: true
+14:25:15 [WARN]  ex is: false
+14:25:15 [WARN]  ex is: null
+14:25:15 [WARN]  ex is: (nil autovar_Unit_0)
+14:25:15 [WARN]  ex is: (cons autovar_Bool_0 (nil autovar_Unit_0))
+14:25:15 [WARN]  ex is: (cons autovar_Bool_1 (cons autovar_Bool_0 (nil autovar_Unit_0)))
+14:25:15 [WARN]  ex is: zero
+14:25:15 [WARN]  ex is: (succ zero)
+14:25:15 [WARN]  ex is: (succ (succ zero))
+14:25:15 [WARN] Running exploration without proof mode, but goals were given
+14:25:15 [WARN] Proof mode: true
+14:25:15 [WARN] proved: (tf0 ?ts_ph_List_0) => ?ts_ph_List_0
+14:25:15 [WARN] proved: (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_1) => ?ts_ph_pvar0_1

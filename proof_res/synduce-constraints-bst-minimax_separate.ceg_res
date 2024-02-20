@@ -1,0 +1,5 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Tree. v0 === (tf9 v0)
+new lemma forall v0: Tree. (snd1 (tf7 v0)) === (tf1 v0)
+new lemma forall v0: Tree. (fst1 (tf7 v0)) === (tf3 v0)

@@ -1,0 +1,6 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Map. v0 === (tf19 v0)
+new lemma forall v0: Nat. True === (nateq v0 v0)
+new lemma forall v0: Nat. (Succ Zero) === (ite (nateq v0 v0) (Succ Zero) Zero)
+new lemma forall v0: Nat. v1: Pos. (tf13 (tf12 v0) v0 (tf9 (tf8 v0) v0 v1)) === (tf17 v1)

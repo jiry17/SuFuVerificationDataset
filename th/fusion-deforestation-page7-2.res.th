@@ -1,0 +1,4 @@
+(=> "(tf5 ?ts_ph_Tree_0) => (main ?ts_ph_Tree_0)" (tf5 ?ts_ph_Tree_0) (main ?ts_ph_Tree_0))
+(=> "(main ?ts_ph_Tree_0) => (tf5 ?ts_ph_Tree_0)" (main ?ts_ph_Tree_0) (tf5 ?ts_ph_Tree_0))
+(=> "(main ?ts_ph_Tree_0) => (main_ ?ts_ph_Tree_0)" (main ?ts_ph_Tree_0) (main_ ?ts_ph_Tree_0))
+(=> "(main_ ?ts_ph_Tree_0) => (main ?ts_ph_Tree_0)" (main_ ?ts_ph_Tree_0) (main ?ts_ph_Tree_0))

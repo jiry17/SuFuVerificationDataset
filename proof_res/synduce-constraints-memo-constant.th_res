@@ -1,0 +1,70 @@
+13:43:15 [0m[33m[WARN] [0mCollecting statistics
+(tf0 (mleaf ?tv1)) => (succ zero)
+(tf0 (mnode ?tv2 ?tv3 ?tv4 ?tv5)) => ?tv2
+(memo ?tv0) => (tf0 ?tv0)
+(and false ?x) => false
+(and ?x false) => false
+(and true true) => true
+(nat_eq zero zero) => true
+(nat_eq zero (succ ?x)) => false
+(nat_eq (succ ?x) zero) => false
+(nat_eq (succ ?x) (succ ?y)) => (nat_eq ?x ?y)
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf2 (mleaf ?tv9)) => true
+(tf2 (mnode ?tv10 ?tv11 ?tv12 ?tv13)) => (and (nat_eq ?tv10 (plus (succ zero) (plus (memo ?tv12) (memo ?tv13)))) (and (tf1 ?tv12) (tf1 ?tv13)))
+(tf1 ?tv7) => (tf2 ?tv7)
+(is_memo ?tv6) => (tf1 ?tv6)
+(tf4 (mleaf ?tv17)) => (leaf ?tv17)
+(tf4 (mnode ?tv18 ?tv19 ?tv20 ?tv21)) => (node ?tv19 (tf3 ?tv20) (tf3 ?tv21))
+(tf3 ?tv15) => (tf4 ?tv15)
+(repr ?tv14) => (tf3 ?tv14)
+(tf6 (mleaf ?tv24)) => (mleaf ?tv24)
+(tf6 (mnode ?tv25 ?tv26 ?tv27 ?tv28)) => (mnode ?tv25 ?tv26 ?tv27 ?tv28)
+(tf5 ?tv23) => (tf6 ?tv23)
+(target ?tv22) => (tf5 ?tv22)
+(tf7 (leaf ?tv30)) => (succ zero)
+(tf7 (node ?tv31 ?tv32 ?tv33)) => (succ zero)
+(spec ?tv29) => (tf7 ?tv29)
+(ite true ?x) => ?x
+(ite false ?x) => zero
+(main ?tv34) => (ite (is_memo ?tv34) (spec (repr (target ?tv34))))
+(main_ ?tv35) => (ite (is_memo ?tv35) (succ zero))
+Searcher: (and ?autovar1 true)
+Searcher: (and true ?autovar2)
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar1))
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar4))
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq (succ ?autovar5) ?autovar8)
+Searcher: (nat_eq (succ ?autovar6) ?autovar8)
+13:43:15 [0m[33m[WARN] [0m ex is: true
+13:43:15 [0m[33m[WARN] [0m ex is: false
+13:43:15 [0m[33m[WARN] [0m ex is: zero
+13:43:15 [0m[33m[WARN] [0m ex is: (succ zero)
+13:43:15 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+13:43:15 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+13:43:15 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+13:43:15 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+13:43:15 [0m[33m[WARN] [0m ex is: (mleaf autovar_Nat_0)
+13:43:15 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0))
+13:43:15 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_3 autovar_Nat_4 (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)) (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)))
+13:43:15 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+13:43:15 [0m[33m[WARN] [0mProof mode: true
+13:43:15 [0m[33m[WARN] [0m ex is: true
+13:43:15 [0m[33m[WARN] [0m ex is: false
+13:43:15 [0m[33m[WARN] [0m ex is: zero
+13:43:15 [0m[33m[WARN] [0m ex is: (succ zero)
+13:43:15 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+13:43:15 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+13:43:15 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+13:43:15 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+13:43:15 [0m[33m[WARN] [0m ex is: (mleaf autovar_Nat_0)
+13:43:15 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0))
+13:43:15 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_3 autovar_Nat_4 (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)) (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)))
+13:43:15 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+13:43:15 [0m[33m[WARN] [0mProof mode: true
+13:43:15 [0m[33m[WARN] [0mFound all lemmas
+done in 4

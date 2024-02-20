@@ -1,0 +1,50 @@
+10:53:52 [0m[33m[WARN] [0mCollecting statistics
+(tf1 (elt ?tv3)) => ?tv3
+(tf1 (cons ?tv4 ?tv5)) => (tf0 ?tv5)
+(tf0 ?tv1) => (tf1 ?tv1)
+(spec ?tv0) => (tf0 ?tv0)
+(tf3 ?tv11 (elt ?tv12)) => (cons ?tv12 ?tv11)
+(tf3 ?tv11 (cons ?tv13 ?tv14)) => (cons ?tv13 (tf2 ?tv14 ?tv11))
+(tf2 ?tv8 ?tv9) => (tf3 ?tv9 ?tv8)
+(cat ?tv6 ?tv7) => (tf2 ?tv6 ?tv7)
+(tf5 (single ?tv18)) => (elt ?tv18)
+(tf5 (concat ?tv19 ?tv20)) => (cat (tf4 ?tv19) (tf4 ?tv20))
+(tf4 ?tv16) => (tf5 ?tv16)
+(repr ?tv15) => (tf4 ?tv15)
+(main ?tv21) => (spec (repr ?tv21))
+(tf7 (single ?tv25)) => ?tv25
+(tf7 (concat ?tv26 ?tv27)) => (tf6 ?tv27)
+(tf6 ?tv23) => (tf7 ?tv23)
+(repr_ ?tv22) => (tf6 ?tv22)
+(main_ ?tv28) => (repr_ ?tv28)
+10:53:52 [0m[33m[WARN] [0m ex is: true
+10:53:52 [0m[33m[WARN] [0m ex is: false
+10:53:52 [0m[33m[WARN] [0m ex is: zero
+10:53:52 [0m[33m[WARN] [0m ex is: (succ zero)
+10:53:52 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:53:52 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:53:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:53:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:53:52 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+10:53:52 [0m[33m[WARN] [0m ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:53:52 [0m[33m[WARN] [0m ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:53:52 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:53:52 [0m[33m[WARN] [0mProof mode: true
+10:53:52 [0m[33m[WARN] [0m ex is: true
+10:53:52 [0m[33m[WARN] [0m ex is: false
+10:53:52 [0m[33m[WARN] [0m ex is: zero
+10:53:52 [0m[33m[WARN] [0m ex is: (succ zero)
+10:53:52 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:53:52 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:53:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:53:52 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:53:52 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+10:53:52 [0m[33m[WARN] [0m ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:53:52 [0m[33m[WARN] [0m ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:53:52 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:53:52 [0m[33m[WARN] [0mProof mode: true
+10:53:52 [0m[33m[WARN] [0mproved: (tf1 (tf3 ?ts_ph_List_1 ?ts_ph_List_0)) => (tf1 ?ts_ph_List_1)
+10:53:52 [0m[33m[WARN] [0mproved: (tf7 ?ts_ph_CList_0) => (main ?ts_ph_CList_0)
+10:53:52 [0m[33m[WARN] [0mproved: (main ?ts_ph_CList_0) => (tf7 ?ts_ph_CList_0)
+10:53:52 [0m[33m[WARN] [0mFound all lemmas
+done in 293

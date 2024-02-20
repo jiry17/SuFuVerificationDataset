@@ -1,0 +1,10 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: List. v1: UList. (tf1 v0 v1) === (tf1 v0 (tf11 v1))
+new lemma forall v0: UList. (tf11 v0) === (tf11 (tf11 v0))
+new lemma forall v0: UList. (tf11 v0) === (tf11 (tf11 (tf11 (tf11 (tf11 v0)))))
+new lemma forall v0: UList. (tf11 v0) === (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 v0))))))
+new lemma forall v0: UList. (tf11 v0) === (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 v0)))))))
+new lemma forall v0: UList. (tf11 v0) === (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 v0))))))))
+new lemma forall v0: UList. (tf11 v0) === (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 v0)))))))))
+new lemma forall v0: UList. (tf11 v0) === (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 (tf11 v0))))))))))

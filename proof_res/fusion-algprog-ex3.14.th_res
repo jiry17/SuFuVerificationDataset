@@ -1,0 +1,72 @@
+09:41:47 [0m[33m[WARN] [0mCollecting statistics
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf3 (ptip ?tv8 ?tv9)) => (ptip (plus ?tv8 (succ zero)) ?tv9)
+(tf3 (pbin ?tv10 ?tv11)) => (pbin (tf2 ?tv10) (tf2 ?tv11))
+(tf2 ?tv6) => (tf3 ?tv6)
+(tf1 (tip ?tv3)) => (ptip zero ?tv3)
+(tf1 (bin ?tv4 ?tv5)) => (pbin (tf2 (tf0 ?tv4)) (tf2 (tf0 ?tv5)))
+(tf0 ?tv1) => (tf1 ?tv1)
+(tri ?tv0) => (tf0 ?tv0)
+(times zero ?x) => zero
+(times (succ ?x) ?y) => (plus (times ?x ?y) ?y)
+(tf5 (ptip ?tv15 ?tv16)) => (times ?tv15 ?tv16)
+(tf5 (pbin ?tv17 ?tv18)) => (plus (tf4 ?tv17) (tf4 ?tv18))
+(tf4 ?tv13) => (tf5 ?tv13)
+(tsum ?tv12) => (tf4 ?tv12)
+(main ?tv19) => (tsum (tri ?tv19))
+(fst_1 (makeTuple1 ?x0 ?x1)) => ?x0
+(snd_1 (makeTuple1 ?x0 ?x1)) => ?x1
+(tf7 (tip ?tv23)) => (makeTuple1 zero ?tv23)
+(tf7 (bin ?tv24 ?tv25)) => (makeTuple1 (plus (plus (plus (fst_1 (tf6 ?tv24)) (snd_1 (tf6 ?tv24))) (fst_1 (tf6 ?tv25))) (snd_1 (tf6 ?tv25))) (plus (snd_1 (tf6 ?tv24)) (snd_1 (tf6 ?tv25))))
+(tf6 ?tv21) => (tf7 ?tv21)
+(tri_ ?tv20) => (tf6 ?tv20)
+(main_ ?tv26) => (fst_1 (tri_ ?tv26))
+09:41:47 [0m[33m[WARN] [0m ex is: true
+09:41:47 [0m[33m[WARN] [0m ex is: false
+09:41:47 [0m[33m[WARN] [0m ex is: zero
+09:41:47 [0m[33m[WARN] [0m ex is: (succ zero)
+09:41:47 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+09:41:47 [0m[33m[WARN] [0m ex is: (tip autovar_Nat_0)
+09:41:47 [0m[33m[WARN] [0m ex is: (bin (tip autovar_Nat_0) (tip autovar_Nat_0))
+09:41:47 [0m[33m[WARN] [0m ex is: (bin (bin (tip autovar_Nat_0) (tip autovar_Nat_0)) (bin (tip autovar_Nat_0) (tip autovar_Nat_0)))
+09:41:47 [0m[33m[WARN] [0m ex is: (ptip autovar_Nat_0 autovar_Nat_1)
+09:41:47 [0m[33m[WARN] [0m ex is: (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1))
+09:41:47 [0m[33m[WARN] [0m ex is: (pbin (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)) (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)))
+09:41:47 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+09:41:47 [0m[33m[WARN] [0mProof mode: true
+09:41:47 [0m[33m[WARN] [0m ex is: true
+09:41:47 [0m[33m[WARN] [0m ex is: false
+09:41:47 [0m[33m[WARN] [0m ex is: zero
+09:41:47 [0m[33m[WARN] [0m ex is: (succ zero)
+09:41:47 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+09:41:47 [0m[33m[WARN] [0m ex is: (tip autovar_Nat_0)
+09:41:47 [0m[33m[WARN] [0m ex is: (bin (tip autovar_Nat_0) (tip autovar_Nat_0))
+09:41:47 [0m[33m[WARN] [0m ex is: (bin (bin (tip autovar_Nat_0) (tip autovar_Nat_0)) (bin (tip autovar_Nat_0) (tip autovar_Nat_0)))
+09:41:47 [0m[33m[WARN] [0m ex is: (ptip autovar_Nat_0 autovar_Nat_1)
+09:41:47 [0m[33m[WARN] [0m ex is: (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1))
+09:41:47 [0m[33m[WARN] [0m ex is: (pbin (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)) (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)))
+09:41:47 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+09:41:47 [0m[33m[WARN] [0mProof mode: true
+09:41:47 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_0 zero) => zero
+09:41:47 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+09:41:47 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 (succ zero)) => (succ ?ts_ph_Nat_0)
+09:41:47 [0m[33m[WARN] [0mproved: (succ ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 (succ zero))
+09:41:47 [0m[33m[WARN] [0mgeneralized case_split proof as: (plus ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_2)) -- (plus (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) ?ts_ph_Nat_2)
+09:41:47 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_2)) => (plus (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) ?ts_ph_Nat_2)
+09:41:47 [0m[33m[WARN] [0mproved: (plus (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) ?ts_ph_Nat_2) => (plus ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_2))
+09:41:47 [0m[33m[WARN] [0mproved: (times (succ ?ts_ph_Nat_0) (succ zero)) => (succ ?ts_ph_Nat_0)
+09:41:47 [0m[33m[WARN] [0mproved: (succ ?ts_ph_Nat_0) => (times (succ ?ts_ph_Nat_0) (succ zero))
+09:41:47 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+09:41:47 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (plus ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+09:41:48 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_0 (succ zero)) => ?ts_ph_Nat_0
+09:41:48 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1)) => (plus ?ts_ph_Nat_0 (times ?ts_ph_Nat_0 ?ts_ph_Nat_1))
+09:41:48 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 (times ?ts_ph_Nat_0 ?ts_ph_Nat_1)) => (times ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1))
+09:41:48 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (times ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+09:41:48 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (times ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+09:41:48 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_0)) => (times ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_1))
+09:41:48 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_1)) => (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_0))
+09:41:49 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_2)) => (plus (times ?ts_ph_Nat_1 ?ts_ph_Nat_2) (times ?ts_ph_Nat_0 ?ts_ph_Nat_1))
+09:41:49 [0m[33m[WARN] [0mproved: (plus (times ?ts_ph_Nat_1 ?ts_ph_Nat_2) (times ?ts_ph_Nat_0 ?ts_ph_Nat_1)) => (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_2))
+09:41:52 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_0 (times ?ts_ph_Nat_1 ?ts_ph_Nat_2)) => (times ?ts_ph_Nat_1 (times ?ts_ph_Nat_0 ?ts_ph_Nat_2))
+09:41:52 [0m[33m[WARN] [0mproved: (times ?ts_ph_Nat_1 (times ?ts_ph_Nat_0 ?ts_ph_Nat_2)) => (times ?ts_ph_Nat_0 (times ?ts_ph_Nat_1 ?ts_ph_Nat_2))

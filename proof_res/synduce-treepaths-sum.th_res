@@ -1,0 +1,53 @@
+10:56:52 [0m[33m[WARN] [0mCollecting statistics
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf1 (empty ?tv3)) => zero
+(tf1 (node ?tv4 ?tv5 ?tv6)) => (plus ?tv4 (plus (tf0 ?tv5) (tf0 ?tv6)))
+(tf0 ?tv1) => (tf1 ?tv1)
+(sum ?tv0) => (tf0 ?tv0)
+(tf3 (top ?tv10)) => (empty null)
+(tf3 (left ?tv11 ?tv12 ?tv13)) => (node ?tv11 ?tv12 (tf2 ?tv13))
+(tf3 (right ?tv14 ?tv15 ?tv16)) => (node ?tv14 (tf2 ?tv16) ?tv15)
+(tf2 ?tv8) => (tf3 ?tv8)
+(repr ?tv7) => (tf2 ?tv7)
+(main ?tv17) => (sum (repr ?tv17))
+(tf5 (top ?tv21)) => zero
+(tf5 (left ?tv22 ?tv23 ?tv24)) => (plus (tf4 ?tv24) (plus ?tv22 (sum ?tv23)))
+(tf5 (right ?tv25 ?tv26 ?tv27)) => (plus (tf4 ?tv27) (plus ?tv25 (sum ?tv26)))
+(tf4 ?tv19) => (tf5 ?tv19)
+(repr_ ?tv18) => (tf4 ?tv18)
+(main_ ?tv28) => (repr_ ?tv28)
+10:56:52 [0m[33m[WARN] [0m ex is: true
+10:56:52 [0m[33m[WARN] [0m ex is: false
+10:56:52 [0m[33m[WARN] [0m ex is: null
+10:56:52 [0m[33m[WARN] [0m ex is: zero
+10:56:52 [0m[33m[WARN] [0m ex is: (succ zero)
+10:56:52 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:56:52 [0m[33m[WARN] [0m ex is: (empty autovar_Unit_0)
+10:56:52 [0m[33m[WARN] [0m ex is: (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0))
+10:56:52 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)) (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)))
+10:56:52 [0m[33m[WARN] [0m ex is: (top autovar_Unit_0)
+10:56:52 [0m[33m[WARN] [0m ex is: (left autovar_Nat_0 autovar_BTree_0 (top autovar_Unit_0))
+10:56:52 [0m[33m[WARN] [0m ex is: (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0))
+10:56:52 [0m[33m[WARN] [0m ex is: (left autovar_Nat_2 autovar_BTree_2 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:56:52 [0m[33m[WARN] [0m ex is: (right autovar_Nat_3 autovar_BTree_3 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:56:52 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:56:52 [0m[33m[WARN] [0mProof mode: true
+10:56:52 [0m[33m[WARN] [0m ex is: true
+10:56:52 [0m[33m[WARN] [0m ex is: false
+10:56:52 [0m[33m[WARN] [0m ex is: null
+10:56:52 [0m[33m[WARN] [0m ex is: zero
+10:56:52 [0m[33m[WARN] [0m ex is: (succ zero)
+10:56:52 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:56:52 [0m[33m[WARN] [0m ex is: (empty autovar_Unit_0)
+10:56:52 [0m[33m[WARN] [0m ex is: (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0))
+10:56:52 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)) (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)))
+10:56:52 [0m[33m[WARN] [0m ex is: (top autovar_Unit_0)
+10:56:52 [0m[33m[WARN] [0m ex is: (left autovar_Nat_0 autovar_BTree_0 (top autovar_Unit_0))
+10:56:52 [0m[33m[WARN] [0m ex is: (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0))
+10:56:52 [0m[33m[WARN] [0m ex is: (left autovar_Nat_2 autovar_BTree_2 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:56:52 [0m[33m[WARN] [0m ex is: (right autovar_Nat_3 autovar_BTree_3 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:56:52 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:56:52 [0m[33m[WARN] [0mProof mode: true
+10:56:52 [0m[33m[WARN] [0mproved: (top ?ts_ph_Unit_0) => (top null)
+10:56:52 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0

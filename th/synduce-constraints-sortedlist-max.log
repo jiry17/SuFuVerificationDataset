@@ -1,0 +1,98 @@
+13:55:15 [WARN] Collecting statistics
+13:55:15 [WARN]  ex is: true
+13:55:15 [WARN]  ex is: false
+13:55:15 [WARN]  ex is: zero
+13:55:15 [WARN]  ex is: (succ zero)
+13:55:15 [WARN]  ex is: (succ (succ zero))
+13:55:15 [WARN]  ex is: (elt autovar_Nat_0)
+13:55:15 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+13:55:15 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+13:55:15 [WARN] Running exploration without proof mode, but goals were given
+13:55:15 [WARN] Proof mode: true
+13:55:15 [WARN]  ex is: true
+13:55:15 [WARN]  ex is: false
+13:55:15 [WARN]  ex is: zero
+13:55:15 [WARN]  ex is: (succ zero)
+13:55:15 [WARN]  ex is: (succ (succ zero))
+13:55:15 [WARN]  ex is: (elt autovar_Nat_0)
+13:55:15 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+13:55:15 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+13:55:15 [WARN] Running exploration without proof mode, but goals were given
+13:55:15 [WARN] Proof mode: true
+13:55:15 [WARN] proved: (tf7 ?ts_ph_List_1 ?ts_ph_List_0) => ?ts_ph_List_1
+13:55:15 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+13:55:15 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+13:55:15 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+13:55:15 [WARN] proved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+13:55:15 [WARN] proved: (max ?ts_ph_Nat_0 ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+13:55:15 [WARN] proved: (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_1) => ?ts_ph_pvar0_1
+13:55:15 [WARN] proved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+13:55:15 [WARN] proved: (geq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+13:56:42 [WARN] proved: (geq ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1)) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+13:56:42 [WARN] proved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (geq ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1))
+13:56:42 [WARN] proved: (geq (succ ?ts_ph_Nat_0) ?ts_ph_Nat_0) => true
+13:56:42 [WARN] proved: (max ?ts_ph_Nat_0 (succ zero)) => (max (succ zero) ?ts_ph_Nat_0)
+13:56:42 [WARN] proved: (max (succ zero) ?ts_ph_Nat_0) => (max ?ts_ph_Nat_0 (succ zero))
+13:56:42 [WARN] generalized case_split proof as: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) -- (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+13:56:42 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+13:56:42 [WARN] proved: (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+13:56:42 [WARN] proved: (ite (lq zero ?ts_ph_Nat_0) ?ts_ph_pvar0_1 ?ts_ph_pvar0_0) => (ite (geq zero ?ts_ph_Nat_0) ?ts_ph_pvar0_0 ?ts_ph_pvar0_1)
+13:56:42 [WARN] proved: (ite (geq zero ?ts_ph_Nat_0) ?ts_ph_pvar0_0 ?ts_ph_pvar0_1) => (ite (lq zero ?ts_ph_Nat_0) ?ts_ph_pvar0_1 ?ts_ph_pvar0_0)
+13:56:42 [WARN] proved: (ite (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) ?ts_ph_pvar0_0 ?ts_ph_pvar0_1) => (ite
+  ?ts_ph_Bool_0
+  (ite ?ts_ph_Bool_1 ?ts_ph_pvar0_0 ?ts_ph_pvar0_1)
+  ?ts_ph_pvar0_1)
+13:56:42 [WARN] proved: (ite
+  ?ts_ph_Bool_0
+  (ite ?ts_ph_Bool_1 ?ts_ph_pvar0_0 ?ts_ph_pvar0_1)
+  ?ts_ph_pvar0_1) => (ite (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) ?ts_ph_pvar0_0 ?ts_ph_pvar0_1)
+13:56:42 [WARN] proved: (ite
+  ?ts_ph_Bool_0
+  (ite ?ts_ph_Bool_1 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0)
+  ?ts_ph_pvar0_1) => (ite
+  ?ts_ph_Bool_1
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_0 ?ts_ph_pvar0_1))
+13:56:42 [WARN] proved: (ite
+  ?ts_ph_Bool_1
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_0 ?ts_ph_pvar0_1)) => (ite
+  ?ts_ph_Bool_0
+  (ite ?ts_ph_Bool_1 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0)
+  ?ts_ph_pvar0_1)
+13:56:42 [WARN] proved: (ite
+  ?ts_ph_Bool_0
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_1 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0)) => (ite
+  ?ts_ph_Bool_1
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0))
+13:56:42 [WARN] proved: (ite
+  ?ts_ph_Bool_1
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0)) => (ite
+  ?ts_ph_Bool_0
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_1 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0))
+13:56:42 [WARN] proved: (ite
+  ?ts_ph_Bool_0
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_0 ?ts_ph_pvar0_1)) => ?ts_ph_pvar0_1
+13:56:42 [WARN] proved: (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0) => (ite
+  ?ts_ph_Bool_0
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0))
+13:56:42 [WARN] proved: (ite
+  ?ts_ph_Bool_0
+  ?ts_ph_pvar0_1
+  (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0)) => (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_0)
+13:56:42 [WARN] proved: (and (geq zero ?ts_ph_Nat_0) (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)) => false
+13:56:42 [WARN] proved: (and (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) (lq zero ?ts_ph_Nat_0)) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+13:56:42 [WARN] proved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (and (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) (lq zero ?ts_ph_Nat_0))
+13:56:42 [WARN] proved: (and (geq ?ts_ph_Nat_1 ?ts_ph_Nat_0) (geq zero ?ts_ph_Nat_0)) => (geq zero ?ts_ph_Nat_0)
+13:56:42 [WARN] proved: (tf1 zero (cons ?ts_ph_Nat_0 ?ts_ph_List_1)) => (and (tf1 zero ?ts_ph_List_1) (geq zero ?ts_ph_Nat_0))
+13:56:42 [WARN] proved: (and (tf1 zero ?ts_ph_List_1) (geq zero ?ts_ph_Nat_0)) => (tf1 zero (cons ?ts_ph_Nat_0 ?ts_ph_List_1))
+13:56:43 [WARN] proved: (and (lq zero ?ts_ph_Nat_1) (geq zero ?ts_ph_Nat_0)) => (and (geq zero ?ts_ph_Nat_0) (lq ?ts_ph_Nat_0 ?ts_ph_Nat_1))
+13:56:43 [WARN] proved: (and (geq zero ?ts_ph_Nat_0) (lq ?ts_ph_Nat_0 ?ts_ph_Nat_1)) => (and (lq zero ?ts_ph_Nat_1) (geq zero ?ts_ph_Nat_0))
+13:57:12 [WARN] proved: (and (geq zero ?ts_ph_Nat_1) (geq zero ?ts_ph_Nat_0)) => (and (geq ?ts_ph_Nat_0 ?ts_ph_Nat_1) (geq zero ?ts_ph_Nat_0))
+13:57:12 [WARN] proved: (and (geq ?ts_ph_Nat_0 ?ts_ph_Nat_1) (geq zero ?ts_ph_Nat_0)) => (and (geq zero ?ts_ph_Nat_1) (geq zero ?ts_ph_Nat_0))

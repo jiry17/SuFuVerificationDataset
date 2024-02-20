@@ -1,0 +1,6 @@
+Proving begin optimize: (main v0 v1) === (mainNew v0 v1)
+Property accepted by cvec analysis
+new lemma forall v0: List. Zero === (snd1 (tf7 Zero (tf6 Zero) v0))
+new lemma forall v0: Nat. v1: List. v0 === (plus v0 (snd1 (tf7 Zero (tf6 Zero) v1)))
+new lemma forall v0: Nat. Zero === (times v0 Zero)
+new lemma forall v0: Nat. Zero === (times (plus v0 Zero) Zero)

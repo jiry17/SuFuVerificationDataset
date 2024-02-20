@@ -1,0 +1,5 @@
+(=> "(tf0 ?ts_ph_List_0) => ?ts_ph_List_0" (tf0 ?ts_ph_List_0) ?ts_ph_List_0)
+(=> "(sum ?ts_ph_List_0) => (tf6 ?ts_ph_List_0)" (sum ?ts_ph_List_0) (tf6 ?ts_ph_List_0))
+(=> "(tf6 ?ts_ph_List_0) => (sum ?ts_ph_List_0)" (tf6 ?ts_ph_List_0) (sum ?ts_ph_List_0))
+(=> "(main ?ts_ph_List_0) => (main_ ?ts_ph_List_0)" (main ?ts_ph_List_0) (main_ ?ts_ph_List_0))
+(=> "(main_ ?ts_ph_List_0) => (main ?ts_ph_List_0)" (main_ ?ts_ph_List_0) (main ?ts_ph_List_0))

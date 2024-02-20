@@ -1,0 +1,34 @@
+13:12:50 [WARN] Collecting statistics
+13:12:50 [WARN]  ex is: true
+13:12:50 [WARN]  ex is: false
+13:12:50 [WARN]  ex is: null
+13:12:50 [WARN]  ex is: zero
+13:12:50 [WARN]  ex is: (succ zero)
+13:12:50 [WARN]  ex is: (succ (succ zero))
+13:12:50 [WARN]  ex is: (nil autovar_Unit_0)
+13:12:50 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+13:12:50 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+13:12:50 [WARN]  ex is: (cnil autovar_Unit_0)
+13:12:50 [WARN]  ex is: (single autovar_Nat_0)
+13:12:50 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+13:12:50 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+13:12:50 [WARN] Running exploration without proof mode, but goals were given
+13:12:50 [WARN] Proof mode: true
+13:12:50 [WARN]  ex is: true
+13:12:50 [WARN]  ex is: false
+13:12:50 [WARN]  ex is: null
+13:12:50 [WARN]  ex is: zero
+13:12:50 [WARN]  ex is: (succ zero)
+13:12:50 [WARN]  ex is: (succ (succ zero))
+13:12:50 [WARN]  ex is: (nil autovar_Unit_0)
+13:12:50 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+13:12:50 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+13:12:50 [WARN]  ex is: (cnil autovar_Unit_0)
+13:12:50 [WARN]  ex is: (single autovar_Nat_0)
+13:12:50 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+13:12:50 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+13:12:50 [WARN] Running exploration without proof mode, but goals were given
+13:12:50 [WARN] Proof mode: true
+13:12:50 [WARN] proved: (nil ?ts_ph_Unit_0) => (nil null)
+13:12:50 [WARN] proved: (cnil ?ts_ph_Unit_0) => (cnil null)
+13:12:50 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0

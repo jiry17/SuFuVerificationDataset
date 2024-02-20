@@ -1,0 +1,46 @@
+09:44:47 [0m[33m[WARN] [0mCollecting statistics
+(tf1 ?tv4 (nil ?tv5)) => ?tv4
+(tf1 ?tv4 (cons ?tv6 ?tv7)) => (cons ?tv6 (tf0 ?tv7))
+(tf0 ?tv2) => (tf1 ?tv2 ?tv2)
+(tf2 ?tv9) => (sum (tf0 ?tv9))
+(single_pass ?tv1) => (tf2 ?tv1)
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf4 (nil ?tv13)) => zero
+(tf4 (cons ?tv14 ?tv15)) => (plus ?tv14 (tf3 ?tv15))
+(tf3 ?tv11) => (tf4 ?tv11)
+(sum ?tv10) => (tf3 ?tv10)
+(main ?tv16) => (single_pass ?tv16)
+(tf6 (nil ?tv21)) => zero
+(tf6 (cons ?tv22 ?tv23)) => (plus ?tv22 (tf5 ?tv23))
+(tf5 ?tv19) => (tf6 ?tv19)
+(tf7 ?tv24) => (tf5 ?tv24)
+(single_pass_ ?tv18) => (tf7 ?tv18)
+(main_ ?tv25) => (single_pass_ ?tv25)
+09:44:47 [0m[33m[WARN] [0m ex is: true
+09:44:47 [0m[33m[WARN] [0m ex is: false
+09:44:47 [0m[33m[WARN] [0m ex is: zero
+09:44:47 [0m[33m[WARN] [0m ex is: (succ zero)
+09:44:47 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+09:44:47 [0m[33m[WARN] [0m ex is: null
+09:44:47 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+09:44:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+09:44:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+09:44:47 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+09:44:47 [0m[33m[WARN] [0mProof mode: true
+09:44:47 [0m[33m[WARN] [0m ex is: true
+09:44:47 [0m[33m[WARN] [0m ex is: false
+09:44:47 [0m[33m[WARN] [0m ex is: zero
+09:44:47 [0m[33m[WARN] [0m ex is: (succ zero)
+09:44:47 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+09:44:47 [0m[33m[WARN] [0m ex is: null
+09:44:47 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+09:44:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+09:44:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+09:44:47 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+09:44:47 [0m[33m[WARN] [0mProof mode: true
+09:44:47 [0m[33m[WARN] [0mproved: (tf0 ?ts_ph_List_0) => ?ts_ph_List_0
+09:44:47 [0m[33m[WARN] [0mproved: (sum ?ts_ph_List_0) => (tf6 ?ts_ph_List_0)
+09:44:47 [0m[33m[WARN] [0mproved: (tf6 ?ts_ph_List_0) => (sum ?ts_ph_List_0)
+09:44:47 [0m[33m[WARN] [0mFound all lemmas
+done in 6

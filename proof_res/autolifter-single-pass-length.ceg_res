@@ -1,0 +1,6 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: List. (main v0) === (mainNew v0)
+optimize uncyclic: VALID (5 ms)
+Attempted 1 goals:
+  1 solved (no cyclic)

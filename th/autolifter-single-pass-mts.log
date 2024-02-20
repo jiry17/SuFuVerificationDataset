@@ -1,0 +1,28 @@
+13:08:50 [WARN] Collecting statistics
+13:08:50 [WARN]  ex is: true
+13:08:50 [WARN]  ex is: false
+13:08:50 [WARN]  ex is: zero
+13:08:50 [WARN]  ex is: (succ zero)
+13:08:50 [WARN]  ex is: (succ (succ zero))
+13:08:50 [WARN]  ex is: null
+13:08:50 [WARN]  ex is: (nil autovar_Unit_0)
+13:08:50 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+13:08:50 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+13:08:50 [WARN] Running exploration without proof mode, but goals were given
+13:08:50 [WARN] Proof mode: true
+13:08:50 [WARN]  ex is: true
+13:08:50 [WARN]  ex is: false
+13:08:50 [WARN]  ex is: zero
+13:08:50 [WARN]  ex is: (succ zero)
+13:08:50 [WARN]  ex is: (succ (succ zero))
+13:08:50 [WARN]  ex is: null
+13:08:50 [WARN]  ex is: (nil autovar_Unit_0)
+13:08:50 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+13:08:50 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+13:08:50 [WARN] Running exploration without proof mode, but goals were given
+13:08:50 [WARN] Proof mode: true
+13:08:50 [WARN] proved: (tf0 ?ts_ph_List_0) => ?ts_ph_List_0
+13:08:50 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+13:08:50 [WARN] proved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+13:08:50 [WARN] proved: (max ?ts_ph_Nat_0 ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+13:08:50 [WARN] proved: (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_1) => ?ts_ph_pvar0_1

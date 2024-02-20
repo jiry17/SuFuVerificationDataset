@@ -1,0 +1,24 @@
+12:56:50 [WARN] Collecting statistics
+12:56:50 [WARN]  ex is: true
+12:56:50 [WARN]  ex is: false
+12:56:50 [WARN]  ex is: null
+12:56:50 [WARN]  ex is: (nil autovar_Unit_0)
+12:56:50 [WARN]  ex is: (cons autovar_Bool_0 (nil autovar_Unit_0))
+12:56:50 [WARN]  ex is: (cons autovar_Bool_1 (cons autovar_Bool_0 (nil autovar_Unit_0)))
+12:56:50 [WARN] Running exploration without proof mode, but goals were given
+12:56:50 [WARN] Proof mode: true
+12:56:50 [WARN]  ex is: true
+12:56:50 [WARN]  ex is: false
+12:56:50 [WARN]  ex is: null
+12:56:50 [WARN]  ex is: (nil autovar_Unit_0)
+12:56:50 [WARN]  ex is: (cons autovar_Bool_0 (nil autovar_Unit_0))
+12:56:50 [WARN]  ex is: (cons autovar_Bool_1 (cons autovar_Bool_0 (nil autovar_Unit_0)))
+12:56:50 [WARN] Running exploration without proof mode, but goals were given
+12:56:50 [WARN] Proof mode: true
+12:56:50 [WARN] proved: (tf0 ?ts_ph_List_0) => ?ts_ph_List_0
+12:56:50 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+12:56:50 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+12:56:50 [WARN] proved: (or ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (or ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+12:56:50 [WARN] proved: (or ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (or ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+12:56:50 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+12:56:50 [WARN] proved: (or ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0

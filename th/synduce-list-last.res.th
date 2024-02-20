@@ -1,0 +1,5 @@
+(=> "(tf1 (tf3 ?ts_ph_List_1 ?ts_ph_List_0)) => (tf1 ?ts_ph_List_1)" (tf1 (tf3 ?ts_ph_List_1 ?ts_ph_List_0)) (tf1 ?ts_ph_List_1))
+(=> "(tf7 ?ts_ph_CList_0) => (main ?ts_ph_CList_0)" (tf7 ?ts_ph_CList_0) (main ?ts_ph_CList_0))
+(=> "(main ?ts_ph_CList_0) => (tf7 ?ts_ph_CList_0)" (main ?ts_ph_CList_0) (tf7 ?ts_ph_CList_0))
+(=> "(main ?ts_ph_CList_0) => (main_ ?ts_ph_CList_0)" (main ?ts_ph_CList_0) (main_ ?ts_ph_CList_0))
+(=> "(main_ ?ts_ph_CList_0) => (main ?ts_ph_CList_0)" (main_ ?ts_ph_CList_0) (main ?ts_ph_CList_0))

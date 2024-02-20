@@ -1,0 +1,26 @@
+13:51:15 [WARN] Collecting statistics
+13:51:15 [WARN]  ex is: true
+13:51:15 [WARN]  ex is: false
+13:51:15 [WARN]  ex is: null
+13:51:15 [WARN]  ex is: zero
+13:51:15 [WARN]  ex is: (succ zero)
+13:51:15 [WARN]  ex is: (succ (succ zero))
+13:51:15 [WARN]  ex is: (nil autovar_Unit_0)
+13:51:15 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+13:51:15 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+13:51:15 [WARN]  ex is: (zip autovar_List_0 autovar_List_1)
+13:51:15 [WARN] Running exploration without proof mode, but goals were given
+13:51:15 [WARN] Proof mode: true
+13:51:15 [WARN]  ex is: true
+13:51:15 [WARN]  ex is: false
+13:51:15 [WARN]  ex is: null
+13:51:15 [WARN]  ex is: zero
+13:51:15 [WARN]  ex is: (succ zero)
+13:51:15 [WARN]  ex is: (succ (succ zero))
+13:51:15 [WARN]  ex is: (nil autovar_Unit_0)
+13:51:15 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+13:51:15 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+13:51:15 [WARN]  ex is: (zip autovar_List_0 autovar_List_1)
+13:51:15 [WARN] Running exploration without proof mode, but goals were given
+13:51:15 [WARN] Proof mode: true
+13:51:15 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0

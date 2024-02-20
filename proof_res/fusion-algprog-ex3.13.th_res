@@ -1,0 +1,53 @@
+14:05:15 [0m[33m[WARN] [0mCollecting statistics
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf3 (pnil ?tv8)) => (pnil null)
+(tf3 (pcons ?tv9 ?tv10 ?tv11)) => (pcons (plus ?tv9 (succ zero)) ?tv10 (tf2 ?tv11))
+(tf2 ?tv6) => (tf3 ?tv6)
+(tf1 (nil ?tv3)) => (pnil null)
+(tf1 (cons ?tv4 ?tv5)) => (pcons zero ?tv4 (tf2 (tf0 ?tv5)))
+(tf0 ?tv1) => (tf1 ?tv1)
+(tri ?tv0) => (tf0 ?tv0)
+(times zero ?x) => zero
+(times (succ ?x) ?y) => (plus (times ?x ?y) ?y)
+(tf5 (pnil ?tv15)) => zero
+(tf5 (pcons ?tv16 ?tv17 ?tv18)) => (plus (times ?tv16 ?tv17) (tf4 ?tv18))
+(tf4 ?tv13) => (tf5 ?tv13)
+(tsum ?tv12) => (tf4 ?tv12)
+(main ?tv19) => (tsum (tri ?tv19))
+(fst_2 (makeTuple2 ?x0 ?x1)) => ?x0
+(snd_2 (makeTuple2 ?x0 ?x1)) => ?x1
+(tf7 (nil ?tv23)) => (makeTuple2 zero zero)
+(tf7 (cons ?tv24 ?tv25)) => (makeTuple2 (fst_2 (makeTuple2 (plus (fst_2 (tf6 ?tv25)) (snd_2 (tf6 ?tv25))) (snd_2 (tf6 ?tv25)))) (plus (snd_2 (makeTuple2 (plus (fst_2 (tf6 ?tv25)) (snd_2 (tf6 ?tv25))) (snd_2 (tf6 ?tv25)))) ?tv24))
+(tf6 ?tv21) => (tf7 ?tv21)
+(tri_ ?tv20) => (tf6 ?tv20)
+(main_ ?tv26) => (fst_2 (tri_ ?tv26))
+14:05:15 [0m[33m[WARN] [0m ex is: true
+14:05:15 [0m[33m[WARN] [0m ex is: false
+14:05:15 [0m[33m[WARN] [0m ex is: null
+14:05:15 [0m[33m[WARN] [0m ex is: zero
+14:05:15 [0m[33m[WARN] [0m ex is: (succ zero)
+14:05:15 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+14:05:15 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+14:05:15 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+14:05:15 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+14:05:15 [0m[33m[WARN] [0m ex is: (pnil autovar_Unit_0)
+14:05:15 [0m[33m[WARN] [0m ex is: (pcons autovar_Nat_0 autovar_Nat_1 (pnil autovar_Unit_0))
+14:05:15 [0m[33m[WARN] [0m ex is: (pcons autovar_Nat_2 autovar_Nat_3 (pcons autovar_Nat_0 autovar_Nat_1 (pnil autovar_Unit_0)))
+14:05:15 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+14:05:15 [0m[33m[WARN] [0mProof mode: true
+14:05:15 [0m[33m[WARN] [0m ex is: true
+14:05:15 [0m[33m[WARN] [0m ex is: false
+14:05:15 [0m[33m[WARN] [0m ex is: null
+14:05:15 [0m[33m[WARN] [0m ex is: zero
+14:05:15 [0m[33m[WARN] [0m ex is: (succ zero)
+14:05:15 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+14:05:15 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+14:05:15 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+14:05:15 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+14:05:15 [0m[33m[WARN] [0m ex is: (pnil autovar_Unit_0)
+14:05:15 [0m[33m[WARN] [0m ex is: (pcons autovar_Nat_0 autovar_Nat_1 (pnil autovar_Unit_0))
+14:05:15 [0m[33m[WARN] [0m ex is: (pcons autovar_Nat_2 autovar_Nat_3 (pcons autovar_Nat_0 autovar_Nat_1 (pnil autovar_Unit_0)))
+14:05:15 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+14:05:15 [0m[33m[WARN] [0mProof mode: true
+14:05:15 [0m[33m[WARN] [0mproved: (nil ?ts_ph_Unit_0) => (nil null)

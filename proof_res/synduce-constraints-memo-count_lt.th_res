@@ -1,0 +1,98 @@
+13:38:50 [0m[33m[WARN] [0mCollecting statistics
+(tf0 (mleaf ?tv1 ?tv2)) => ?tv1
+(tf0 (mnode ?tv3 ?tv4 ?tv5 ?tv6)) => ?tv3
+(memo ?tv0) => (tf0 ?tv0)
+(and false ?x) => false
+(and ?x false) => false
+(and true true) => true
+(geq zero (succ ?x)) => false
+(geq ?x zero) => true
+(geq (succ ?x) (succ ?y)) => (geq ?x ?y)
+(lq zero (succ ?x)) => true
+(lq ?x zero) => false
+(lq (succ ?x) (succ ?y)) => (lq ?x ?y)
+(nat_eq zero zero) => true
+(nat_eq zero (succ ?x)) => false
+(nat_eq (succ ?x) zero) => false
+(nat_eq (succ ?x) (succ ?y)) => (nat_eq ?x ?y)
+(ite true ?x ?y) => ?x
+(ite false ?x ?y) => ?y
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf2 (mleaf ?tv10 ?tv11)) => (and (geq ?tv10 zero) (ite (lq ?tv11 (succ (succ zero))) (nat_eq ?tv10 (succ zero)) (nat_eq ?tv10 zero)))
+(tf2 (mnode ?tv12 ?tv13 ?tv14 ?tv15)) => (and (and (geq ?tv12 zero) (nat_eq ?tv12 (plus (ite (lq ?tv13 (succ (succ zero))) (succ zero) zero) (plus (memo ?tv14) (memo ?tv15))))) (and (tf1 ?tv14) (tf1 ?tv15)))
+(tf1 ?tv8) => (tf2 ?tv8)
+(is_memo ?tv7) => (tf1 ?tv7)
+(tf4 (mleaf ?tv19 ?tv20)) => (leaf ?tv20)
+(tf4 (mnode ?tv21 ?tv22 ?tv23 ?tv24)) => (node ?tv22 (tf3 ?tv23) (tf3 ?tv24))
+(tf3 ?tv17) => (tf4 ?tv17)
+(repr ?tv16) => (tf3 ?tv16)
+(tf6 (leaf ?tv28)) => (ite (lq ?tv28 (succ (succ zero))) (succ zero) zero)
+(tf6 (node ?tv29 ?tv30 ?tv31)) => (ite (lq ?tv29 (succ (succ zero))) (plus (succ zero) (plus (tf5 ?tv30) (tf5 ?tv31))) (plus (tf5 ?tv30) (tf5 ?tv31)))
+(tf5 ?tv26) => (tf6 ?tv26)
+(spec ?tv25) => (tf5 ?tv25)
+(tf8 ?tv34 (mleaf ?tv35 ?tv36)) => (ite (lq ?tv36 (succ (succ zero))) ?tv34 ?tv34)
+(tf8 ?tv34 (mnode ?tv37 ?tv38 ?tv39 ?tv40)) => (ite (lq ?tv38 (succ (succ zero))) ?tv34 ?tv34)
+(tf7 ?tv33) => (tf8 ?tv33 ?tv33)
+(target ?tv32) => (tf7 ?tv32)
+(main ?tv41) => (ite (is_memo ?tv41) (spec (repr (target ?tv41))) zero)
+(main_ ?tv42) => (ite (is_memo ?tv42) (memo ?tv42) zero)
+Searcher: (and ?autovar1 true)
+Searcher: (and true ?autovar2)
+Searcher: (geq ?autovar5 (succ ?autovar1))
+Searcher: (geq ?autovar5 (succ ?autovar3))
+Searcher: (geq zero ?autovar6)
+Searcher: (geq (succ ?autovar4) ?autovar6)
+Searcher: (lq ?autovar5 (succ ?autovar1))
+Searcher: (lq ?autovar5 (succ ?autovar3))
+Searcher: (lq zero ?autovar6)
+Searcher: (lq (succ ?autovar4) ?autovar6)
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar1))
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar4))
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq (succ ?autovar5) ?autovar8)
+Searcher: (nat_eq (succ ?autovar6) ?autovar8)
+13:38:50 [0m[33m[WARN] [0m ex is: true
+13:38:50 [0m[33m[WARN] [0m ex is: false
+13:38:50 [0m[33m[WARN] [0m ex is: zero
+13:38:50 [0m[33m[WARN] [0m ex is: (succ zero)
+13:38:50 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+13:38:50 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+13:38:50 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+13:38:50 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+13:38:50 [0m[33m[WARN] [0m ex is: (mleaf autovar_Nat_0 autovar_Nat_1)
+13:38:50 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_2 autovar_Nat_3 (mleaf autovar_Nat_0 autovar_Nat_1) (mleaf autovar_Nat_0 autovar_Nat_1))
+13:38:50 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_4 autovar_Nat_5 (mnode autovar_Nat_2 autovar_Nat_3 (mleaf autovar_Nat_0 autovar_Nat_1) (mleaf autovar_Nat_0 autovar_Nat_1)) (mnode autovar_Nat_2 autovar_Nat_3 (mleaf autovar_Nat_0 autovar_Nat_1) (mleaf autovar_Nat_0 autovar_Nat_1)))
+13:38:50 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+13:38:50 [0m[33m[WARN] [0mProof mode: true
+13:38:50 [0m[33m[WARN] [0m ex is: true
+13:38:50 [0m[33m[WARN] [0m ex is: false
+13:38:50 [0m[33m[WARN] [0m ex is: zero
+13:38:50 [0m[33m[WARN] [0m ex is: (succ zero)
+13:38:50 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+13:38:50 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+13:38:50 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+13:38:50 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+13:38:50 [0m[33m[WARN] [0m ex is: (mleaf autovar_Nat_0 autovar_Nat_1)
+13:38:50 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_2 autovar_Nat_3 (mleaf autovar_Nat_0 autovar_Nat_1) (mleaf autovar_Nat_0 autovar_Nat_1))
+13:38:50 [0m[33m[WARN] [0m ex is: (mnode autovar_Nat_4 autovar_Nat_5 (mnode autovar_Nat_2 autovar_Nat_3 (mleaf autovar_Nat_0 autovar_Nat_1) (mleaf autovar_Nat_0 autovar_Nat_1)) (mnode autovar_Nat_2 autovar_Nat_3 (mleaf autovar_Nat_0 autovar_Nat_1) (mleaf autovar_Nat_0 autovar_Nat_1)))
+13:38:50 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+13:38:50 [0m[33m[WARN] [0mProof mode: true
+13:38:51 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+13:38:51 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+13:38:51 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+13:38:51 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+13:38:51 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 zero) => (geq zero ?ts_ph_Nat_0)
+13:38:51 [0m[33m[WARN] [0mproved: (geq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+13:38:51 [0m[33m[WARN] [0mproved: (nat_eq zero ?ts_ph_Nat_0) => (geq zero ?ts_ph_Nat_0)
+13:38:51 [0m[33m[WARN] [0mproved: (geq zero ?ts_ph_Nat_0) => (nat_eq zero ?ts_ph_Nat_0)
+13:38:51 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => (geq ?ts_ph_Nat_0 ?ts_ph_Nat_0)
+13:38:51 [0m[33m[WARN] [0mproved: (geq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0)
+13:38:51 [0m[33m[WARN] [0mproved: (ite ?ts_ph_Bool_0 ?ts_ph_pvar0_1 ?ts_ph_pvar0_1) => ?ts_ph_pvar0_1
+13:38:51 [0m[33m[WARN] [0mproved: (tf7 ?ts_ph_TreeMemo_0) => ?ts_ph_TreeMemo_0
+13:38:51 [0m[33m[WARN] [0mproved: (tf8 ?ts_ph_TreeMemo_1 ?ts_ph_TreeMemo_0) => ?ts_ph_TreeMemo_1
+13:38:51 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+13:38:51 [0m[33m[WARN] [0mproved: (geq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true

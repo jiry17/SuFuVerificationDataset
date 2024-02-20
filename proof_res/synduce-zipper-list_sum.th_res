@@ -1,0 +1,61 @@
+10:20:47 [0m[33m[WARN] [0mCollecting statistics
+(tf1 ?tv5 (nil ?tv6)) => ?tv5
+(tf1 ?tv5 (cons ?tv7 ?tv8)) => (cons ?tv7 (tf0 ?tv8 ?tv5))
+(tf0 ?tv2 ?tv3) => (tf1 ?tv3 ?tv2)
+(concat ?tv0 ?tv1) => (tf0 ?tv0 ?tv1)
+(tf3 (nil ?tv12)) => (nil null)
+(tf3 (cons ?tv13 ?tv14)) => (concat (tf2 ?tv14) (cons ?tv13 (nil null)))
+(tf2 ?tv10) => (tf3 ?tv10)
+(rev ?tv9) => (tf2 ?tv9)
+(tf5 (nil ?tv18)) => (nil null)
+(tf5 (cons ?tv19 ?tv20)) => (cons ?tv19 (tf4 ?tv20))
+(tf4 ?tv16) => (tf5 ?tv16)
+(list_repr ?tv15) => (tf4 ?tv15)
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf7 (nil ?tv24)) => zero
+(tf7 (cons ?tv25 ?tv26)) => (plus ?tv25 (tf6 ?tv26))
+(tf6 ?tv22) => (tf7 ?tv22)
+(sum ?tv21) => (tf6 ?tv21)
+(tf8 (zip ?tv28 ?tv29)) => (concat (rev ?tv28) (list_repr ?tv29))
+(repr ?tv27) => (tf8 ?tv27)
+(main ?tv30) => (sum (repr ?tv30))
+(tf10 (nil ?tv34)) => zero
+(tf10 (cons ?tv35 ?tv36)) => (plus ?tv35 (tf9 ?tv36))
+(tf9 ?tv32) => (tf10 ?tv32)
+(rev_ ?tv31) => (tf9 ?tv31)
+(tf12 (nil ?tv40)) => zero
+(tf12 (cons ?tv41 ?tv42)) => (plus (tf11 ?tv42) ?tv41)
+(tf11 ?tv38) => (tf12 ?tv38)
+(list_repr_ ?tv37) => (tf11 ?tv37)
+(tf13 (zip ?tv44 ?tv45)) => (plus (rev_ ?tv44) (list_repr_ ?tv45))
+(repr_ ?tv43) => (tf13 ?tv43)
+(main_ ?tv46) => (repr_ ?tv46)
+10:20:47 [0m[33m[WARN] [0m ex is: true
+10:20:47 [0m[33m[WARN] [0m ex is: false
+10:20:47 [0m[33m[WARN] [0m ex is: null
+10:20:47 [0m[33m[WARN] [0m ex is: zero
+10:20:47 [0m[33m[WARN] [0m ex is: (succ zero)
+10:20:47 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:20:47 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+10:20:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+10:20:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+10:20:47 [0m[33m[WARN] [0m ex is: (zip autovar_List_0 autovar_List_1)
+10:20:47 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:20:47 [0m[33m[WARN] [0mProof mode: true
+10:20:47 [0m[33m[WARN] [0m ex is: true
+10:20:47 [0m[33m[WARN] [0m ex is: false
+10:20:47 [0m[33m[WARN] [0m ex is: null
+10:20:47 [0m[33m[WARN] [0m ex is: zero
+10:20:47 [0m[33m[WARN] [0m ex is: (succ zero)
+10:20:47 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:20:47 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+10:20:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+10:20:47 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+10:20:47 [0m[33m[WARN] [0m ex is: (zip autovar_List_0 autovar_List_1)
+10:20:47 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:20:47 [0m[33m[WARN] [0mProof mode: true
+10:20:47 [0m[33m[WARN] [0mproved: (tf7 ?ts_ph_List_0) => (tf10 ?ts_ph_List_0)
+10:20:47 [0m[33m[WARN] [0mproved: (tf10 ?ts_ph_List_0) => (tf7 ?ts_ph_List_0)
+10:20:47 [0m[33m[WARN] [0mproved: (nil ?ts_ph_Unit_0) => (nil null)
+10:20:47 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0

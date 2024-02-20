@@ -1,0 +1,3 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: NList. v0 === (tf5 v0 v0)

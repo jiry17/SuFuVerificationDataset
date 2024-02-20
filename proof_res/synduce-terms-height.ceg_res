@@ -1,0 +1,7 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Term2. v0 === (tf7 v0)
+new lemma forall v0: Term2. (main v0) === (mainNew v0)
+optimize uncyclic: VALID (211 ms)
+Attempted 1 goals:
+  1 solved (no cyclic)

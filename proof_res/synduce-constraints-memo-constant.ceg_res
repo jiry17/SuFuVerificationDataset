@@ -1,0 +1,7 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: TreeMemo. v0 === (tf6 v0)
+new lemma forall v0: TreeMemo. (main v0) === (mainNew v0)
+optimize uncyclic: VALID (23 ms)
+Attempted 1 goals:
+  1 solved (no cyclic)

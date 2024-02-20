@@ -1,0 +1,24 @@
+09:32:04 [WARN] Collecting statistics
+09:32:04 [WARN]  ex is: true
+09:32:04 [WARN]  ex is: false
+09:32:04 [WARN]  ex is: zero
+09:32:04 [WARN]  ex is: (succ zero)
+09:32:04 [WARN]  ex is: (succ (succ zero))
+09:32:04 [WARN]  ex is: null
+09:32:04 [WARN]  ex is: (nil autovar_Unit_0)
+09:32:04 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+09:32:04 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+09:32:04 [WARN] Running exploration without proof mode, but goals were given
+09:32:04 [WARN] Proof mode: true
+09:32:04 [WARN]  ex is: true
+09:32:04 [WARN]  ex is: false
+09:32:04 [WARN]  ex is: zero
+09:32:04 [WARN]  ex is: (succ zero)
+09:32:04 [WARN]  ex is: (succ (succ zero))
+09:32:04 [WARN]  ex is: null
+09:32:04 [WARN]  ex is: (nil autovar_Unit_0)
+09:32:04 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+09:32:04 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+09:32:04 [WARN] Running exploration without proof mode, but goals were given
+09:32:04 [WARN] Proof mode: true
+09:32:04 [WARN] Found all lemmas

@@ -1,0 +1,3 @@
+Proving begin optimize: (main v0 v1) === (mainNew v0 v1)
+Property accepted by cvec analysis
+new lemma forall v0: Nat. v1: List. v0 === (snd2 (tf7 (tf6 v0) v0 v1))
