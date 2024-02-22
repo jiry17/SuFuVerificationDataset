@@ -1,0 +1,10 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Bool. v0 === (and True v0)
+new lemma forall v0: Bool. v1: Nat. (and True (ite3 v0 (nateq v1 Zero) False)) === (ite3 v0 (nateq v1 Zero) False)
+new lemma forall v0: Nat. Zero === (ite4 (ite3 (lq v0 (Succ Zero)) False True) Zero Zero)
+new lemma forall v0: Nat. Zero === (ite4 (ite3 (lq v0 (Succ (Succ Zero))) False True) Zero Zero)
+new lemma forall v0: Nat. False === (ite3 (lq v0 (Succ Zero)) False False)
+new lemma forall v0: Bool. v0 === (and v0 True)
+new lemma forall v0: Bool. (and v0 True) === (and True v0)
+new lemma forall v0: Bool. v0 === (and (and True v0) True)

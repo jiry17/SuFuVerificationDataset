@@ -1,0 +1,30 @@
+File processed.
+Depth 1: 21 terms, 4 tests, 55 evaluations, 21 classes, 0 raw equations.
+Depth 2: 333 terms, 100 tests, 8757 evaluations, 283 classes, 50 raw equations.
+Depth 3: 29825 terms, 800 tests, 1963015 evaluations, 19547 classes, 10278 raw equations.
+QuickSpec done, 19547 classes, 10278 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034m[1mProved tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034mProved MakeTuple2 (fst2 var0_0) (snd2 var0_0) (third2 var0_0) == var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_1 == and var0_1 var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (and var0_1 var0_2) == and var0_1 (and var0_0 var0_2) without induction[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved and (lq var0_0 var0_1) (lq var0_1 var0_0) == False by induction on var0_1[0m using Z3
+[034mProved and (lq var0_0 var0_1) (lq Zero var0_1) == lq var0_0 var0_1 without induction[0m using Z3
+[034mProved spec (Elt var0_0) == True without induction[0m using Z3
+Failed to prove and (and var0_0 var0_1) (spec var0_2) == and (and var0_0 var0_0a) (spec var0_2)
+Failed to prove and (and var0_0 var0_1) (spec var0_2) == and (and var0_1 var0_0a) (spec var0_2)
+Failed to prove and (spec var0_0) (and var0_1 var0_2) == and (and var0_1 var0_0a) (spec var0_0)
+Failed to prove and (spec var0_0) (and var0_1 var0_2) == and (and var0_2 var0_0a) (spec var0_0)
+Failed to prove and (spec var0_0) (lq Zero var0_1) == spec var0_0
+Failed to prove and (lq Zero var0_0) (spec var0_1) == spec var0_1
+[034mProved third2 (tf5 var0_0) == spec var0_0 without induction[0m using Z3
+Failed to prove spec (tf1 var0_0 var0_0) == False
+Failed to prove main (Concat var0_0 var0_1) == False
+[034mProved main (Single var0_0) == True without induction[0m using Z3
+Failed to prove main (Concat var0_0 var0_0) == False
+[034mProved and (main var0_0) var0_1 == and var0_1 (main var0_0) without induction[0m using Z3

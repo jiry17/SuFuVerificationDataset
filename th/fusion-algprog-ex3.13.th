@@ -30,6 +30,7 @@
   (=> tsumr0 (tsum ?tv12) (tf4 ?tv12))
   (declare-fun main (List) Nat)
   (=> mainr0 (main ?tv19) (tsum (tri ?tv19)))
+  (datatype Tuple2 () ((makeTuple2 Nat Nat Tuple2)))
   (declare-fun fst_2 (Tuple2) Nat)
   (=> fst_2r0 (fst_2 (makeTuple2 ?x0 ?x1)) ?x0)
   (declare-fun snd_2 (Tuple2) Nat)

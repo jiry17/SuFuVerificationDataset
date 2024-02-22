@@ -1,0 +1,77 @@
+File processed.
+Depth 1: 15 terms, 4 tests, 37 evaluations, 15 classes, 0 raw equations.
+Depth 2: 220 terms, 100 tests, 11744 evaluations, 135 classes, 85 raw equations.
+Depth 3: 13839 terms, 400 tests, 1261285 evaluations, 5425 classes, 8414 raw equations.
+QuickSpec done, 5425 classes, 8414 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034mProved ite2 var0_0 var0_1 var0_1 == var0_1 without induction[0m using Z3
+[034mProved ite2 var0_0 var0_1 (ite2 var0_0 var0_2 var0_0a) == ite2 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 var0_1 (ite2 var0_2 var0_1 var0_0a) == ite2 var0_2 var0_1 (ite2 var0_0 var0_1 var0_0a) without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_1 var0_2 var0_0a) var0_2 == ite2 var0_1 var0_2 (ite2 var0_0 var0_0a var0_2) without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_1 var0_2 var0_0a) var0_0a == ite2 var0_1 (ite2 var0_0 var0_2 var0_0a) var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_0 var0_1 var0_2) var0_0a == ite2 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 (Succ var0_1) (Succ var0_2) == Succ (ite2 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034m[1mProved gq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ var0_0) var0_0 == True by induction on var0_0[0m using Z3
+[034mProved gq (ite2 var0_0 var0_1 var0_2) var0_1 == gq var0_2 (ite2 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved gq (ite2 var0_0 var0_1 var0_2) var0_2 == gq var0_1 (ite2 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034m[1mProved ite2 (gq var0_0 var0_1) var0_1 var0_0 == ite2 (gq var0_1 var0_0) var0_0 var0_1 by induction on var0_0[0m using Z3
+[034mProved ite2 (gq var0_0 var0_1) var0_0 var0_1 == ite2 (gq var0_1 var0_0) var0_1 var0_0 without induction[0m using Z3
+[034mProved gq (ite2 var0_0 var0_1 Zero) var0_2 == gq var0_1 (ite2 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved gq (ite2 var0_0 Zero var0_1) var0_2 == gq var0_1 (ite2 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034mProved gq (Succ var0_0) (ite2 var0_1 var0_2 Zero) == gq (Succ var0_0) (ite2 var0_1 var0_2 var0_0) without induction[0m using Z3
+[034mProved gq (Succ var0_0) (ite2 var0_1 Zero var0_2) == gq (Succ var0_0) (ite2 var0_1 var0_0 var0_2) without induction[0m using Z3
+[034mProved gq (ite2 var0_0 var0_1 Zero) (Succ var0_2) == gq (ite2 var0_0 var0_1 var0_2) (Succ var0_2) without induction[0m using Z3
+[034mProved gq (ite2 var0_0 Zero var0_1) (Succ var0_2) == gq (ite2 var0_0 var0_2 var0_1) (Succ var0_2) without induction[0m using Z3
+[034mProved ite2 (gq var0_0 Zero) var0_1 Zero == ite2 (gq var0_0 Zero) var0_1 var0_0 without induction[0m using Z3
+[034mProved ite2 (gq var0_0 Zero) var0_1 (Succ Zero) == ite2 (gq var0_0 Zero) var0_1 (Succ var0_0) without induction[0m using Z3
+[034mProved tf7 (Concat var0_0 var0_1) == tf7 (Concat var0_1 var0_0) without induction[0m using Z3
+[034mProved tf7 (Concat var0_0 var0_0) == tf7 var0_0 without induction[0m using Z3
+[034mProved max var0_0 var0_1 == max var0_1 var0_0 without induction[0m using Z3
+[034mProved max var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034m[1mProved max var0_0 Zero == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved max var0_0 (max var0_1 var0_2) == max var0_1 (max var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved gq var0_0 (max var0_0 var0_1) == False without induction[0m using Z3
+[034mProved gq (max var0_0 var0_1) var0_0 == gq var0_1 var0_0 without induction[0m using Z3
+[034mProved max var0_0 (Succ var0_0) == Succ var0_0 without induction[0m using Z3
+[034mProved max (Succ var0_0) (Succ var0_1) == Succ (max var0_0 var0_1) without induction[0m using Z3
+[034mProved gq (Succ var0_0) (max var0_0 var0_1) == gq (Succ var0_0) var0_1 without induction[0m using Z3
+Failed to prove max (max var0_0 var0_1) (Succ Zero) == max var0_0 var0_1
+Failed to prove max (max var0_0 var0_1) (Succ Zero) == max var0_1 var0_0
+Failed to prove max (Succ Zero) (max var0_0 var0_1) == max var0_0 var0_1
+Failed to prove max (Succ Zero) (max var0_0 var0_1) == max var0_1 var0_0
+[034mProved max var0_0 (ite2 var0_1 var0_0 var0_2) == ite2 var0_1 var0_0 (max var0_0 var0_2) without induction[0m using Z3
+[034mProved ite2 var0_0 (max var0_1 var0_2) var0_1 == max var0_1 (ite2 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved ite2 (gq var0_0 var0_1) var0_0 var0_1 == max var0_0 var0_1 without induction[0m using Z3
+[034mProved max var0_0 (ite2 var0_1 var0_2 Zero) == max var0_0 (ite2 var0_1 var0_2 var0_0) without induction[0m using Z3
+[034mProved max var0_0 (ite2 var0_1 Zero var0_2) == ite2 var0_1 var0_0 (max var0_0 var0_2) without induction[0m using Z3
+[034m[1mProved ite2 (gq var0_0 var0_1) var0_0 (Succ var0_1) == max var0_0 (Succ var0_1) by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved max (Succ var0_0) (ite2 var0_1 var0_2 Zero) == max (ite2 var0_1 var0_2 var0_0) (Succ var0_0) by induction on var0_2,var0_1[0m using Z3
+[034m[1mProved max (Succ var0_0) (ite2 var0_1 Zero var0_2) == max (ite2 var0_1 var0_0 var0_2) (Succ var0_0) by induction on var0_1[0m using Z3
+Failed to prove max (tf7 var0_0) (tf7 var0_1) == tf7 (Concat var0_0 var0_1)
+Failed to prove max (tf7 var0_0) (tf7 var0_1) == tf7 (Concat var0_1 var0_0)
+Failed to prove gq (max var0_0 var0_1) (tf7 var0_2) == gq (ite2 var0_0a var0_1 var0_0) (tf7 var0_2)
+[034m[1mProved tf3 (tf3 var0_0 var0_1) var0_2 == tf3 var0_0 (tf3 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034mProved tf1 (Cons Zero var0_0) == tf1 var0_0 without induction[0m using Z3
+Failed to prove max var0_0 (tf1 var0_1) == tf1 (Cons var0_0 var0_1)
+Failed to prove max (tf1 var0_0) var0_1 == tf1 (Cons var0_1 var0_0)
+Failed to prove max (tf1 var0_0) (max var0_1 var0_1) == tf1 (Cons var0_1 var0_0)
+Failed to prove max (max var0_0 var0_0) (tf1 var0_1) == tf1 (Cons var0_0 var0_1)
+Failed to prove max (ite2 var0_0 var0_1 var0_1) (tf1 var0_2) == tf1 (Cons var0_1 var0_2)
+Failed to prove max (tf1 var0_0) (ite2 var0_1 var0_2 var0_2) == tf1 (Cons var0_2 var0_0)
+Failed to prove tf1 (tf3 var0_0 var0_1) == tf1 (tf3 var0_1 var0_0)
+Failed to prove tf1 (tf3 var0_0 var0_0) == tf1 var0_0
+Failed to prove main (Concat var0_0 var0_1) == main (Concat var0_1 var0_0)
+Failed to prove main (Concat var0_0 var0_0) == main var0_0
+Failed to prove main var0_0 == tf7 var0_0
+Failed to prove main (Concat var0_0 var0_1) == tf7 (Concat var0_0 var0_1)
+Failed to prove max (tf1 var0_0) (tf1 var0_1) == tf1 (tf3 var0_0 var0_1)
+Failed to prove spec (tf3 var0_0 var0_1) == tf1 (tf3 var0_1 var0_0)
+Failed to prove spec (tf3 var0_0 var0_0) == tf1 var0_0
+Failed to prove tf0 (tf3 var0_0 var0_1) == tf1 (tf3 var0_1 var0_0)
+Failed to prove tf0 (tf3 var0_0 var0_0) == tf1 var0_0
+Merry-go-round!
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove max (max var0_0 var0_1) (Succ Zero) == max var0_0 var0_1
+Failed to prove max (max var0_0 var0_1) (Succ Zero) == max var0_1 var0_0

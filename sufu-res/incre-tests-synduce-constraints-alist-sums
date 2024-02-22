@@ -1,0 +1,65 @@
+
+Inductive List = nil Unit | cons {Int, List};
+
+Inductive Nat = z Unit | s Nat;
+
+is_unique = let key_differ = (\key: Int. 
+    fix (
+    \f: List -> Bool. \xs: List. 
+    match xs with
+      nil _ -> true
+    | cons {h, t} -> and (not (== h key)) (f t)
+    end
+)) in 
+        fix (
+        \f: List -> Bool. \xs: List. 
+        match xs with
+          nil _ -> true
+        | cons {h, t} -> and (key_differ h t) (f t)
+        end
+    );
+
+spec = \global0: Int. 
+    fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> if (== h global0) then + h (f t)
+        else f t
+    end
+);
+
+target = \global0: Int. 
+    fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> 
+        let tmp1 = (nil unit) in 
+            tmp1
+    | cons {h, t} -> if (== h global0) then let tmp2 = (cons {h, t}) in 
+            tmp2
+        else let tmp3 = (f t) in 
+            cons {h, tmp3}
+    end
+);
+
+main = \global0: Int. \xs: List. 
+    if (is_unique xs) then let tmp4 = (target global0 xs) in 
+        spec global0 tmp4
+    else 0;
+
+target_ = \global0: Int. 
+    fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> if (== h global0) then h
+        else let tmp3 = (f t) in 
+            tmp3
+    end
+);
+
+main_ = \global0: Int. \xs: List. 
+    if (is_unique xs) then let tmp4 = (target_ global0 xs) in 
+        tmp4
+    else 0;

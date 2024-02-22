@@ -1,0 +1,56 @@
+
+Inductive List = cons {Int, List} | nil Unit;
+
+single_pass = \v: List -> Bool. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+inf = 100;
+
+line_sight = fix (
+    \f: Int -> List -> Bool. \ma: Int. \xs: List. 
+    match xs with
+      nil _ -> true
+    | cons {h, nil _} -> >= h ma
+    | cons {h, t} -> if (> h ma) then f h t
+        else f ma t
+    end
+) (- 0 inf);
+
+main = single_pass line_sight;
+
+@Combine al_inf = 100;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_inf
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Bool. 
+    let run = (fix (
+    \f: List -> {Bool, Int}. \xs: List. 
+    match xs with
+      nil _ -> {true, -100}
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            {or (and (<= h tmp1.2) tmp1.1) (== tmp1.2 (- 0 al_inf)), if (< h tmp1.2) then tmp1.2
+            else h}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2.1;
+
+main_ = single_pass_ line_sight;

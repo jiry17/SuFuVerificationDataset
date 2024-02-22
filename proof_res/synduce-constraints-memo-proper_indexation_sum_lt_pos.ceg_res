@@ -1,8 +1,0 @@
-Proving begin optimize: (main v0) === (mainNew v0)
-Property accepted by cvec analysis
-new lemma forall v0: IDList. v0 === (tf11 v0 v0)
-new lemma forall v0: Nat. (Succ v0) === (plus v0 (Succ Zero))
-prove lemma forall v0: IDList. (snd2 (tf13 v0)) === (tf1 v0)
-new lemma forall v0: IDList. (tf1 v0) === (tf7 (tf5 v0))
-new lemma forall v0: IDList. (snd2 (tf13 v0)) === (tf7 (tf5 (tf11 v0 v0)))
-new lemma forall v0: Nat. v1: Nat. v2: IDList. (Icons v0 v1 v2) === (Icons v0 v1 (tf11 v2 v2))

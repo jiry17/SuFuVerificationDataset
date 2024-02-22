@@ -1,0 +1,91 @@
+File processed.
+Depth 1: 16 terms, 100 tests, 447 evaluations, 13 classes, 3 raw equations.
+Depth 2: 189 terms, 100 tests, 11589 evaluations, 113 classes, 76 raw equations.
+Depth 3: 9172 terms, 800 tests, 1144952 evaluations, 4402 classes, 4770 raw equations.
+QuickSpec done, 4402 classes, 4770 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved plus (tf5 var0_0) (tf5 var0_1) == tf5 (Node Zero var0_0 var0_1) without induction[0m using Z3
+Failed to prove plus (tf9 var0_0) (tf5 var0_0) == tf5 (Node Zero var0_0 var0_0)
+Failed to prove plus (tf5 var0_0) (tf9 var0_0) == tf5 (Node Zero var0_0 var0_0)
+[034m[1mProved nateq var0_0 var0_1 == nateq var0_1 var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 (plus var0_0 var0_1) == nateq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_1) (plus var0_0 var0_2) == nateq var0_1 var0_2 by induction on var0_1[0m using Z3
+[034mProved nateq (plus var0_0 var0_1) (Succ var0_1) == nateq (plus var0_0 var0_2) (Succ var0_2) without induction[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_0) (plus var0_1 var0_1) == nateq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_0) (Succ Zero) == False by induction on var0_0[0m using Z3
+[034mProved tf3 (Node var0_0 var0_1 var0_2) == tf3 (Node var0_0a var0_1 var0_2) without induction[0m using Z3
+[034mProved nateq Zero (tf1 var0_0) == tf3 (Node var0_1 var0_0 var0_0) without induction[0m using Z3
+Failed to prove nateq (tf9 var0_0) (tf5 var0_0) == tf3 var0_0
+[034m[1mProved mainNew (Nil var0_0) == Zero by induction on var0_0[0m using Z3
+[034mProved mainNew (Leaf var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved mainNew (Node Zero var0_0 var0_0) == Zero by induction on var0_0[0m using Z3
+Failed to prove nateq (tf9 var0_0) (mainNew var0_0) == tf3 var0_0
+Failed to prove nateq (mainNew var0_0) (tf9 var0_0) == tf3 var0_0
+Failed to prove nateq (Succ var0_0) (mainNew var0_1) == nateq (Succ var0_0) (tf5 var0_1)
+Failed to prove plus (tf5 var0_0) (mainNew var0_0) == tf5 (Node Zero var0_0 var0_0)
+Failed to prove plus (mainNew var0_0) (tf5 var0_0) == tf5 (Node Zero var0_0 var0_0)
+Failed to prove nateq (tf5 var0_0) (mainNew var0_0) == tf3 var0_0
+Failed to prove nateq (mainNew var0_0) (tf5 var0_0) == tf3 var0_0
+Failed to prove nateq (mainNew var0_0) (Succ Zero) == nateq (tf5 var0_0) (Succ Zero)
+[034mProved ite1 var0_0 Zero == Zero without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_1 var0_2) == ite1 var0_1 (ite1 var0_0 var0_2) without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_0 var0_1) == ite1 var0_0 var0_1 without induction[0m using Z3
+[034mProved plus (ite1 var0_0 var0_1) (ite1 var0_0 var0_2) == ite1 var0_0 (plus var0_1 var0_2) without induction[0m using Z3
+[034m[1mProved ite1 (nateq var0_0 var0_1) var0_1 == ite1 (nateq var0_0 var0_1) var0_0 by induction on var0_1[0m using Z3
+[034mProved nateq (ite1 var0_0 var0_1) (Succ var0_1) == False without induction[0m using Z3
+[034mProved ite1 (nateq var0_0 var0_1) (Succ var0_1) == ite1 (nateq var0_0 var0_1) (Succ var0_0) without induction[0m using Z3
+[034mProved nateq (ite1 var0_0 var0_1) (plus var0_1 var0_1) == nateq var0_1 Zero without induction[0m using Z3
+Failed to prove nateq (ite1 var0_0 var0_1) (tf5 var0_2) == nateq (ite1 var0_0 var0_0a) (tf5 var0_2)
+Failed to prove nateq (tf5 var0_0) (ite1 var0_1 var0_2) == nateq (ite1 var0_1 var0_0a) (tf5 var0_0)
+Failed to prove ite1 (nateq var0_0 Zero) (tf5 var0_1) == ite1 (nateq var0_0 Zero) (tf9 var0_1)
+Failed to prove ite1 (tf3 var0_0) (tf5 var0_0) == ite1 (tf3 var0_0) (tf9 var0_0)
+[034mProved ite1 (tf3 var0_0) (mainNew var0_0) == mainNew var0_0 without induction[0m using Z3
+[034mProved ite1 (tf3 var0_0) (tf9 var0_0) == mainNew var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_1 == and var0_1 var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (and var0_1 var0_2) == and var0_1 (and var0_0 var0_2) without induction[0m using Z3
+[034mProved and (nateq var0_0 var0_1) (nateq var0_1 var0_2) == and (nateq var0_0 var0_1) (nateq var0_0 var0_2) without induction[0m using Z3
+[034mProved and (nateq var0_0 var0_1) (nateq var0_0 Zero) == nateq Zero (plus var0_0 var0_1) without induction[0m using Z3
+[034mProved ite1 (and var0_0 var0_1) var0_2 == ite1 var0_0 (ite1 var0_1 var0_2) without induction[0m using Z3
+Failed to prove and var0_0 (nateq var0_1 Zero) == nateq (plus var0_2 var0_1) (ite1 var0_0 var0_2)
+[034m[1mProved tf7 var0_0 == var0_0 by induction on var0_0[0m using Z3
+[034mProved plus (main var0_0) var0_1 == plus var0_1 (main var0_0) without induction[0m using Z3
+[034mProved nateq (main var0_0) var0_1 == nateq var0_1 (main var0_0) without induction[0m using Z3
+[034mProved main (Nil var0_0) == Zero without induction[0m using Z3
+[034mProved main (Leaf var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved main (Node Zero var0_0 var0_0) == Zero by induction on var0_0[0m using Z3
+[034mProved plus Zero (main var0_0) == main var0_0 without induction[0m using Z3
+Failed to prove nateq (tf5 var0_0) (main var0_0) == tf3 var0_0
+Failed to prove nateq (main var0_0) (tf5 var0_0) == tf3 var0_0
+[034mProved nateq (main var0_0) (main var0_0) == True without induction[0m using Z3
+[034mProved plus (main var0_0) (Succ Zero) == Succ (main var0_0) without induction[0m using Z3
+[034mProved ite1 (nateq var0_0 var0_0) (main var0_1) == main var0_1 without induction[0m using Z3
+[034mProved ite1 False (main var0_0) == Zero without induction[0m using Z3
+[034mProved ite1 (tf3 var0_0) (main var0_0) == main var0_0 without induction[0m using Z3
+Failed to prove ite1 (tf3 var0_0) (tf9 var0_0) == main var0_0
+Failed to prove main var0_0 == mainNew var0_0
+Failed to prove main (Node var0_0 var0_1 var0_2) == mainNew (Node var0_0 var0_1 var0_2)
+Failed to prove Node (main var0_0) var0_1 var0_2 == Node (mainNew var0_0) var0_1 var0_2
+[034m[1mProved main (Node var0_0 var0_1 var0_1) == mainNew (Node var0_0 var0_1 var0_1) by induction on var0_1[0m using Z3
+Failed to prove plus var0_0 (main var0_1) == plus var0_0 (mainNew var0_1)
+Failed to prove nateq var0_0 (main var0_1) == nateq var0_0 (mainNew var0_1)
+Failed to prove Node (main var0_0) var0_1 var0_0 == Node (mainNew var0_0) var0_1 var0_0
+Failed to prove Node (main var0_0) var0_1 var0_1 == Node (mainNew var0_0) var0_1 var0_1
+Failed to prove Node (main var0_0) var0_0 var0_1 == Node (mainNew var0_0) var0_0 var0_1
+Failed to prove Succ (main var0_0) == Succ (mainNew var0_0)
+Failed to prove Leaf (main var0_0) == Leaf (mainNew var0_0)
+Failed to prove Node (main var0_0) var0_0 var0_0 == Node (mainNew var0_0) var0_0 var0_0
+Failed to prove plus (plus var0_0 var0_1) (main var0_2) == plus (plus var0_0 var0_1) (mainNew var0_2)
+Failed to prove nateq (plus var0_0 var0_1) (main var0_2) == nateq (plus var0_0 var0_1) (mainNew var0_2)
+Failed to prove Node (main var0_0) var0_1 (Nil var0_2) == Node (mainNew var0_0) var0_1 (Nil var0_2)
+Failed to prove Node (main var0_0) var0_1 (Leaf var0_2) == Node (mainNew var0_0) var0_1 (Leaf var0_2)
+Failed to prove Node (main var0_0) (Nil var0_1) var0_2 == Node (mainNew var0_0) (Nil var0_1) var0_2
+Failed to prove Node (main var0_0) (Leaf var0_1) var0_2 == Node (mainNew var0_0) (Leaf var0_1) var0_2
+Failed to prove main (Node Zero var0_0 var0_1) == mainNew (Node Zero var0_0 var0_1)
+Failed to prove plus (Succ var0_0) (main var0_1) == plus (Succ var0_0) (mainNew var0_1)

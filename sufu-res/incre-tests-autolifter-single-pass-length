@@ -1,0 +1,51 @@
+
+Inductive List = cons {Int, List} | nil Unit;
+
+single_pass = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+length = fix (
+    \f: List -> Int. \x: List. 
+    match x with
+      cons {h, t} -> + (f t) 1
+    | nil _ -> 0
+    end
+);
+
+main = single_pass length;
+
+@Combine al_inf = 100;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_inf
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            + tmp1 1
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2;
+
+main_ = single_pass_ length;

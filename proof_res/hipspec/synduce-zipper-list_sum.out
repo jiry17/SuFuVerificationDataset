@@ -1,0 +1,62 @@
+File processed.
+Depth 1: 14 terms, 100 tests, 428 evaluations, 11 classes, 3 raw equations.
+Depth 2: 146 terms, 100 tests, 10757 evaluations, 73 classes, 73 raw equations.
+Depth 3: 6165 terms, 800 tests, 552685 evaluations, 2616 classes, 3549 raw equations.
+QuickSpec done, 2616 classes, 3549 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf5 var0_0 == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf1 (Nil var0_0) var0_1 == var0_1 by induction on var0_1[0m using Z3
+Failed to prove tf3 (tf3 var0_0) == var0_0
+[034m[1mProved tf1 (tf3 var0_0) (tf3 var0_1) == tf3 (tf1 var0_1 var0_0) by induction on var0_0[0m using Z3
+[034m[1mProved tf2 (tf3 var0_0) == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved tf7 (Cons Zero var0_0) == tf7 var0_0 without induction[0m using Z3
+[034m[1mProved tf7 var0_0 == tf9 var0_0 by induction on var0_0[0m using Z3
+[034mProved plus var0_0 (tf12 var0_1) == tf12 (Cons var0_0 var0_1) without induction[0m using Z3
+[034mProved plus (tf12 var0_0) (tf12 var0_1) == plus (tf12 var0_1) (tf12 var0_0) without induction[0m using Z3
+[034mProved tf12 (Cons Zero var0_0) == tf12 var0_0 without induction[0m using Z3
+[034mProved plus (tf12 var0_0) (Succ Zero) == Succ (tf12 var0_0) without induction[0m using Z3
+[034m[1mProved Cons (tf12 var0_0) var0_1 == Cons (tf9 var0_0) var0_1 by induction on var0_0[0m using Z3
+[034mProved Succ (tf12 var0_0) == Succ (tf9 var0_0) without induction[0m using Z3
+[034mProved plus (plus var0_0 var0_1) (tf12 var0_2) == plus (plus var0_0 var0_1) (tf9 var0_2) without induction[0m using Z3
+Failed to prove plus (tf13 var0_0) (plus var0_1 var0_1) == plus var0_1 (tf13 var0_0)
+Failed to prove plus (plus var0_0 var0_0) (tf13 var0_1) == plus var0_0 (tf13 var0_1)
+[034m[1mProved tf9 (tf1 var0_0 var0_1) == tf9 (tf1 var0_1 var0_0) by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus (tf9 var0_0) (tf9 var0_1) == tf9 (tf1 var0_0 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved tf9 (tf3 var0_0) == tf9 var0_0 by induction on var0_0[0m using Z3
+[034mProved main (Zip var0_0 var0_1) == tf7 (tf1 var0_0 var0_1) without induction[0m using Z3
+[034mProved plus (main var0_0) var0_1 == plus var0_1 (main var0_0) without induction[0m using Z3
+[034mProved plus (main var0_0) (main var0_1) == plus (main var0_1) (main var0_0) without induction[0m using Z3
+Failed to prove plus (main var0_0) (plus var0_1 var0_1) == plus var0_1 (main var0_0)
+Failed to prove plus (plus var0_0 var0_0) (main var0_1) == plus var0_0 (main var0_1)
+[034m[1mProved plus Zero (main var0_0) == main var0_0 by induction on var0_0[0m using Z3
+[034mProved plus (main var0_0) (Succ Zero) == Succ (main var0_0) without induction[0m using Z3
+[034mProved tf12 (tf1 var0_0 var0_1) == tf12 (tf1 var0_1 var0_0) without induction[0m using Z3
+[034mProved tf12 (tf3 var0_0) == tf12 var0_0 without induction[0m using Z3
+[034mProved tf12 (tf1 var0_0 var0_1) == tf7 (tf1 var0_0 var0_1) without induction[0m using Z3
+[034mProved tf12 (tf8 var0_0) == tf7 (tf8 var0_0) without induction[0m using Z3
+[034m[1mProved main var0_0 == tf13 var0_0 by induction on var0_0[0m using Z3
+Merry-go-round!
+[034m[1mProved optimize {- main inp0 == mainNew inp0 -} by induction on inp0[0m using Z3
+Proved:
+    main var0_0 == tf13 var0_0
+    plus Zero (main var0_0) == main var0_0
+    tf9 (tf3 var0_0) == tf9 var0_0
+    plus (tf9 var0_0) (tf9 var0_1) == tf9 (tf1 var0_0 var0_1)
+    tf9 (tf1 var0_0 var0_1) == tf9 (tf1 var0_1 var0_0)
+    Cons (tf12 var0_0) var0_1 == Cons (tf9 var0_0) var0_1
+    tf7 var0_0 == tf9 var0_0
+    plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2)
+    plus var0_0 var0_1 == plus var0_1 var0_0
+    tf2 (tf3 var0_0) == var0_0
+    tf1 (tf3 var0_0) (tf3 var0_1) == tf3 (tf1 var0_1 var0_0)
+    tf1 (Nil var0_0) var0_1 == var0_1
+    tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2)
+    tf5 var0_0 == var0_0
+    Null == var0_0
+    optimize {- main inp0 == mainNew inp0 -}
+

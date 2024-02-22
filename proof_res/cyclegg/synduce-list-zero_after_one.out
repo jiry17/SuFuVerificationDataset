@@ -1,0 +1,5 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Bool. v0 === (and v0 True)
+new lemma forall v0: Bool. v0 === (or v0 False)
+new lemma forall v0: Bool. v0 === (or False v0)

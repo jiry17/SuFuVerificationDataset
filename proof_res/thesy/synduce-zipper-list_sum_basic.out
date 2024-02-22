@@ -1,0 +1,50 @@
+11:27:26 [0m[33m[WARN] [0mCollecting statistics
+(tf1 ?tv5 (nil ?tv6)) => ?tv5
+(tf1 ?tv5 (cons ?tv7 ?tv8)) => (cons ?tv7 (tf0 ?tv8 ?tv5))
+(tf0 ?tv2 ?tv3) => (tf1 ?tv3 ?tv2)
+(concat ?tv0 ?tv1) => (tf0 ?tv0 ?tv1)
+(tf3 (nil ?tv12)) => (nil null)
+(tf3 (cons ?tv13 ?tv14)) => (concat (tf2 ?tv14) (cons ?tv13 (nil null)))
+(tf2 ?tv10) => (tf3 ?tv10)
+(rev ?tv9) => (tf2 ?tv9)
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf5 (nil ?tv18)) => zero
+(tf5 (cons ?tv19 ?tv20)) => (plus ?tv19 (tf4 ?tv20))
+(tf4 ?tv16) => (tf5 ?tv16)
+(sum ?tv15) => (tf4 ?tv15)
+(tf6 (zip ?tv22 ?tv23)) => (concat (rev ?tv22) ?tv23)
+(repr ?tv21) => (tf6 ?tv21)
+(tf8 (zip ?tv26 ?tv27)) => (zip ?tv26 ?tv27)
+(tf7 ?tv25) => (tf8 ?tv25)
+(target ?tv24) => (tf7 ?tv24)
+(main ?tv28) => (sum (repr (target ?tv28)))
+(tf10 (zip ?tv31 ?tv32)) => (plus (sum ?tv31) (sum ?tv32))
+(tf9 ?tv30) => (tf10 ?tv30)
+(target_ ?tv29) => (tf9 ?tv29)
+(main_ ?tv33) => (target_ ?tv33)
+11:27:26 [0m[33m[WARN] [0m ex is: true
+11:27:26 [0m[33m[WARN] [0m ex is: false
+11:27:26 [0m[33m[WARN] [0m ex is: null
+11:27:26 [0m[33m[WARN] [0m ex is: zero
+11:27:26 [0m[33m[WARN] [0m ex is: (succ zero)
+11:27:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:27:26 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+11:27:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:27:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:27:26 [0m[33m[WARN] [0m ex is: (zip autovar_List_0 autovar_List_1)
+11:27:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:27:26 [0m[33m[WARN] [0mProof mode: true
+11:27:26 [0m[33m[WARN] [0m ex is: true
+11:27:26 [0m[33m[WARN] [0m ex is: false
+11:27:26 [0m[33m[WARN] [0m ex is: null
+11:27:26 [0m[33m[WARN] [0m ex is: zero
+11:27:26 [0m[33m[WARN] [0m ex is: (succ zero)
+11:27:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:27:26 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+11:27:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:27:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:27:26 [0m[33m[WARN] [0m ex is: (zip autovar_List_0 autovar_List_1)
+11:27:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:27:26 [0m[33m[WARN] [0mProof mode: true
+11:27:26 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0

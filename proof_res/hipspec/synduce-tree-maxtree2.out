@@ -1,0 +1,46 @@
+File processed.
+Depth 1: 16 terms, 100 tests, 435 evaluations, 13 classes, 3 raw equations.
+Depth 2: 220 terms, 100 tests, 11654 evaluations, 135 classes, 85 raw equations.
+Depth 3: 12251 terms, 400 tests, 999918 evaluations, 4825 classes, 7426 raw equations.
+QuickSpec done, 4825 classes, 7426 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved max var0_0 var0_1 == max var0_1 var0_0 by induction on var0_0[0m using Z3
+[034mProved max var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034m[1mProved max var0_0 Zero == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved max var0_0 (max var0_1 var0_2) == max var0_1 (max var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved lq var0_0 (max var0_0 var0_1) == lq var0_0 var0_1 without induction[0m using Z3
+[034mProved max var0_0 (Succ var0_0) == Succ var0_0 without induction[0m using Z3
+Failed to prove lq Zero (max var0_0 var0_1) == True
+[034mProved lq (max var0_0 var0_1) (Succ var0_0) == lq var0_1 (Succ var0_0) without induction[0m using Z3
+[034mProved max (Succ var0_0) (Succ var0_1) == Succ (max var0_0 var0_1) without induction[0m using Z3
+Failed to prove max (max var0_0 var0_1) (Succ Zero) == max var0_0 var0_1
+Failed to prove lq (max var0_0 var0_1) (Succ Zero) == False
+Failed to prove max (Succ Zero) (max var0_0 var0_1) == max var0_0 var0_1
+Failed to prove tf1 var0_0 (Node var0_1 var0_2 var0_0a) == tf1 var0_0 (Node var0_1 var0_0a var0_2)
+Failed to prove tf1 var0_0 (Node var0_1 var0_2 var0_0a) == tf1 var0_1 (Node var0_0 var0_2 var0_0a)
+Failed to prove tf1 var0_0 (Node var0_1 var0_2 var0_0a) == tf1 var0_1 (Node var0_0 var0_0a var0_2)
+Failed to prove tf1 var0_0 (Node var0_0 var0_1 var0_2) == tf1 var0_0 (Node var0_0 var0_2 var0_1)
+Failed to prove tf1 var0_0 (Node var0_1 var0_2 var0_2) == tf1 var0_1 (Node var0_0 var0_2 var0_2)
+Failed to prove tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (Node var0_0 var0_1 var0_2)
+Failed to prove tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (Node var0_0 var0_2 var0_1)
+Failed to prove tf1 var0_0 (Node var0_0 var0_1 var0_1) == tf1 var0_0 var0_1
+Failed to prove lq (tf1 var0_0 var0_1) var0_0 == False
+Failed to prove tf1 (tf1 var0_0 var0_1) var0_1 == tf1 var0_0 var0_1
+Failed to prove tf1 (Succ var0_0) (Node var0_1 var0_2 var0_0a) == tf1 (Succ var0_0) (Node var0_1 var0_0a var0_2)
+Failed to prove tf1 (Succ var0_0) (Node var0_1 var0_2 var0_0a) == tf1 var0_0 (Node var0_1 var0_2 var0_0a)
+Failed to prove tf1 (Succ var0_0) (Node var0_1 var0_2 var0_0a) == tf1 var0_0 (Node var0_1 var0_0a var0_2)
+Failed to prove tf1 var0_0 (Node Zero var0_1 var0_2) == tf1 var0_0 (Node var0_0 var0_1 var0_2)
+Failed to prove tf1 var0_0 (Node Zero var0_1 var0_2) == tf1 var0_0 (Node var0_0 var0_2 var0_1)
+Failed to prove tf1 Zero (Node var0_0 var0_1 var0_2) == tf1 var0_0 (Node var0_0 var0_1 var0_2)
+Failed to prove tf1 Zero (Node var0_0 var0_1 var0_2) == tf1 var0_0 (Node var0_0 var0_2 var0_1)
+Failed to prove lq (tf1 var0_0 var0_1) (tf1 var0_2 var0_1) == lq (tf1 var0_0 var0_1) var0_2
+Failed to prove tf1 (Succ var0_0) (Node var0_0 var0_1 var0_2) == tf1 (Succ var0_0) (Node var0_0 var0_2 var0_1)
+Failed to prove tf1 var0_0 (Node Zero var0_1 var0_1) == tf1 var0_0 var0_1
+Failed to prove tf1 Zero (Node var0_0 var0_1 var0_1) == tf1 var0_0 var0_1
+Failed to prove tf1 (Succ var0_0) (Node var0_0 var0_1 var0_1) == tf1 (Succ var0_0) var0_1

@@ -1,0 +1,65 @@
+
+Inductive List = nil Unit | cons {Int, List};
+
+Inductive NList = nnil Unit | ncons {List, NList};
+
+inf = 100;
+
+map = \f: List -> Int. 
+    fix (
+    \g: NList -> List. \xs: NList. 
+    match xs with
+      nnil _ -> 
+        let tmp1 = (nil unit) in 
+            tmp1
+    | ncons {h, t} -> 
+        let tmp2 = (f h) in 
+            let tmp3 = (g t) in 
+                cons {tmp2, tmp3}
+    end
+);
+
+max = \a: Int. \b: Int. 
+    if (< a b) then b
+    else a;
+
+min = \a: Int. \b: Int. 
+    if (< a b) then a
+    else b;
+
+minimum = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> inf
+    | cons {h, t} -> min h (f t)
+    end
+);
+
+maximum = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> - 0 inf
+    | cons {h, t} -> max h (f t)
+    end
+);
+
+main = \xs: NList. 
+    let tmp4 = (map maximum xs) in 
+        minimum tmp4;
+
+map_ = \f: List -> Int. 
+    fix (
+    \g: NList -> Int. \xs: NList. 
+    match xs with
+      nnil _ -> inf
+    | ncons {h, t} -> 
+        let tmp2 = (f h) in 
+            let tmp3 = (g t) in 
+                if (< tmp3 tmp2) then tmp3
+                else tmp2
+    end
+);
+
+main_ = \xs: NList. 
+    let tmp4 = (map_ maximum xs) in 
+        tmp4;

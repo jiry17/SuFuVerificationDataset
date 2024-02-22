@@ -1,0 +1,51 @@
+
+Inductive Tree = tip Int | bin {Tree, Tree};
+
+Inductive PTree = ptip {Int, Int} | pbin {PTree, PTree};
+
+tri = fix (
+    \f: Tree -> PTree. \t: Tree. 
+    match t with
+      tip w -> 
+        let tmp1 = (ptip {0, w}) in 
+            tmp1
+    | bin {l, r} -> 
+        let step = (fix (
+        \g: PTree -> PTree. \ys: PTree. 
+        match ys with
+          ptip {n, w} -> ptip {+ n 1, w}
+        | pbin {l, r} -> pbin {g l, g r}
+        end
+    )) in 
+            let tmp2 = (f l) in 
+                let tmp3 = (f r) in 
+                    pbin {step tmp2, step tmp3}
+    end
+);
+
+tsum = fix (
+    \f: PTree -> Int. \t: PTree. 
+    match t with
+      ptip {n, w} -> * n w
+    | pbin {l, r} -> + (f l) (f r)
+    end
+);
+
+main = \t: Tree. 
+    let tmp4 = (tri t) in 
+        tsum tmp4;
+
+tri_ = fix (
+    \f: Tree -> {Int, Int}. \t: Tree. 
+    match t with
+      tip w -> {0, w}
+    | bin {l, r} -> 
+        let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                {+ (+ (+ tmp2.1 tmp2.2) tmp3.1) tmp3.2, + tmp2.2 tmp3.2}
+    end
+);
+
+main_ = \t: Tree. 
+    let tmp4 = (tri_ t) in 
+        tmp4.1;

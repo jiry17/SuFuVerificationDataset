@@ -1,0 +1,21 @@
+File processed.
+Depth 1: 15 terms, 6 tests, 49 evaluations, 15 classes, 0 raw equations.
+Depth 2: 341 terms, 200 tests, 21123 evaluations, 210 classes, 131 raw equations.
+Depth 3: 36667 terms, 1600 tests, 5096797 evaluations, 13921 classes, 22746 raw equations.
+QuickSpec done, 13921 classes, 22746 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034mProved MakeTuple2 (fst2 var0_0) (snd2 var0_0) == var0_0 without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_1 var0_2) == ite2 var0_1 (ite2 var0_0 var0_2) without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_0 var0_1) == ite2 var0_0 var0_1 without induction[0m using Z3
+[034mProved and var0_0 var0_1 == and var0_1 var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (and var0_1 var0_2) == and var0_1 (and var0_0 var0_2) without induction[0m using Z3
+[034mProved ite2 (and var0_0 var0_1) var0_2 == ite2 var0_0 (ite2 var0_1 var0_2) without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 var0_1 == var0_1 without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 (ite1 var0_0 var0_2 var0_0a) == ite1 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 (ite1 var0_2 var0_1 var0_0a) == ite1 var0_2 var0_1 (ite1 var0_0 var0_1 var0_0a) without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_2 == ite1 var0_1 var0_2 (ite1 var0_0 var0_0a var0_2) without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_0a == ite1 var0_1 (ite1 var0_0 var0_2 var0_0a) var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_0 var0_1 var0_2) var0_0a == ite1 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 (Succ var0_1) (Succ var0_2) == Succ (ite1 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034mProved ite1 (and var0_0 var0_1) var0_2 var0_0a == ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_0a without induction[0m using Z3

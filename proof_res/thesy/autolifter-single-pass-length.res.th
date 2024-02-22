@@ -1,0 +1,7 @@
+(=> "(tf0 ?ts_ph_List_0) => ?ts_ph_List_0" (tf0 ?ts_ph_List_0) ?ts_ph_List_0)
+(=> "(plus ?ts_ph_Nat_0) => (succ ?ts_ph_Nat_0)" (plus ?ts_ph_Nat_0) (succ ?ts_ph_Nat_0))
+(=> "(succ ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0)" (succ ?ts_ph_Nat_0) (plus ?ts_ph_Nat_0))
+(=> "(tf6 ?ts_ph_List_0) => (length ?ts_ph_List_0)" (tf6 ?ts_ph_List_0) (length ?ts_ph_List_0))
+(=> "(length ?ts_ph_List_0) => (tf6 ?ts_ph_List_0)" (length ?ts_ph_List_0) (tf6 ?ts_ph_List_0))
+(=> "(main ?ts_ph_List_0) => (main_ ?ts_ph_List_0)" (main ?ts_ph_List_0) (main_ ?ts_ph_List_0))
+(=> "(main_ ?ts_ph_List_0) => (main ?ts_ph_List_0)" (main_ ?ts_ph_List_0) (main ?ts_ph_List_0))

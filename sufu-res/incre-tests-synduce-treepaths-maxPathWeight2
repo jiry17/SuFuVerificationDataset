@@ -1,0 +1,89 @@
+
+Inductive BTree = empty Unit | node {Int, BTree, BTree};
+
+Inductive Zipper = top Unit | left {Int, BTree, Zipper} | right {Int, BTree, Zipper};
+
+max = \a: Int. \b: Int. 
+    if (< a b) then b
+    else a;
+
+mpath = fix (
+    \f: BTree -> Int. \t: BTree. 
+    match t with
+      empty _ -> 0
+    | node {a, l, r} -> + a (max (f l) (f r))
+    end
+);
+
+repr = fix (
+    \f: Zipper -> BTree. \z: Zipper. 
+    match z with
+      top _ -> empty unit
+    | left {w, tree, zz} -> node {w, tree, f zz}
+    | right {w, tree, zz} -> node {w, f zz, tree}
+    end
+);
+
+tree_rec = fix (
+    \f: BTree -> BTree. \t: BTree. 
+    match t with
+      empty _ -> 
+        let tmp1 = (empty unit) in 
+            tmp1
+    | node {a, l, r} -> 
+        let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                node {a, tmp2, tmp3}
+    end
+);
+
+zip_rec = fix (
+    \f: Zipper -> Zipper. \z: Zipper. 
+    match z with
+      top _ -> 
+        let tmp4 = (top unit) in 
+            tmp4
+    | left {w, tree, zz} -> 
+        let tmp5 = (tree_rec tree) in 
+            let tmp6 = (f zz) in 
+                left {w, tmp5, tmp6}
+    | right {w, tree, zz} -> 
+        let tmp7 = (tree_rec tree) in 
+            let tmp8 = (f zz) in 
+                right {w, tmp7, tmp8}
+    end
+);
+
+main = \z: Zipper. 
+    let tmp9 = (zip_rec z) in 
+        mpath (repr tmp9);
+
+tree_rec_ = fix (
+    \f: BTree -> Int. \t: BTree. 
+    match t with
+      empty _ -> 0
+    | node {a, l, r} -> 
+        let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                + a (max tmp3 tmp2)
+    end
+);
+
+zip_rec_ = fix (
+    \f: Zipper -> Int. \z: Zipper. 
+    match z with
+      top _ -> 0
+    | left {w, tree, zz} -> 
+        let tmp5 = (tree_rec_ tree) in 
+            let tmp6 = (f zz) in 
+                + w (max tmp6 tmp5)
+    | right {w, tree, zz} -> 
+        let tmp7 = (tree_rec_ tree) in 
+            let tmp8 = (f zz) in 
+                + w (max tmp8 tmp7)
+    end
+);
+
+main_ = \z: Zipper. 
+    let tmp9 = (zip_rec_ z) in 
+        tmp9;

@@ -1,0 +1,59 @@
+File processed.
+Depth 1: 19 terms, 100 tests, 457 evaluations, 16 classes, 3 raw equations.
+Depth 2: 514 terms, 200 tests, 32616 evaluations, 314 classes, 200 raw equations.
+Depth 3: 38006 terms, 1600 tests, 4717601 evaluations, 17107 classes, 20899 raw equations.
+QuickSpec done, 17107 classes, 20899 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf11 var0_0 == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved tf13 (Usplit var0_0 var0_1 var0_2 var0_0a) == tf13 (Usplit var0_0a var0_1 var0_2 var0_0) without induction[0m using Z3
+Failed to prove plus (plus var0_0 var0_1) (tf13 var0_2) == tf13 (Usplit var0_2 var0_0 var0_1 var0_2)
+Failed to prove plus (plus var0_0 var0_1) (tf13 var0_2) == tf13 (Usplit var0_2 var0_1 var0_0 var0_2)
+Failed to prove plus (tf13 var0_0) (plus var0_1 var0_2) == tf13 (Usplit var0_0 var0_1 var0_2 var0_0)
+Failed to prove plus (tf13 var0_0) (plus var0_1 var0_2) == tf13 (Usplit var0_0 var0_2 var0_1 var0_0)
+Failed to prove plus (tf13 var0_0) (plus var0_1 var0_1) == tf13 (Usplit var0_0 var0_1 var0_1 var0_0)
+Failed to prove plus (plus var0_0 var0_0) (tf13 var0_1) == tf13 (Usplit var0_1 var0_0 var0_0 var0_1)
+[034m[1mProved plus (tf9 var0_0) (tf13 var0_1) == tf9 (tf1 var0_0 var0_1) by induction on var0_1[0m using Z3
+[034mProved tf9 (repr var0_0) == tf13 var0_0 without induction[0m using Z3
+[034m[1mProved leq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 (plus var0_0 var0_1) == True by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) var0_0 == leq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) (plus var0_0 var0_2) == leq var0_1 var0_2 by induction on var0_2[0m using Z3
+[034mProved leq (plus var0_0 var0_1) (Succ var0_1) == leq (plus var0_0 var0_2) (Succ var0_2) without induction[0m using Z3
+[034m[1mProved leq (Succ var0_0) (plus var0_0 var0_1) == leq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_0) (plus var0_1 var0_1) == leq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_0) (Succ Zero) == leq var0_0 Zero by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ Zero) (plus var0_0 var0_0) == leq (Succ var0_1) (plus var0_0 var0_1) by induction on var0_0[0m using Z3
+Failed to prove leq (tf9 var0_0) (Succ Zero) == leq (tf9 var0_0) Zero
+Failed to prove leq (tf13 var0_0) (plus var0_1 var0_1) == leq (tf13 var0_0) (Succ var0_1)
+[034m[1mProved geq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034mProved geq var0_0 Zero == True without induction[0m using Z3
+[034m[1mProved geq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved geq (Succ var0_0) var0_0 == True by induction on var0_0[0m using Z3
+[034mProved tf3 var0_0 (Cons var0_0 var0_1) == tf3 var0_0 var0_1 without induction[0m using Z3
+Failed to prove tf3 (Succ var0_0) (Cons var0_1 var0_2) == tf3 var0_0 (Cons var0_1 var0_2)
+[034m[1mProved tf3 var0_0 (Cons Zero var0_1) == tf3 Zero var0_1 by induction on var0_0[0m using Z3
+Failed to prove tf3 Zero (Cons var0_0 var0_1) == tf3 Zero (Cons var0_0 var0_2)
+[034mProved tf3 (Succ var0_0) (Cons var0_0 var0_1) == tf3 var0_0 var0_1 without induction[0m using Z3
+Failed to prove tf3 (Succ Zero) var0_0 == tf3 Zero var0_0
+Failed to prove tf3 (Succ var0_0) (repr var0_1) == tf3 var0_0 (repr var0_1)
+Failed to prove tf2 (Succ var0_0) (Cons var0_1 var0_2) == tf3 var0_0 (Cons var0_1 var0_2)
+Failed to prove tf2 Zero (Cons var0_0 var0_1) == tf3 Zero (Cons var0_0 var0_2)
+Failed to prove tf2 (Succ Zero) var0_0 == tf3 Zero var0_0
+Failed to prove tf2 (Succ var0_0) (repr var0_1) == tf3 var0_0 (repr var0_1)
+[034m[1mProved geq var0_0 (plus var0_0 var0_1) == geq Zero var0_1 by induction on var0_0[0m using Z3
+[034m[1mProved geq (plus var0_0 var0_1) var0_0 == True by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved geq (plus var0_0 var0_1) (plus var0_0 var0_2) == geq var0_1 var0_2 by induction on var0_0[0m using Z3
+[034m[1mProved geq (plus var0_0 var0_1) (Succ var0_1) == geq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved geq (Succ var0_0) (plus var0_0 var0_1) == geq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved geq (plus var0_0 var0_0) (plus var0_1 var0_1) == geq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved geq (plus var0_0 var0_0) (Succ Zero) == geq (plus var0_0 var0_1) (Succ var0_1) by induction on var0_0[0m using Z3
+[034m[1mProved geq (Succ Zero) (plus var0_0 var0_0) == geq Zero var0_0 by induction on var0_0[0m using Z3
+Failed to prove geq (Succ Zero) (tf9 var0_0) == geq Zero (tf9 var0_0)
+Failed to prove geq (plus var0_0 var0_0) (tf13 var0_1) == geq (Succ var0_0) (tf13 var0_1)
+[034mProved tf3 (plus var0_0 var0_1) (Cons var0_0 var0_2) == tf3 var0_0 var0_2 without induction[0m using Z3

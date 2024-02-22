@@ -1,0 +1,93 @@
+
+Inductive Tree = leaf {Int, Int} | node {Int, Int, Tree, Tree};
+
+min = \a: Int. \b: Int. 
+    if (< a b) then a
+    else b;
+
+max = \a: Int. \b: Int. 
+    if (< a b) then b
+    else a;
+
+tmin = fix (
+    \f: Tree -> Int. \t: Tree. 
+    match t with
+      leaf {a, b} -> a
+    | node {a, b, l, r} -> min a (min (f l) (f r))
+    end
+);
+
+tmax = fix (
+    \f: Tree -> Int. \t: Tree. 
+    match t with
+      leaf {a, b} -> a
+    | node {a, b, l, r} -> max a (max (f l) (f r))
+    end
+);
+
+is_bst = fix (
+    \f: Tree -> Bool. \t: Tree. 
+    match t with
+      leaf {a, b} -> < a b
+    | node {a, b, l, r} -> and (< a b) (and (and (> a (tmax l)) (< a (tmin r))) (and (f l) (f r)))
+    end
+);
+
+inside = \global0: Int. \global1: Int. \a: Int. \b: Int. 
+    and (< global0 a) (< b global1);
+
+spec = \global0: Int. \global1: Int. 
+    fix (
+    \f: Tree -> Bool. \t: Tree. 
+    match t with
+      leaf {a, b} -> inside global0 global1 a b
+    | node {a, b, l, r} -> or (or (inside global0 global1 a b) (f l)) (f r)
+    end
+);
+
+target = \global0: Int. \global1: Int. 
+    fix (
+    \f: Tree -> Tree. \t: Tree. 
+    match t with
+      leaf {a, b} -> 
+        let tmp1 = (leaf {a, b}) in 
+            tmp1
+    | node {a, b, l, r} -> if (> b global1) then if (> a global0) then let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                node {a, b, tmp2, tmp3}
+        else let tmp4 = (f r) in 
+            node {a, b, l, tmp4}
+        else let tmp5 = (f l) in 
+            let tmp6 = (f r) in 
+                node {a, b, tmp5, tmp6}
+    end
+);
+
+main = \global0: Int. \global1: Int. \t: Tree. 
+    if (is_bst t) then let tmp7 = (target global0 global1 t) in 
+        spec global0 global1 tmp7
+    else false;
+
+target_ = \global0: Int. \global1: Int. 
+    fix (
+    \f: Tree -> Bool. \t: Tree. 
+    match t with
+      leaf {a, b} -> 
+        let c0 = (inside global0 global1 a b) in 
+            c0
+    | node {a, b, l, r} -> if (> b global1) then if (> a global0) then let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                or tmp2 tmp3
+        else let tmp4 = (f r) in 
+            tmp4
+        else let tmp5 = (f l) in 
+            let tmp6 = (f r) in 
+                let c0 = (inside global0 global1 a b) in 
+                    or (or tmp5 tmp6) c0
+    end
+);
+
+main_ = \global0: Int. \global1: Int. \t: Tree. 
+    if (is_bst t) then let tmp7 = (target_ global0 global1 t) in 
+        tmp7
+    else false;

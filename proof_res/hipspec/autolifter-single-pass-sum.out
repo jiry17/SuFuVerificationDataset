@@ -1,0 +1,9 @@
+File processed.
+Depth 1: 11 terms, 100 tests, 422 evaluations, 8 classes, 3 raw equations.
+Depth 2: 89 terms, 200 tests, 6314 evaluations, 43 classes, 46 raw equations.
+Depth 3: 1620 terms, 200 tests, 131535 evaluations, 594 classes, 1026 raw equations.
+QuickSpec done, 594 classes, 1026 equations.
+[034m[1mProved optimize {- main inp0 == mainNew inp0 -} by induction on inp0[0m using Z3
+Proved:
+    optimize {- main inp0 == mainNew inp0 -}
+

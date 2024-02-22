@@ -1,9 +1,0 @@
-Proving begin optimize: (main v0) === (mainNew v0)
-Property accepted by cvec analysis
-new lemma forall v0: Bool. v0 === (and True v0)
-new lemma forall v0: Bool. v0 === (and v0 True)
-prove lemma forall v0: Bool. v1: Bool. (and v0 v1) === (and v1 v0)
-prove lemma forall v0: NnfFormula. (main v0) === (mainNew v0)
-optimize uncyclic: VALID (55 ms)
-Attempted 1 goals:
-  1 solved (no cyclic)

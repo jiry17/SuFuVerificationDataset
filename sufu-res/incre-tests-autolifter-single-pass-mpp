@@ -1,0 +1,58 @@
+Inductive List = cons {Int, List} | nil Unit;
+
+single_pass = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+max = \a: Int. \b: Int. 
+    if (< a b) then b
+    else a;
+
+mpp = fix (
+    \f: Int -> List -> Int. \pre: Int. \l: List. 
+    match l with
+      nil _ -> pre
+    | cons {h, t} -> max pre (f (* h pre) t)
+    end
+) 1;
+
+main = single_pass mpp;
+
+@Combine al_inf = 100;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_inf
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> {Int, Int}. \xs: List. 
+    match xs with
+      nil _ -> {1, al_inf}
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            {if (and (< 0 (* h tmp1.2)) (< h 0)) then * h tmp1.2
+            else if (< h 1) then 1
+            else * h tmp1.1, if (< h 0) then * h tmp1.1
+            else if (< tmp1.2 1) then * h tmp1.2
+            else h}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2.1;
+
+main_ = single_pass_ mpp;

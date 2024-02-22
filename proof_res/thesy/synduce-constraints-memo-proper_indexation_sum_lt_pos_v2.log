@@ -1,0 +1,45 @@
+11:00:58 [WARN] Collecting statistics
+11:00:58 [WARN]  ex is: true
+11:00:58 [WARN]  ex is: false
+11:00:58 [WARN]  ex is: null
+11:00:58 [WARN]  ex is: zero
+11:00:58 [WARN]  ex is: (succ zero)
+11:00:58 [WARN]  ex is: (succ (succ zero))
+11:00:58 [WARN]  ex is: (nil autovar_Unit_0)
+11:00:58 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:00:58 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:00:58 [WARN]  ex is: (inil autovar_Unit_0)
+11:00:58 [WARN]  ex is: (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0))
+11:00:58 [WARN]  ex is: (icons autovar_Nat_2 autovar_Nat_3 (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0)))
+11:00:58 [WARN]  ex is: (makeTuple3 autovar_Nat_0 autovar_Nat_1)
+11:00:58 [WARN] Running exploration without proof mode, but goals were given
+11:00:58 [WARN] Proof mode: true
+11:00:58 [WARN]  ex is: true
+11:00:58 [WARN]  ex is: false
+11:00:58 [WARN]  ex is: null
+11:00:58 [WARN]  ex is: zero
+11:00:58 [WARN]  ex is: (succ zero)
+11:00:58 [WARN]  ex is: (succ (succ zero))
+11:00:58 [WARN]  ex is: (nil autovar_Unit_0)
+11:00:58 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:00:58 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:00:58 [WARN]  ex is: (inil autovar_Unit_0)
+11:00:58 [WARN]  ex is: (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0))
+11:00:58 [WARN]  ex is: (icons autovar_Nat_2 autovar_Nat_3 (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0)))
+11:00:58 [WARN]  ex is: (makeTuple3 autovar_Nat_0 autovar_Nat_1)
+11:00:58 [WARN] Running exploration without proof mode, but goals were given
+11:00:58 [WARN] Proof mode: true
+11:00:59 [WARN] proved: (max ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+11:00:59 [WARN] proved: (nil ?ts_ph_Unit_0) => (nil null)
+11:00:59 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+11:00:59 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+11:00:59 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+11:00:59 [WARN] proved: (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+11:00:59 [WARN] proved: (leq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+11:00:59 [WARN] proved: (max ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 zero)
+11:00:59 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => (max ?ts_ph_Nat_0)
+11:00:59 [WARN] proved: (leq ?ts_ph_Nat_0 zero) => (nat_eq ?ts_ph_Nat_0 zero)
+11:00:59 [WARN] proved: (nat_eq ?ts_ph_Nat_0 zero) => (leq ?ts_ph_Nat_0 zero)
+11:00:59 [WARN] proved: (nat_eq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+11:00:59 [WARN] proved: (nat_eq ?ts_ph_Nat_0 zero) => (nat_eq zero ?ts_ph_Nat_0)
+11:00:59 [WARN] proved: (ite2 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1

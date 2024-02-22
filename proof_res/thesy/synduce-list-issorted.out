@@ -1,0 +1,91 @@
+10:40:26 [0m[33m[WARN] [0mCollecting statistics
+(tf1 ?tv5 (elt ?tv6)) => (cons ?tv6 ?tv5)
+(tf1 ?tv5 (cons ?tv7 ?tv8)) => (cons ?tv7 (tf0 ?tv8 ?tv5))
+(tf0 ?tv2 ?tv3) => (tf1 ?tv3 ?tv2)
+(cat_list ?tv0 ?tv1) => (tf0 ?tv0 ?tv1)
+(tf3 (single ?tv12)) => (elt ?tv12)
+(tf3 (concat ?tv13 ?tv14)) => (cat_list (tf2 ?tv13) (tf2 ?tv14))
+(tf2 ?tv10) => (tf3 ?tv10)
+(repr ?tv9) => (tf2 ?tv9)
+(snd_2 (makeTuple2 ?x0 ?x1 ?x2)) => ?x1
+(and false ?x) => false
+(and ?x false) => false
+(and true true) => true
+(third_2 (makeTuple2 ?x0 ?x1 ?x2)) => ?x2
+(lq zero (succ ?x)) => true
+(lq ?x zero) => false
+(lq (succ ?x) (succ ?y)) => (lq ?x ?y)
+(fst_2 (makeTuple2 ?x0 ?x1 ?x2)) => ?x0
+(tf5 (elt ?tv18)) => (makeTuple2 ?tv18 ?tv18 true)
+(tf5 (cons ?tv19 ?tv20)) => (makeTuple2 ?tv19 (snd_2 (tf4 ?tv20)) (and (third_2 (tf4 ?tv20)) (lq ?tv19 (fst_2 (tf4 ?tv20)))))
+(tf4 ?tv16) => (tf5 ?tv16)
+(spec ?tv15) => (third_2 (tf4 ?tv15))
+(main ?tv21) => (spec (repr ?tv21))
+(fst_3 (makeTuple3 ?x0 ?x1 ?x2)) => ?x0
+(third_3 (makeTuple3 ?x0 ?x1 ?x2)) => ?x2
+(snd_3 (makeTuple3 ?x0 ?x1 ?x2)) => ?x1
+(tf7 (single ?tv25)) => (makeTuple3 true ?tv25 ?tv25)
+(tf7 (concat ?tv26 ?tv27)) => (makeTuple3 (and (and (fst_3 (tf6 ?tv26)) (fst_3 (tf6 ?tv27))) (lq (third_3 (tf6 ?tv26)) (snd_3 (tf6 ?tv27)))) (snd_3 (tf6 ?tv26)) (third_3 (tf6 ?tv27)))
+(tf6 ?tv23) => (tf7 ?tv23)
+(repr_ ?tv22) => (tf6 ?tv22)
+(main_ ?tv28) => (fst_3 (repr_ ?tv28))
+Searcher: (and ?autovar1 true)
+Searcher: (and true ?autovar2)
+Searcher: (lq ?autovar5 (succ ?autovar1))
+Searcher: (lq ?autovar5 (succ ?autovar3))
+Searcher: (lq zero ?autovar6)
+Searcher: (lq (succ ?autovar4) ?autovar6)
+10:40:26 [0m[33m[WARN] [0m ex is: true
+10:40:26 [0m[33m[WARN] [0m ex is: false
+10:40:26 [0m[33m[WARN] [0m ex is: zero
+10:40:26 [0m[33m[WARN] [0m ex is: (succ zero)
+10:40:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:40:26 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:40:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:40:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:40:26 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+10:40:26 [0m[33m[WARN] [0m ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:40:26 [0m[33m[WARN] [0m ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:40:26 [0m[33m[WARN] [0m ex is: (makeTuple2 autovar_Nat_0 autovar_Nat_1 autovar_Bool_0)
+10:40:26 [0m[33m[WARN] [0m ex is: (makeTuple3 autovar_Bool_0 autovar_Nat_0 autovar_Nat_1)
+10:40:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:40:26 [0m[33m[WARN] [0mProof mode: true
+10:40:26 [0m[33m[WARN] [0m ex is: true
+10:40:26 [0m[33m[WARN] [0m ex is: false
+10:40:26 [0m[33m[WARN] [0m ex is: zero
+10:40:26 [0m[33m[WARN] [0m ex is: (succ zero)
+10:40:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:40:26 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:40:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:40:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:40:26 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+10:40:26 [0m[33m[WARN] [0m ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:40:26 [0m[33m[WARN] [0m ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:40:26 [0m[33m[WARN] [0m ex is: (makeTuple2 autovar_Nat_0 autovar_Nat_1 autovar_Bool_0)
+10:40:26 [0m[33m[WARN] [0m ex is: (makeTuple3 autovar_Bool_0 autovar_Nat_0 autovar_Nat_1)
+10:40:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:40:26 [0m[33m[WARN] [0mProof mode: true
+10:40:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:40:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:40:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:40:26 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+10:40:52 [0m[33m[WARN] [0mgeneralized case_split proof as: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) -- (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+10:40:52 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+10:40:52 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:40:52 [0m[33m[WARN] [0mgeneralized case_split proof as: (tf1 (tf1 ?ts_ph_SList_1 ?ts_ph_SList_2) ?ts_ph_SList_0) -- (tf1 ?ts_ph_SList_1 (tf1 ?ts_ph_SList_2 ?ts_ph_SList_0))
+10:40:52 [0m[33m[WARN] [0mproved: (tf1 (tf1 ?ts_ph_SList_1 ?ts_ph_SList_2) ?ts_ph_SList_0) => (tf1 ?ts_ph_SList_1 (tf1 ?ts_ph_SList_2 ?ts_ph_SList_0))
+10:40:52 [0m[33m[WARN] [0mproved: (tf1 ?ts_ph_SList_1 (tf1 ?ts_ph_SList_2 ?ts_ph_SList_0)) => (tf1 (tf1 ?ts_ph_SList_1 ?ts_ph_SList_2) ?ts_ph_SList_0)
+10:40:52 [0m[33m[WARN] [0mproved: (and (lq zero ?ts_ph_Nat_0) (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+10:40:52 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (and (lq zero ?ts_ph_Nat_0) (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0))
+10:40:52 [0m[33m[WARN] [0mproved: (makeTuple3
+  (fst_3 ?ts_ph_Tuple3_0)
+  (snd_3 ?ts_ph_Tuple3_0)
+  (third_3 ?ts_ph_Tuple3_0)) => ?ts_ph_Tuple3_0
+10:40:53 [0m[33m[WARN] [0mproved: (lq (succ ?ts_ph_Nat_0) ?ts_ph_Nat_0) => false
+10:40:53 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_0 (succ ?ts_ph_Nat_0)) => true
+10:40:55 [0m[33m[WARN] [0mproved: (and (lq ?ts_ph_Nat_0 ?ts_ph_Nat_1) (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)) => false
+10:40:56 [0m[33m[WARN] [0mproved: (makeTuple2
+  (fst_2 ?ts_ph_Tuple2_0)
+  (snd_2 ?ts_ph_Tuple2_0)
+  (third_2 ?ts_ph_Tuple2_0)) => ?ts_ph_Tuple2_0
+done in 31911

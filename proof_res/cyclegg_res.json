@@ -1,0 +1,369 @@
+{
+    "synduce-list-last": {
+        "status": true,
+        "time": 2.723
+    },
+    "synduce-tree-min": {
+        "status": false
+    },
+    "synduce-list-issorted": {
+        "status": false
+    },
+    "fusion-algprog-page60": {
+        "status": true,
+        "time": 1.023
+    },
+    "synduce-constraints-sortedlist-parallel_max": {
+        "status": false
+    },
+    "synduce-constraints-memo-proper_indexation_sum_lt_pos": {
+        "status": false
+    },
+    "synduce-constraints-balanced_tree-height_v2": {
+        "status": false
+    },
+    "synduce-constraints-alist-count_eq": {
+        "status": false
+    },
+    "synduce-list-lenhom": {
+        "status": true,
+        "time": 0.352
+    },
+    "synduce-list-prodhom": {
+        "status": false
+    },
+    "synduce-list-mincount": {
+        "status": false
+    },
+    "synduce-constraints-bst-from_list_max": {
+        "status": false
+    },
+    "synduce-nested_list-pyramid_intervals": {
+        "status": false
+    },
+    "synduce-combine-mts": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-sndmind": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-parallel_min": {
+        "status": false
+    },
+    "synduce-list-mpshom": {
+        "status": false
+    },
+    "synduce-constraints-balanced_tree-node_count": {
+        "status": false
+    },
+    "synduce-list_to_tree-search_v2": {
+        "status": false
+    },
+    "synduce-list-sumgt": {
+        "status": false
+    },
+    "synduce-tailopt-sum": {
+        "status": false
+    },
+    "synduce-unimodal_lists-sum": {
+        "status": false
+    },
+    "synduce-sorted_list-sumgtz": {
+        "status": false
+    },
+    "synduce-tree-sorted": {
+        "status": false
+    },
+    "synduce-constraints-alist-sums": {
+        "status": false
+    },
+    "synduce-tree-maxtree2": {
+        "status": false
+    },
+    "synduce-list-mts_and_mps_hom": {
+        "status": false
+    },
+    "synduce-terms-height": {
+        "status": true,
+        "time": 0.174
+    },
+    "synduce-constraints-size-obfuscated_length": {
+        "status": false
+    },
+    "synduce-indexed_list-sum_elts_lt_pos": {
+        "status": true,
+        "time": 0.105
+    },
+    "synduce-list_to_tree-mls": {
+        "status": false
+    },
+    "synduce-indexed_list-position_polynomial": {
+        "status": false
+    },
+    "synduce-treepaths-sum": {
+        "status": true,
+        "time": 0.137
+    },
+    "fusion-tupling-page1": {
+        "status": false
+    },
+    "synduce-tree-minmax": {
+        "status": false
+    },
+    "synduce-tree-sumtree": {
+        "status": true,
+        "time": 0.516
+    },
+    "synduce-compressed_list-sum": {
+        "status": true,
+        "time": 1.261
+    },
+    "synduce-constraints-unimodal_lists-max_in_um_pos": {
+        "status": false
+    },
+    "synduce-tailopt-mps": {
+        "status": false
+    },
+    "synduce-constraints-bst-minimax_sim": {
+        "status": false
+    },
+    "synduce-list-zero_after_one": {
+        "status": false
+    },
+    "autolifter-single-pass-mps": {
+        "status": true,
+        "time": 0.063
+    },
+    "autolifter-single-pass-max_dist_between_zeros": {
+        "status": false
+    },
+    "synduce-tree-maxtree": {
+        "status": false
+    },
+    "fusion-algprog-ex3.14": {
+        "status": false
+    },
+    "synduce-constraints-bst-minimax_separate": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-failing_slspplus": {
+        "status": false
+    },
+    "fusion-deforestation-page7-2": {
+        "status": true,
+        "time": 0.005
+    },
+    "synduce-constraints-empty_right_subtree-sum": {
+        "status": false
+    },
+    "synduce-list-maxcount": {
+        "status": false
+    },
+    "autolifter-single-pass-longest1s": {
+        "status": false
+    },
+    "synduce-constraints-bst-check_mem_included": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-min": {
+        "status": false
+    },
+    "autolifter-single-pass-cnt1s": {
+        "status": false
+    },
+    "synduce-zipper-list_sum_basic": {
+        "status": false
+    },
+    "synduce-constraints-all_positive-sndmax": {
+        "status": false
+    },
+    "synduce-list-line_of_sight": {
+        "status": false
+    },
+    "fusion-algprog-page58": {
+        "status": false
+    },
+    "synduce-list_to_tree-search_v3": {
+        "status": false
+    },
+    "synduce-constraints-balanced_tree-height": {
+        "status": false
+    },
+    "synduce-constraints-unimodal_lists-max_logn": {
+        "status": false
+    },
+    "synduce-list-slsp": {
+        "status": false
+    },
+    "synduce-constraints-size-obfuscated_length_3": {
+        "status": false
+    },
+    "synduce-constraints-memo-tree_size": {
+        "status": false
+    },
+    "synduce-list-sumhom": {
+        "status": true,
+        "time": 0.187
+    },
+    "synduce-combine-mss_with_sum": {
+        "status": false
+    },
+    "synduce-constraints-alist-count_eq2": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-nestedl_pyramid": {
+        "status": false
+    },
+    "synduce-constraints-unimodal_lists-max_logn_v2": {
+        "status": false
+    },
+    "fusion-algprog-ex3.13": {
+        "status": false
+    },
+    "autolifter-single-pass-mts": {
+        "status": false
+    },
+    "autolifter-single-pass-count10p": {
+        "status": false
+    },
+    "synduce-list_to_tree-search": {
+        "status": false
+    },
+    "autolifter-single-pass-length": {
+        "status": true,
+        "time": 0.006
+    },
+    "synduce-sorted_list-max": {
+        "status": false
+    },
+    "autolifter-single-pass-max_len_1s": {
+        "status": false
+    },
+    "synduce-constraints-bst-most_frequent_v1": {
+        "status": false
+    },
+    "fusion-identities-page6": {
+        "status": false
+    },
+    "synduce-sorted_list-min": {
+        "status": false
+    },
+    "synduce-indexed_list-search": {
+        "status": true,
+        "time": 0.197
+    },
+    "autolifter-single-pass-0s1s": {
+        "status": false
+    },
+    "synduce-constraints-bst-sum_between": {
+        "status": false
+    },
+    "synduce-misc-composed_unkwns": {
+        "status": true,
+        "time": 3.576
+    },
+    "synduce-tree-maxPathWeight": {
+        "status": false
+    },
+    "synduce-zipper-list_sum": {
+        "status": true,
+        "time": 2.031
+    },
+    "synduce-constraints-all_positive-list_mps": {
+        "status": false
+    },
+    "synduce-constraints-memo-constant": {
+        "status": true,
+        "time": 0.022
+    },
+    "synduce-treepaths-maxPathWeight2": {
+        "status": false
+    },
+    "autolifter-single-pass-0after1": {
+        "status": false
+    },
+    "autolifter-single-pass-atoi": {
+        "status": false
+    },
+    "synduce-misc-simple_nnf": {
+        "status": true,
+        "time": 0.049
+    },
+    "synduce-list-minhom": {
+        "status": false
+    },
+    "fusion-identities-page5": {
+        "status": true,
+        "time": 0.124
+    },
+    "synduce-list-maxhom": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-parallel_max2": {
+        "status": false
+    },
+    "synduce-constraints-bst-check_included_comb": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-slsp": {
+        "status": false
+    },
+    "synduce-constraints-all_positive-sndmin": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-max": {
+        "status": false
+    },
+    "autolifter-single-pass-mis": {
+        "status": false
+    },
+    "synduce-misc-unknowns_are_ids": {
+        "status": true,
+        "time": 2.997
+    },
+    "synduce-constraints-memo-count_lt": {
+        "status": false
+    },
+    "synduce-treepaths-maxPathWeight": {
+        "status": false
+    },
+    "synduce-constraints-memo-mts_memo_sum": {
+        "status": false
+    },
+    "synduce-constraints-memo-proper_indexation_sum_lt_pos_v2": {
+        "status": false
+    },
+    "synduce-list-zeros_ones": {
+        "status": false
+    },
+    "autolifter-single-pass-dropwhile": {
+        "status": false
+    },
+    "synduce-treepaths-height": {
+        "status": true,
+        "time": 1.254
+    },
+    "synduce-constraints-ensures-mps_no_ensures": {
+        "status": false
+    },
+    "synduce-constraints-sortedlist-sndmax_empty_base_case": {
+        "status": false
+    },
+    "fusion-shortcut-page1": {
+        "status": true,
+        "time": 0.026
+    },
+    "synduce-list-mtshom": {
+        "status": false
+    },
+    "synduce-constraints-ensures-mts_no_ensures": {
+        "status": false
+    },
+    "autolifter-single-pass-sum": {
+        "status": true,
+        "time": 0.005
+    },
+    "fusion-tupling-page8": {
+        "status": false
+    }
+}

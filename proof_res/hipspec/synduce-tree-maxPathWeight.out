@@ -1,0 +1,24 @@
+File processed.
+Depth 1: 16 terms, 100 tests, 453 evaluations, 13 classes, 3 raw equations.
+Depth 2: 236 terms, 100 tests, 12459 evaluations, 147 classes, 89 raw equations.
+Depth 3: 20103 terms, 3200 tests, 2763248 evaluations, 6143 classes, 13960 raw equations.
+QuickSpec done, 6143 classes, 13960 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq var0_0 (plus var0_0 var0_1) == lq Zero var0_1 by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (plus var0_0 var0_2) == lq var0_1 var0_2 by induction on var0_2[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (Succ var0_1) == lq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved lq (Succ var0_0) (plus var0_0 var0_1) == lq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_0) (plus var0_1 var0_1) == lq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+Failed to prove lq (Succ Zero) (plus var0_0 var0_1) == lq Zero (plus var0_0 var0_1)
+Failed to prove lq (Succ Zero) (plus var0_0 var0_1) == lq Zero (plus var0_1 var0_0)
+[034mProved lq (plus var0_0 var0_0) (Succ Zero) == lq (plus var0_0 var0_1) (Succ var0_1) without induction[0m using Z3
+[034mProved lq (Succ Zero) (plus var0_0 var0_0) == lq Zero var0_0 without induction[0m using Z3

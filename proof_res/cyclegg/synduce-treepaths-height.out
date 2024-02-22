@@ -1,0 +1,12 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Nat. v0 === (ite2 (lq Zero v0) v0 Zero)
+new lemma forall v0: Nat. (Succ v0) === (ite2 (lq Zero v0) (Succ v0) (Succ Zero))
+new lemma forall v0: Bool. v1: Nat. v2: Nat. True === (lq Zero (ite2 v0 (Succ v1) (Succ v2)))
+new lemma forall v0: Bool. v1: Nat. v2: Nat. (Succ (ite2 v0 v1 v2)) === (ite2 v0 (Succ v1) (Succ v2))
+prove lemma forall v0: Nat. v1: Nat. (Succ (ite2 (lq v0 v1) v1 v0)) === (Succ (ite2 (lq v1 v0) v0 v1))
+prove lemma forall v0: Nat. v1: Nat. (ite2 (lq v0 v1) v1 v0) === (ite2 (lq v1 v0) v0 v1)
+prove lemma forall v0: Zipper. (main v0) === (mainNew v0)
+optimize uncyclic: VALID (1254 ms)
+Attempted 1 goals:
+  1 solved (no cyclic)

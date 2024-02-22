@@ -15,6 +15,7 @@
   (=> tf2r0 (tf2 ?tv10) (tf3 ?tv10))
   (declare-fun repr (CList) List)
   (=> reprr0 (repr ?tv9) (tf2 ?tv9))
+  (datatype Tuple2 () ((makeTuple2 Bool Bool Bool Tuple2)))
   (declare-fun and (Bool Bool) Bool)
   (=> andr0 (and false ?x) false)
   (=> andr1 (and ?x false) false)

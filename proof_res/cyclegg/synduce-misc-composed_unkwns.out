@@ -1,0 +1,11 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Nat. v0 === (plus v0 Zero)
+new lemma forall v0: Nat. v1: Nat. (plus v0 v1) === (plus v1 v0)
+new lemma forall v0: Nat. v1: List. (plus v0 (tf1 v1)) === (tf1 (tf3 (Cons v0 (Nil Null)) v1))
+new lemma forall v0: List. v1: Unit. (tf1 v0) === (tf1 (tf3 (Nil v1) v0))
+new lemma forall v0: List. v1: List. (plus (tf1 v0) (tf1 v1)) === (tf1 (tf3 v0 v1))
+prove lemma forall v0: CList. (main v0) === (mainNew v0)
+optimize uncyclic: VALID (3576 ms)
+Attempted 1 goals:
+  1 solved (no cyclic)

@@ -1,0 +1,29 @@
+10:38:26 [WARN] Collecting statistics
+10:38:26 [WARN]  ex is: true
+10:38:26 [WARN]  ex is: false
+10:38:26 [WARN]  ex is: (elt autovar_Bool_0)
+10:38:26 [WARN]  ex is: (cons autovar_Bool_1 (elt autovar_Bool_0))
+10:38:26 [WARN]  ex is: (cons autovar_Bool_2 (cons autovar_Bool_1 (elt autovar_Bool_0)))
+10:38:26 [WARN]  ex is: (single autovar_Bool_0)
+10:38:26 [WARN]  ex is: (concat (single autovar_Bool_0) (single autovar_Bool_0))
+10:38:26 [WARN]  ex is: (concat (concat (single autovar_Bool_0) (single autovar_Bool_0)) (concat (single autovar_Bool_0) (single autovar_Bool_0)))
+10:38:26 [WARN]  ex is: (makeTuple2 autovar_Bool_0 autovar_Bool_1 autovar_Bool_2)
+10:38:26 [WARN] Running exploration without proof mode, but goals were given
+10:38:26 [WARN] Proof mode: true
+10:38:26 [WARN]  ex is: true
+10:38:26 [WARN]  ex is: false
+10:38:26 [WARN]  ex is: (elt autovar_Bool_0)
+10:38:26 [WARN]  ex is: (cons autovar_Bool_1 (elt autovar_Bool_0))
+10:38:26 [WARN]  ex is: (cons autovar_Bool_2 (cons autovar_Bool_1 (elt autovar_Bool_0)))
+10:38:26 [WARN]  ex is: (single autovar_Bool_0)
+10:38:26 [WARN]  ex is: (concat (single autovar_Bool_0) (single autovar_Bool_0))
+10:38:26 [WARN]  ex is: (concat (concat (single autovar_Bool_0) (single autovar_Bool_0)) (concat (single autovar_Bool_0) (single autovar_Bool_0)))
+10:38:26 [WARN]  ex is: (makeTuple2 autovar_Bool_0 autovar_Bool_1 autovar_Bool_2)
+10:38:26 [WARN] Running exploration without proof mode, but goals were given
+10:38:26 [WARN] Proof mode: true
+10:38:26 [WARN] proved: (or ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (or ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:38:26 [WARN] proved: (or ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (or ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:38:26 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:38:26 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:38:26 [WARN] proved: (or ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:38:26 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0

@@ -1,0 +1,17 @@
+File processed.
+Depth 1: 17 terms, 100 tests, 438 evaluations, 14 classes, 3 raw equations.
+Depth 2: 176 terms, 100 tests, 5679 evaluations, 141 classes, 35 raw equations.
+Depth 3: 17169 terms, 800 tests, 1325715 evaluations, 9332 classes, 7837 raw equations.
+QuickSpec done, 9332 classes, 7837 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved mainNew (Cons var0_0 var0_1) == mainNew (Cons var0_2 var0_1) without induction[0m using Z3
+[034mProved mainNew (Nil var0_0) == Zero without induction[0m using Z3
+[034m[1mProved times var0_0 var0_1 == times var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved times var0_0 (times var0_1 var0_2) == times var0_1 (times var0_0 var0_2) by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved times var0_0 (plus var0_1 var0_1) == times var0_1 (plus var0_0 var0_0) by induction on var0_0[0m using Z3
+Failed to prove times (times var0_0 var0_1) (plus var0_1 var0_2) == times (times var0_0 var0_1) (plus var0_0 var0_2)
+Failed to prove times (times var0_0 var0_1) (plus var0_2 var0_1) == times (times var0_0 var0_1) (plus var0_0 var0_2)

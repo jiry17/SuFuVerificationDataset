@@ -1,0 +1,59 @@
+
+Inductive List = single Int | cons {Int, List};
+
+Inductive CList = elt Int | cat {CList, CList};
+
+max = \a: Int. \b: Int. 
+    if (< a b) then b
+    else a;
+
+spec = \xs: List. 
+    (fix (
+    \f: List -> {Int, Int, Bool}. \xs: List. 
+    match xs with
+      single a -> {a, a, true}
+    | cons {hd, tl} -> 
+        let result = (f tl) in 
+            {hd, max result.2 hd, > hd result.2}
+    end
+) xs).3;
+
+cat_list = fix (
+    \f: List -> List -> List. \xs: List. \ys: List. 
+    match xs with
+      single a -> cons {a, ys}
+    | cons {a, b} -> cons {a, f b ys}
+    end
+);
+
+repr = fix (
+    \f: CList -> List. \xs: CList. 
+    match xs with
+      elt a -> 
+        let tmp1 = (single a) in 
+            tmp1
+    | cat {a, b} -> 
+        let tmp2 = (f a) in 
+            let tmp3 = (f b) in 
+                cat_list tmp2 tmp3
+    end
+);
+
+main = \x: CList. 
+    let tmp4 = (repr x) in 
+        spec tmp4;
+
+repr_ = fix (
+    \f: CList -> {Bool, Int}. \xs: CList. 
+    match xs with
+      elt a -> {true, a}
+    | cat {a, b} -> 
+        let tmp2 = (f a) in 
+            let tmp3 = (f b) in 
+                {and tmp2.1 (< tmp3.2 tmp2.2), max tmp3.2 tmp2.2}
+    end
+);
+
+main_ = \x: CList. 
+    let tmp4 = (repr_ x) in 
+        tmp4.1;

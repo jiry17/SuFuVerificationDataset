@@ -1,0 +1,82 @@
+10:27:26 [0m[33m[WARN] [0mCollecting statistics
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf1 (nil ?tv3)) => zero
+(tf1 (leaf ?tv4)) => (succ zero)
+(tf1 (node ?tv5 ?tv6 ?tv7)) => (plus (succ zero) (plus (tf0 ?tv6) (tf0 ?tv7)))
+(tf0 ?tv1) => (tf1 ?tv1)
+(size ?tv0) => (tf0 ?tv0)
+(and false ?x) => false
+(and ?x false) => false
+(and true true) => true
+(nat_eq zero zero) => true
+(nat_eq zero (succ ?x)) => false
+(nat_eq (succ ?x) zero) => false
+(nat_eq (succ ?x) (succ ?y)) => (nat_eq ?x ?y)
+(tf3 (node ?tv11 ?tv12 ?tv13)) => (and (nat_eq zero (size ?tv13)) (tf2 ?tv12))
+(tf3 (nil ?tv14)) => true
+(tf3 (leaf ?tv15)) => true
+(tf2 ?tv9) => (tf3 ?tv9)
+(empty_right ?tv8) => (tf2 ?tv8)
+(tf5 (nil ?tv19)) => zero
+(tf5 (leaf ?tv20)) => ?tv20
+(tf5 (node ?tv21 ?tv22 ?tv23)) => (plus ?tv21 (plus (tf4 ?tv22) (tf4 ?tv23)))
+(tf4 ?tv17) => (tf5 ?tv17)
+(spec ?tv16) => (tf4 ?tv16)
+(tf7 (nil ?tv27)) => (nil null)
+(tf7 (leaf ?tv28)) => (leaf ?tv28)
+(tf7 (node ?tv29 ?tv30 ?tv31)) => (node ?tv29 (tf6 ?tv30) ?tv31)
+(tf6 ?tv25) => (tf7 ?tv25)
+(target ?tv24) => (tf6 ?tv24)
+(ite1 true ?x) => ?x
+(ite1 false ?x) => zero
+(main ?tv32) => (ite1 (empty_right ?tv32) (spec (target ?tv32)))
+(tf9 (nil ?tv36)) => zero
+(tf9 (leaf ?tv37)) => ?tv37
+(tf9 (node ?tv38 ?tv39 ?tv40)) => (plus (tf8 ?tv39) ?tv38)
+(tf8 ?tv34) => (tf9 ?tv34)
+(target_ ?tv33) => (tf8 ?tv33)
+(main_ ?tv41) => (ite1 (empty_right ?tv41) (target_ ?tv41))
+Searcher: (and ?autovar1 true)
+Searcher: (and true ?autovar2)
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar1))
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar4))
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq (succ ?autovar5) ?autovar8)
+Searcher: (nat_eq (succ ?autovar6) ?autovar8)
+10:27:26 [0m[33m[WARN] [0m ex is: true
+10:27:26 [0m[33m[WARN] [0m ex is: false
+10:27:26 [0m[33m[WARN] [0m ex is: null
+10:27:26 [0m[33m[WARN] [0m ex is: zero
+10:27:26 [0m[33m[WARN] [0m ex is: (succ zero)
+10:27:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:27:26 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+10:27:26 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+10:27:26 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:27:26 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:27:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:27:26 [0m[33m[WARN] [0mProof mode: true
+10:27:26 [0m[33m[WARN] [0m ex is: true
+10:27:26 [0m[33m[WARN] [0m ex is: false
+10:27:26 [0m[33m[WARN] [0m ex is: null
+10:27:26 [0m[33m[WARN] [0m ex is: zero
+10:27:26 [0m[33m[WARN] [0m ex is: (succ zero)
+10:27:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:27:26 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+10:27:26 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+10:27:26 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:27:26 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:27:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:27:26 [0m[33m[WARN] [0mProof mode: true
+10:27:26 [0m[33m[WARN] [0mproved: (nil ?ts_ph_Unit_0) => (nil null)
+10:27:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:27:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:27:26 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+10:27:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:27:26 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+10:27:26 [0m[33m[WARN] [0mproved: (ite1 ?ts_ph_Bool_0 zero) => zero
+10:27:26 [0m[33m[WARN] [0mproved: (nat_eq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+10:27:26 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 zero) => (nat_eq zero ?ts_ph_Nat_0)

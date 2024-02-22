@@ -1,0 +1,72 @@
+11:01:58 [0m[33m[WARN] [0mCollecting statistics
+(lq zero (succ ?x)) => true
+(lq ?x zero) => false
+(lq (succ ?x) (succ ?y)) => (lq ?x ?y)
+(ite1 true ?x ?y) => ?x
+(ite1 false ?x ?y) => ?y
+(max ?tv0 ?tv1) => (ite1 (lq ?tv0 ?tv1) ?tv1 ?tv0)
+(gq zero ?x) => false
+(gq (succ ?x) zero) => true
+(gq (succ ?x) (succ ?y)) => (gq ?x ?y)
+(min ?tv2 ?tv3) => (ite1 (gq ?tv2 ?tv3) ?tv3 ?tv2)
+(fst_2 (makeTuple2 ?x0 ?x1)) => ?x0
+(snd_2 (makeTuple2 ?x0 ?x1)) => ?x1
+(tf1 ?tv9 (leaf ?tv10)) => (makeTuple2 (min ?tv10 (fst_2 ?tv9)) (max ?tv10 (snd_2 ?tv9)))
+(tf1 ?tv9 (node ?tv11 ?tv12 ?tv13)) => (tf0 (tf0 (makeTuple2 (min ?tv11 (fst_2 ?tv9)) (max ?tv11 (snd_2 ?tv9))) ?tv12) ?tv13)
+(tf0 ?tv6 ?tv7) => (tf1 ?tv6 ?tv7)
+(g ?tv4 ?tv5) => (tf0 ?tv4 ?tv5)
+(tf3 (leaf ?tv16)) => (makeTuple2 ?tv16 ?tv16)
+(tf3 (node ?tv17 ?tv18 ?tv19)) => (g (makeTuple2 (fst_2 (g (makeTuple2 ?tv17 ?tv17) ?tv18)) (snd_2 (g (makeTuple2 ?tv17 ?tv17) ?tv18))) ?tv19)
+(tf2 ?tv15) => (tf3 ?tv15)
+(spec ?tv14) => (tf2 ?tv14)
+(tf5 (leaf ?tv23)) => (leaf ?tv23)
+(tf5 (node ?tv24 ?tv25 ?tv26)) => (node ?tv24 (tf4 ?tv25) (tf4 ?tv26))
+(tf4 ?tv21) => (tf5 ?tv21)
+(repr ?tv20) => (tf4 ?tv20)
+(main ?tv27) => (spec (repr ?tv27))
+(tf7 (leaf ?tv31)) => (makeTuple2 ?tv31 ?tv31)
+(tf7 (node ?tv32 ?tv33 ?tv34)) => (makeTuple2 (min (fst_2 (tf6 ?tv33)) (min (fst_2 (tf6 ?tv34)) ?tv32)) (max (snd_2 (tf6 ?tv33)) (max (snd_2 (tf6 ?tv34)) ?tv32)))
+(tf6 ?tv29) => (tf7 ?tv29)
+(repr_ ?tv28) => (tf6 ?tv28)
+(main_ ?tv35) => (makeTuple2 (fst_2 (repr_ ?tv35)) (snd_2 (repr_ ?tv35)))
+Searcher: (lq ?autovar5 (succ ?autovar1))
+Searcher: (lq ?autovar5 (succ ?autovar3))
+Searcher: (lq zero ?autovar6)
+Searcher: (lq (succ ?autovar4) ?autovar6)
+Searcher: (gq ?autovar6 zero)
+Searcher: (gq ?autovar6 (succ ?autovar3))
+Searcher: (gq (succ ?autovar4) ?autovar7)
+Searcher: (gq (succ ?autovar5) ?autovar7)
+11:01:58 [0m[33m[WARN] [0m ex is: true
+11:01:58 [0m[33m[WARN] [0m ex is: false
+11:01:58 [0m[33m[WARN] [0m ex is: zero
+11:01:58 [0m[33m[WARN] [0m ex is: (succ zero)
+11:01:58 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:01:58 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+11:01:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:01:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:01:58 [0m[33m[WARN] [0m ex is: (makeTuple2 autovar_Nat_0 autovar_Nat_1)
+11:01:58 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:01:58 [0m[33m[WARN] [0mProof mode: true
+11:01:58 [0m[33m[WARN] [0m ex is: true
+11:01:58 [0m[33m[WARN] [0m ex is: false
+11:01:58 [0m[33m[WARN] [0m ex is: zero
+11:01:58 [0m[33m[WARN] [0m ex is: (succ zero)
+11:01:58 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:01:58 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+11:01:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:01:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:01:58 [0m[33m[WARN] [0m ex is: (makeTuple2 autovar_Nat_0 autovar_Nat_1)
+11:01:58 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:01:58 [0m[33m[WARN] [0mProof mode: true
+11:01:58 [0m[33m[WARN] [0mproved: (tf5 ?ts_ph_Tree_0) => ?ts_ph_Tree_0
+11:01:58 [0m[33m[WARN] [0mproved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+11:01:58 [0m[33m[WARN] [0mproved: (min ?ts_ph_Nat_0 zero) => zero
+11:01:58 [0m[33m[WARN] [0mproved: (gq ?ts_ph_Nat_0 zero) => (lq zero ?ts_ph_Nat_0)
+11:01:58 [0m[33m[WARN] [0mproved: (lq zero ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 zero)
+11:01:58 [0m[33m[WARN] [0mproved: (ite1 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1
+11:01:58 [0m[33m[WARN] [0mproved: (tf7 ?ts_ph_Tree_0) => (main_ ?ts_ph_Tree_0)
+11:01:58 [0m[33m[WARN] [0mproved: (main_ ?ts_ph_Tree_0) => (tf7 ?ts_ph_Tree_0)
+11:01:58 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+11:01:58 [0m[33m[WARN] [0mproved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+11:01:58 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false

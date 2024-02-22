@@ -1,0 +1,42 @@
+11:21:59 [WARN] Collecting statistics
+11:21:59 [WARN]  ex is: true
+11:21:59 [WARN]  ex is: false
+11:21:59 [WARN]  ex is: zero
+11:21:59 [WARN]  ex is: (succ zero)
+11:21:59 [WARN]  ex is: (succ (succ zero))
+11:21:59 [WARN]  ex is: (leaf autovar_Nat_0)
+11:21:59 [WARN]  ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:21:59 [WARN]  ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:21:59 [WARN]  ex is: (makeTuple1 autovar_Nat_0 autovar_Bool_0)
+11:21:59 [WARN]  ex is: (makeTuple2 autovar_Bool_0 autovar_Nat_0)
+11:21:59 [WARN] Running exploration without proof mode, but goals were given
+11:21:59 [WARN] Proof mode: true
+11:21:59 [WARN]  ex is: true
+11:21:59 [WARN]  ex is: false
+11:21:59 [WARN]  ex is: zero
+11:21:59 [WARN]  ex is: (succ zero)
+11:21:59 [WARN]  ex is: (succ (succ zero))
+11:21:59 [WARN]  ex is: (leaf autovar_Nat_0)
+11:21:59 [WARN]  ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:21:59 [WARN]  ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:21:59 [WARN]  ex is: (makeTuple1 autovar_Nat_0 autovar_Bool_0)
+11:21:59 [WARN]  ex is: (makeTuple2 autovar_Bool_0 autovar_Nat_0)
+11:21:59 [WARN] Running exploration without proof mode, but goals were given
+11:21:59 [WARN] Proof mode: true
+11:21:59 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+11:21:59 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+11:21:59 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+11:21:59 [WARN] proved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+11:21:59 [WARN] proved: (tf3 ?ts_ph_Tree_0) => ?ts_ph_Tree_0
+11:22:24 [WARN] proved: (snd_2 (tf5 ?ts_ph_Tree_0)) => (fst_1 (tf1 ?ts_ph_Tree_0))
+11:22:24 [WARN] proved: (fst_1 (tf1 ?ts_ph_Tree_0)) => (snd_2 (tf5 ?ts_ph_Tree_0))
+11:22:24 [WARN] proved: (lq ?ts_ph_Nat_0 (succ ?ts_ph_Nat_0)) => true
+11:22:24 [WARN] proved: (lq (succ ?ts_ph_Nat_0) ?ts_ph_Nat_0) => false
+11:22:24 [WARN] generalized case_split proof as: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) -- (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+11:22:24 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+11:22:24 [WARN] proved: (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+11:22:24 [WARN] proved: (makeTuple2 (fst_2 ?ts_ph_Tuple2_0) (snd_2 ?ts_ph_Tuple2_0)) => ?ts_ph_Tuple2_0
+11:22:24 [WARN] proved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (and (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) (lq zero ?ts_ph_Nat_0))
+11:22:24 [WARN] proved: (and (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) (lq zero ?ts_ph_Nat_0)) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+11:22:24 [WARN] proved: (makeTuple1 (fst_1 ?ts_ph_Tuple1_0) (snd_1 ?ts_ph_Tuple1_0)) => ?ts_ph_Tuple1_0
+11:22:25 [WARN] proved: (and (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) (lq ?ts_ph_Nat_0 ?ts_ph_Nat_1)) => false

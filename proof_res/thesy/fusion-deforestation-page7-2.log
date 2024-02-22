@@ -1,0 +1,25 @@
+11:46:26 [WARN] Collecting statistics
+11:46:26 [WARN]  ex is: true
+11:46:26 [WARN]  ex is: false
+11:46:26 [WARN]  ex is: zero
+11:46:26 [WARN]  ex is: (succ zero)
+11:46:26 [WARN]  ex is: (succ (succ zero))
+11:46:26 [WARN]  ex is: (leaf autovar_Nat_0)
+11:46:26 [WARN]  ex is: (branch (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:46:26 [WARN]  ex is: (branch (branch (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (branch (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:46:26 [WARN] Running exploration without proof mode, but goals were given
+11:46:26 [WARN] Proof mode: true
+11:46:26 [WARN]  ex is: true
+11:46:26 [WARN]  ex is: false
+11:46:26 [WARN]  ex is: zero
+11:46:26 [WARN]  ex is: (succ zero)
+11:46:26 [WARN]  ex is: (succ (succ zero))
+11:46:26 [WARN]  ex is: (leaf autovar_Nat_0)
+11:46:26 [WARN]  ex is: (branch (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:46:26 [WARN]  ex is: (branch (branch (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (branch (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:46:26 [WARN] Running exploration without proof mode, but goals were given
+11:46:26 [WARN] Proof mode: true
+11:46:26 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+11:46:26 [WARN] proved: (main ?ts_ph_Tree_0) => (tf5 ?ts_ph_Tree_0)
+11:46:26 [WARN] proved: (tf5 ?ts_ph_Tree_0) => (main ?ts_ph_Tree_0)
+11:46:26 [WARN] Found all lemmas

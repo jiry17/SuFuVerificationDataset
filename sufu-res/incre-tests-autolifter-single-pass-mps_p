@@ -1,0 +1,63 @@
+
+Inductive List = cons {Int, List} | nil Unit;
+
+single_pass = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+max = \a: Int. \b: Int. 
+    if (< a b) then b
+    else a;
+
+mps_p = \xs: List. 
+    fix (
+    \f: List -> Int -> Int -> Int -> Int -> Int. \xs: List. \i: Int. \mps: Int. \pos: Int. \sum: Int. 
+    match xs with
+      nil _ -> pos
+    | cons {h, t} -> 
+        let sum = (+ sum h) in 
+            let pos = (if (> sum mps) then i
+            else pos) in 
+                let mps = (max mps sum) in 
+                    f t (+ i 1) mps pos sum
+    end
+) xs 0 0 0 0;
+
+main = single_pass mps_p;
+
+@Combine al_inf = 100;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_inf
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> {Int, Int}. \xs: List. 
+    match xs with
+      nil _ -> {0, -100}
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            {if (and (< 0 tmp1.2) (< 0 (+ h tmp1.2))) then + 1 tmp1.1
+            else 0, if (< h (+ h tmp1.2)) then + h tmp1.2
+            else h}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2.1;
+
+main_ = single_pass_ mps_p;

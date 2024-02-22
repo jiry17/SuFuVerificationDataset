@@ -1,0 +1,18 @@
+File processed.
+Depth 1: 10 terms, 4 tests, 24 evaluations, 10 classes, 0 raw equations.
+Depth 2: 103 terms, 100 tests, 5922 evaluations, 64 classes, 39 raw equations.
+Depth 3: 3948 terms, 100 tests, 349920 evaluations, 1525 classes, 2423 raw equations.
+QuickSpec done, 1525 classes, 2423 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034m[1mProved tf3 (tf3 var0_0 var0_1) var0_2 == tf3 var0_0 (tf3 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf1 (tf3 var0_0 var0_1) == tf1 var0_0 by induction on var0_1[0m using Z3
+[034mProved main (Concat var0_0 var0_1) == main var0_1 without induction[0m using Z3
+[034m[1mProved main var0_0 == tf7 var0_0 by induction on var0_0[0m using Z3
+Merry-go-round!
+[034mProved optimize {- main inp0 == mainNew inp0 -} without induction[0m using Z3
+Proved:
+    main var0_0 == tf7 var0_0
+    tf1 (tf3 var0_0 var0_1) == tf1 var0_0
+    tf3 (tf3 var0_0 var0_1) var0_2 == tf3 var0_0 (tf3 var0_1 var0_2)
+    optimize {- main inp0 == mainNew inp0 -}
+

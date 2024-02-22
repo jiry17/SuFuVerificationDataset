@@ -1,0 +1,78 @@
+File processed.
+Depth 1: 22 terms, 100 tests, 461 evaluations, 19 classes, 3 raw equations.
+Depth 2: 364 terms, 100 tests, 19017 evaluations, 233 classes, 131 raw equations.
+Depth 3: 32733 terms, 1600 tests, 3281891 evaluations, 16344 classes, 16389 raw equations.
+QuickSpec done, 16344 classes, 16389 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034mProved MakeTuple3 (fst3 var0_0) (snd3 var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved nateq var0_0 var0_1 == nateq var0_1 var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 (plus var0_0 var0_1) == nateq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_1) (plus var0_0 var0_2) == nateq var0_1 var0_2 by induction on var0_1[0m using Z3
+[034mProved nateq (plus var0_0 var0_1) (Succ var0_1) == nateq (plus var0_0 var0_2) (Succ var0_2) without induction[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_0) (plus var0_1 var0_1) == nateq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_0) (Succ Zero) == False by induction on var0_0[0m using Z3
+[034mProved tf3 (Icons var0_0 var0_1 var0_2) == tf3 (Icons var0_0a var0_1 var0_2) without induction[0m using Z3
+Failed to prove nateq (tf1 var0_0) (plus var0_1 var0_1) == tf3 (Icons var0_2 var0_1 var0_0)
+[034mProved nateq Zero (tf1 var0_0) == tf3 (Icons var0_1 Zero var0_0) without induction[0m using Z3
+[034m[1mProved leq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 (plus var0_0 var0_1) == True by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) var0_0 == leq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) (plus var0_0 var0_2) == leq var0_1 var0_2 by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) (Succ var0_1) == leq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved leq (Succ var0_0) (plus var0_0 var0_1) == leq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_0) (plus var0_1 var0_1) == leq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+Failed to prove leq (Succ Zero) (plus var0_0 var0_1) == True
+[034m[1mProved leq (plus var0_0 var0_0) (Succ Zero) == leq var0_0 Zero by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ Zero) (plus var0_0 var0_0) == leq (Succ var0_1) (plus var0_0 var0_1) by induction on var0_0[0m using Z3
+[034mProved tf11 (Icons var0_0 var0_1 var0_2) == tf11 (Icons var0_0 var0_0a var0_2) without induction[0m using Z3
+[034m[1mProved snd3 (tf11 var0_0) == tf1 var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 Zero == nateq var0_0 Zero by induction on var0_0[0m using Z3
+Failed to prove mainNew (Icons var0_0 var0_1 var0_2) == mainNew (Icons var0_0a var0_1 var0_2)
+[034mProved mainNew (Inil var0_0) == MakeTuple3 Zero Zero without induction[0m using Z3
+Failed to prove mainNew (Icons Zero var0_0 var0_1) == mainNew (Icons var0_0 var0_0 var0_1)
+Failed to prove fst3 (mainNew var0_0) == Zero
+[034m[1mProved gq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ var0_0) var0_0 == True by induction on var0_0[0m using Z3
+[034mProved max var0_0 == var0_0 without induction[0m using Z3
+[034m[1mProved gq var0_0 (plus var0_0 var0_1) == False by induction on var0_0[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_1) var0_0 == gq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_1) (plus var0_0 var0_2) == gq var0_1 var0_2 by induction on var0_0[0m using Z3
+Failed to prove gq (plus var0_0 var0_1) Zero == True
+[034m[1mProved gq (plus var0_0 var0_1) (Succ var0_1) == gq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved gq (Succ var0_0) (plus var0_0 var0_1) == gq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_0) (plus var0_1 var0_1) == gq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_0) (Succ Zero) == gq var0_0 Zero by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ Zero) (plus var0_0 var0_0) == gq (Succ var0_1) (plus var0_0 var0_1) by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ Zero) (plus var0_0 var0_1) == nateq Zero (plus var0_0 var0_1) by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved gq (Succ Zero) (tf1 var0_0) == nateq Zero (tf1 var0_0) by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ var0_0) var0_1 == gq var0_1 var0_0 by induction on var0_0,var0_1[0m using Z3
+[034mProved ite3 var0_0 (ite3 var0_1 var0_2) == ite3 var0_1 (ite3 var0_0 var0_2) without induction[0m using Z3
+[034mProved ite3 var0_0 (ite3 var0_0 var0_1) == ite3 var0_0 var0_1 without induction[0m using Z3
+Failed to prove ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_1 var0_2) == ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_0 var0_2)
+Failed to prove ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_2 var0_1) == ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_2 var0_0)
+Failed to prove ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_1 var0_0) == ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_0 var0_1)
+Failed to prove ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_0 var0_0) == ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_0 var0_1)
+Failed to prove ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_1 var0_1) == ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_0 var0_1)
+[034mProved ite3 (nateq var0_0 var0_1) (ite3 False var0_2) == ite3 False var0_2 without induction[0m using Z3
+Failed to prove ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_1 Zero) == ite3 (nateq var0_0 var0_1) (MakeTuple3 var0_0 Zero)
+Failed to prove ite3 (nateq var0_0 var0_1) (MakeTuple3 Zero var0_1) == ite3 (nateq var0_0 var0_1) (MakeTuple3 Zero var0_0)
+[034m[1mProved ite3 (nateq var0_0 Zero) (MakeTuple3 var0_0 var0_0) == ite3 False var0_1 by induction on var0_0[0m using Z3
+[034m[1mProved ite3 (nateq var0_0 Zero) (MakeTuple3 var0_1 Zero) == ite3 (nateq var0_0 Zero) (MakeTuple3 var0_1 var0_0) by induction on var0_0[0m using Z3
+[034m[1mProved ite3 (nateq var0_0 Zero) (MakeTuple3 Zero var0_1) == ite3 (nateq var0_0 Zero) (MakeTuple3 var0_0 var0_1) by induction on var0_0[0m using Z3
+Failed to prove ite3 (tf3 var0_0) (ite3 False var0_1) == ite3 False var0_1
+[034m[1mProved ite3 (leq var0_0 var0_1) (ite3 False var0_2) == ite3 False var0_2 by induction on var0_0,var0_1[0m using Z3
+Failed to prove ite3 var0_0 (mainNew var0_1) == mainNew var0_1
+Failed to prove ite3 (nateq var0_0 var0_1) (mainNew var0_2) == mainNew var0_2
+Failed to prove ite3 (nateq var0_0 var0_1) (mainNew var0_2) == ite3 var0_0a (mainNew var0_2)
+Failed to prove ite3 (nateq var0_0 var0_1) (mainNew var0_2) == ite3 (nateq var0_0 var0_0a) (mainNew var0_2)
+Failed to prove ite3 (leq var0_0 var0_1) (mainNew var0_2) == mainNew var0_2
+Failed to prove ite3 (leq var0_0 var0_1) (mainNew var0_2) == ite3 (nateq var0_0a var0_1) (mainNew var0_2)

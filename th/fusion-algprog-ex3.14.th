@@ -1,6 +1,7 @@
   (datatype Bool () ((true Bool) (false Bool)))
   (datatype Nat () ((zero Nat) (succ Nat Nat)))
   (datatype Tree () ((tip Nat Tree) (bin Tree Tree Tree)))
+  (datatype Tuple1 () ((makeTuple1 Nat Nat Tuple1)))
   (datatype PTree () ((ptip Nat Nat PTree) (pbin PTree PTree PTree)))
   (declare-fun plus (Nat Nat) Nat)
   (=> plusr0 (plus zero ?x) ?x)

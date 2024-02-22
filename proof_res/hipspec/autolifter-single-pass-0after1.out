@@ -1,0 +1,65 @@
+File processed.
+Depth 1: 15 terms, 100 tests, 437 evaluations, 12 classes, 3 raw equations.
+Depth 2: 211 terms, 200 tests, 16221 evaluations, 107 classes, 104 raw equations.
+Depth 3: 14753 terms, 400 tests, 1694151 evaluations, 3569 classes, 11184 raw equations.
+QuickSpec done, 3569 classes, 11184 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf0 var0_0 == var0_0 by induction on var0_0[0m using Z3
+[034mProved tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2) without induction[0m using Z3
+[034mProved tf1 var0_0 (tf1 var0_1 var0_0) == tf1 var0_1 var0_0 without induction[0m using Z3
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_0a) == tf1 (Cons var0_1a var0_1) (tf1 var0_2 var0_0a)
+[034mProved tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_1) == tf1 (Cons var0_0 var0_2) (tf1 var0_2 var0_1) without induction[0m using Z3
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_1 var0_2) == tf1 (Cons var0_0a var0_1) (tf1 var0_1 var0_2)
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_1) == tf1 (Cons var0_0a var0_1) (tf1 var0_2 var0_1)
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_1) == tf1 (Cons var0_0a var0_2) (tf1 var0_2 var0_1)
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_1 var0_2) == tf1 (Cons var0_0a var0_2) (tf1 var0_1 var0_2)
+[034m[1mProved tf7 (Nil var0_0) == False by induction on var0_0[0m using Z3
+[034mProved tf7 (Cons False var0_0) == tf7 var0_0 without induction[0m using Z3
+[034m[1mProved MakeTuple2 (tf7 var0_0) False == tf6 (Cons False var0_0) by induction on var0_0[0m using Z3
+[034mProved not (not var0_0) == var0_0 without induction[0m using Z3
+[034mProved tf4 var0_0 (Cons var0_0 var0_1) == tf4 var0_0 var0_1 without induction[0m using Z3
+[034mProved tf4 (tf4 var0_0 var0_1) var0_1 == tf4 var0_0 var0_1 without induction[0m using Z3
+[034m[1mProved tf4 (tf4 var0_0 var0_1) (Cons var0_2 var0_1) == tf4 (tf4 var0_2 var0_1) (Cons var0_0 var0_1) by induction on var0_0[0m using Z3
+[034mProved tf4 var0_0 (Cons True var0_1) == tf4 True var0_1 without induction[0m using Z3
+[034mProved tf4 (tf4 var0_0 var0_1) (Cons False var0_1) == tf4 var0_0 var0_1 without induction[0m using Z3
+Failed to prove tf4 (tf4 var0_0 var0_1) (tf1 var0_2 var0_1) == tf4 var0_0 (tf1 var0_2 var0_1)
+[034mProved tf4 (zafter1 var0_0) (Cons var0_1 var0_2) == tf4 (tf4 var0_1 var0_0) (Cons var0_1 var0_2) without induction[0m using Z3
+[034mProved tf4 (zafter1 var0_0) (Cons False var0_1) == tf4 (zafter1 var0_1) (Cons False var0_0) without induction[0m using Z3
+[034mProved tf4 (zafter1 var0_0) (tf1 var0_1 var0_0) == zafter1 (tf1 var0_1 var0_0) without induction[0m using Z3
+Failed to prove MakeTuple2 (zafter1 var0_0) False == tf6 (Cons False var0_0)
+Failed to prove tf7 (Cons var0_0 var0_1) == tf4 var0_0 var0_1
+Failed to prove tf4 (tf7 var0_0) var0_0 == tf7 var0_0
+Failed to prove tf4 (tf7 var0_0) (Cons var0_1 var0_2) == tf4 (tf4 var0_1 var0_0) (Cons var0_1 var0_2)
+Failed to prove tf4 (tf7 var0_0) (Cons var0_1 var0_0) == tf4 var0_1 var0_0
+[034mProved tf4 (tf7 var0_0) (Nil var0_1) == False without induction[0m using Z3
+Failed to prove tf7 (Cons True var0_0) == tf4 True var0_0
+[034mProved tf4 (tf7 var0_0) (Cons True var0_1) == tf4 True var0_1 without induction[0m using Z3
+Failed to prove tf4 (tf7 var0_0) (Cons False var0_1) == tf4 (tf7 var0_1) (Cons False var0_0)
+Failed to prove tf4 (tf7 var0_0) (Cons False var0_0) == tf7 var0_0
+Failed to prove tf4 (tf7 var0_0) (tf1 var0_1 var0_0) == tf7 (tf1 var0_1 var0_0)
+Failed to prove tf2 var0_0 == tf7 var0_0
+Failed to prove tf2 (tf1 var0_0 var0_1) == tf7 (tf1 var0_0 var0_1)
+Failed to prove tf7 var0_0 == zafter1 var0_0
+Failed to prove MakeTuple2 var0_0 (tf7 var0_1) == MakeTuple2 var0_0 (zafter1 var0_1)
+Failed to prove Cons (tf7 var0_0) var0_1 == Cons (zafter1 var0_0) var0_1
+Failed to prove tf4 (tf7 var0_0) var0_1 == tf4 (zafter1 var0_0) var0_1
+Failed to prove MakeTuple2 (tf7 var0_0) var0_1 == MakeTuple2 (zafter1 var0_0) var0_1
+Failed to prove Cons (tf7 var0_0) var0_0 == Cons (zafter1 var0_0) var0_0
+Failed to prove MakeTuple2 (tf4 var0_0 var0_1) (tf7 var0_2) == MakeTuple2 (tf4 var0_0 var0_1) (zafter1 var0_2)
+Failed to prove Cons (tf7 var0_0) (Cons var0_1 var0_2) == Cons (zafter1 var0_0) (Cons var0_1 var0_2)
+Failed to prove MakeTuple2 (tf7 var0_0) (tf4 var0_1 var0_2) == MakeTuple2 (zafter1 var0_0) (tf4 var0_1 var0_2)
+Failed to prove MakeTuple2 (tf4 var0_0 var0_1) (tf7 var0_1) == MakeTuple2 (tf4 var0_0 var0_1) (zafter1 var0_1)
+Failed to prove Cons (tf7 var0_0) (Cons var0_1 var0_0) == Cons (zafter1 var0_0) (Cons var0_1 var0_0)
+Failed to prove Cons (tf7 var0_0) (Nil var0_1) == Cons (zafter1 var0_0) (Nil var0_1)
+Failed to prove MakeTuple2 (zafter1 var0_0) (tf7 var0_1) == MakeTuple2 (zafter1 var0_0) (zafter1 var0_1)
+Failed to prove MakeTuple2 (tf7 var0_0) (tf4 var0_1 var0_0) == MakeTuple2 (zafter1 var0_0) (tf4 var0_1 var0_0)
+Failed to prove MakeTuple2 (tf7 var0_0) (zafter1 var0_1) == MakeTuple2 (zafter1 var0_0) (zafter1 var0_1)
+Failed to prove MakeTuple2 (tf7 var0_0) (tf7 var0_1) == MakeTuple2 (zafter1 var0_0) (zafter1 var0_1)
+Failed to prove MakeTuple2 False (tf7 var0_0) == MakeTuple2 False (zafter1 var0_0)
+Failed to prove MakeTuple2 True (tf7 var0_0) == MakeTuple2 True (zafter1 var0_0)
+Failed to prove MakeTuple2 (zafter1 var0_0) (tf7 var0_0) == MakeTuple2 (zafter1 var0_0) (zafter1 var0_0)
+Failed to prove MakeTuple2 (tf7 var0_0) True == MakeTuple2 (zafter1 var0_0) True
+Failed to prove MakeTuple2 (tf7 var0_0) (zafter1 var0_0) == MakeTuple2 (zafter1 var0_0) (zafter1 var0_0)
+Failed to prove MakeTuple2 (tf7 var0_0) (tf7 var0_0) == MakeTuple2 (zafter1 var0_0) (zafter1 var0_0)

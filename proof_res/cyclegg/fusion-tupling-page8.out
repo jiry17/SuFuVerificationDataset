@@ -1,0 +1,6 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: MyNat. v0 === (tf3 v0 v0)
+optimize uncyclic: INVALID (46065 ms)
+Attempted 1 goals:
+  0 solved (no cyclic)

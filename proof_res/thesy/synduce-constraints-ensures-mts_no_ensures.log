@@ -1,0 +1,38 @@
+11:24:26 [WARN] Collecting statistics
+11:24:26 [WARN]  ex is: true
+11:24:26 [WARN]  ex is: false
+11:24:26 [WARN]  ex is: null
+11:24:26 [WARN]  ex is: zero
+11:24:26 [WARN]  ex is: (succ zero)
+11:24:26 [WARN]  ex is: (succ (succ zero))
+11:24:26 [WARN]  ex is: (nil autovar_Unit_0)
+11:24:26 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:24:26 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:24:26 [WARN]  ex is: (cnil autovar_Unit_0)
+11:24:26 [WARN]  ex is: (single autovar_Nat_0)
+11:24:26 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+11:24:26 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+11:24:26 [WARN]  ex is: (makeTuple3 autovar_Nat_0 autovar_Nat_1)
+11:24:26 [WARN] Running exploration without proof mode, but goals were given
+11:24:26 [WARN] Proof mode: true
+11:24:26 [WARN]  ex is: true
+11:24:26 [WARN]  ex is: false
+11:24:26 [WARN]  ex is: null
+11:24:26 [WARN]  ex is: zero
+11:24:26 [WARN]  ex is: (succ zero)
+11:24:26 [WARN]  ex is: (succ (succ zero))
+11:24:26 [WARN]  ex is: (nil autovar_Unit_0)
+11:24:26 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:24:26 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:24:26 [WARN]  ex is: (cnil autovar_Unit_0)
+11:24:26 [WARN]  ex is: (single autovar_Nat_0)
+11:24:26 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+11:24:26 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+11:24:26 [WARN]  ex is: (makeTuple3 autovar_Nat_0 autovar_Nat_1)
+11:24:26 [WARN] Running exploration without proof mode, but goals were given
+11:24:26 [WARN] Proof mode: true
+11:24:26 [WARN] proved: (cnil ?ts_ph_Unit_0) => (cnil null)
+11:24:26 [WARN] proved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+11:24:26 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => (max zero ?ts_ph_Nat_0)
+11:24:26 [WARN] proved: (max zero ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 zero)
+11:24:26 [WARN] proved: (ite2 ?ts_ph_Bool_0 zero zero) => zero

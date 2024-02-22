@@ -1,6 +1,0 @@
-Proving begin optimize: (main v0) === (mainNew v0)
-Property accepted by cvec analysis
-new lemma forall v0: UList. v0 === (tf13 v0)
-new lemma forall v0: UList. v1: Nat. v2: Nat. v3: UList. (Usplit v0 v1 v2 v3) === (Usplit v0 v1 v2 (tf13 v3))
-new lemma forall v0: UList. v1: Nat. v2: Nat. v3: UList. (Usplit v0 v1 v2 v3) === (Usplit (tf13 v0) v1 v2 v3)
-new lemma forall v0: UList. v1: Nat. v2: Nat. v3: UList. (Usplit v0 v1 v2 (tf13 v3)) === (Usplit (tf13 v0) v1 v2 v3)

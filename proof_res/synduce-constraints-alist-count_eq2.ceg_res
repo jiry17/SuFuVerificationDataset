@@ -1,3 +1,0 @@
-Proving begin optimize: (main v0 v1) === (mainNew v0 v1)
-Property accepted by cvec analysis
-new lemma forall v0: AList. v1: Nat. (tf11 v0) === (tf11 (tf15 (tf14 v1) v1 v0))

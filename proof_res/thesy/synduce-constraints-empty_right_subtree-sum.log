@@ -1,0 +1,34 @@
+10:27:26 [WARN] Collecting statistics
+10:27:26 [WARN]  ex is: true
+10:27:26 [WARN]  ex is: false
+10:27:26 [WARN]  ex is: null
+10:27:26 [WARN]  ex is: zero
+10:27:26 [WARN]  ex is: (succ zero)
+10:27:26 [WARN]  ex is: (succ (succ zero))
+10:27:26 [WARN]  ex is: (nil autovar_Unit_0)
+10:27:26 [WARN]  ex is: (leaf autovar_Nat_0)
+10:27:26 [WARN]  ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:27:26 [WARN]  ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:27:26 [WARN] Running exploration without proof mode, but goals were given
+10:27:26 [WARN] Proof mode: true
+10:27:26 [WARN]  ex is: true
+10:27:26 [WARN]  ex is: false
+10:27:26 [WARN]  ex is: null
+10:27:26 [WARN]  ex is: zero
+10:27:26 [WARN]  ex is: (succ zero)
+10:27:26 [WARN]  ex is: (succ (succ zero))
+10:27:26 [WARN]  ex is: (nil autovar_Unit_0)
+10:27:26 [WARN]  ex is: (leaf autovar_Nat_0)
+10:27:26 [WARN]  ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:27:26 [WARN]  ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:27:26 [WARN] Running exploration without proof mode, but goals were given
+10:27:26 [WARN] Proof mode: true
+10:27:26 [WARN] proved: (nil ?ts_ph_Unit_0) => (nil null)
+10:27:26 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:27:26 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:27:26 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+10:27:26 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:27:26 [WARN] proved: (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+10:27:26 [WARN] proved: (ite1 ?ts_ph_Bool_0 zero) => zero
+10:27:26 [WARN] proved: (nat_eq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+10:27:26 [WARN] proved: (nat_eq ?ts_ph_Nat_0 zero) => (nat_eq zero ?ts_ph_Nat_0)

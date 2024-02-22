@@ -1,0 +1,64 @@
+File processed.
+Depth 1: 22 terms, 100 tests, 452 evaluations, 19 classes, 3 raw equations.
+Depth 2: 286 terms, 100 tests, 13079 evaluations, 197 classes, 89 raw equations.
+Depth 3: 19488 terms, 800 tests, 1577338 evaluations, 9066 classes, 10422 raw equations.
+QuickSpec done, 9066 classes, 10422 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034mProved MakeTuple3 (fst3 var0_0) (snd3 var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved tf1 (Nil var0_0) var0_1 == tf3 var0_1 by induction on var0_1[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq var0_0 (plus var0_0 var0_1) == lq Zero var0_1 by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (plus var0_0 var0_2) == lq var0_1 var0_2 by induction on var0_2[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (Succ var0_1) == lq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034mProved lq (Succ var0_0) (plus var0_0 var0_1) == lq (Succ var0_2) (plus var0_2 var0_1) without induction[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_0) (plus var0_1 var0_1) == lq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_0) (Succ Zero) == lq (plus var0_0 var0_1) (Succ var0_1) by induction on var0_1[0m using Z3
+[034mProved lq (Succ Zero) (plus var0_0 var0_0) == lq Zero var0_0 without induction[0m using Z3
+Failed to prove tf7 (Cons Zero var0_0) == tf7 var0_0
+Failed to prove fst3 (tf7 var0_0) == snd3 (tf7 var0_0)
+Failed to prove tf6 (Cons Zero var0_0) == tf7 var0_0
+Failed to prove spec (Cons Zero var0_0) == tf7 var0_0
+Failed to prove tf9 (Node var0_0 var0_1 var0_2) == tf9 (Node var0_0 var0_2 var0_1)
+Failed to prove tf9 (Node Zero var0_0 var0_1) == tf9 (Node Zero var0_1 var0_0)
+Failed to prove fst3 (tf9 var0_0) == snd3 (tf9 var0_0)
+Failed to prove tf8 (Node var0_0 var0_1 var0_2) == tf9 (Node var0_0 var0_2 var0_1)
+Failed to prove tf8 (Node Zero var0_0 var0_1) == tf9 (Node Zero var0_1 var0_0)
+Failed to prove targetNew (Node var0_0 var0_1 var0_2) == tf9 (Node var0_0 var0_2 var0_1)
+Failed to prove targetNew (Node Zero var0_0 var0_1) == tf9 (Node Zero var0_1 var0_0)
+[034mProved mainNew var0_0 == tf9 var0_0 without induction[0m using Z3
+Failed to prove mainNew (Node var0_0 var0_1 var0_2) == tf9 (Node var0_0 var0_2 var0_1)
+Failed to prove mainNew (Node Zero var0_0 var0_1) == tf9 (Node Zero var0_1 var0_0)
+[034m[1mProved max var0_0 var0_1 == max var0_1 var0_0 by induction on var0_0[0m using Z3
+[034mProved max var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034m[1mProved max var0_0 Zero == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved max var0_0 (max var0_1 var0_2) == max var0_1 (max var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved lq var0_0 (max var0_0 var0_1) == lq var0_0 var0_1 without induction[0m using Z3
+[034mProved max var0_0 (Succ var0_0) == Succ var0_0 without induction[0m using Z3
+[034mProved lq (max var0_0 var0_1) (Succ var0_0) == lq var0_1 (Succ var0_0) without induction[0m using Z3
+[034mProved max (Succ var0_0) (Succ var0_1) == Succ (max var0_0 var0_1) without induction[0m using Z3
+[034mProved max var0_0 (plus var0_0 var0_1) == plus var0_0 var0_1 without induction[0m using Z3
+Failed to prove max (plus var0_0 var0_1) (plus var0_0 var0_2) == plus var0_0 (max var0_1 var0_2)
+Failed to prove max (plus var0_0 var0_1) (plus var0_1 var0_2) == plus var0_1 (max var0_0 var0_2)
+Failed to prove max (plus var0_0 var0_1) (plus var0_2 var0_0) == plus var0_0 (max var0_1 var0_2)
+Failed to prove max (plus var0_0 var0_1) (plus var0_2 var0_1) == plus var0_1 (max var0_0 var0_2)
+Failed to prove max (plus var0_0 var0_1) (plus var0_0 var0_2) == plus var0_0 (max var0_2 var0_1)
+Failed to prove max (plus var0_0 var0_1) (plus var0_2 var0_0) == plus var0_0 (max var0_2 var0_1)
+Failed to prove max (plus var0_0 var0_1) (plus var0_2 var0_1) == plus var0_1 (max var0_2 var0_0)
+Failed to prove max (plus var0_0 var0_1) (plus var0_1 var0_2) == plus var0_1 (max var0_2 var0_0)
+Failed to prove lq Zero (max var0_0 var0_1) == lq Zero (plus var0_0 var0_1)
+Failed to prove max (plus var0_0 var0_1) (plus var0_0 var0_0) == plus var0_0 (max var0_0 var0_1)
+Failed to prove max (plus var0_0 var0_1) (plus var0_1 var0_1) == plus var0_1 (max var0_0 var0_1)
+Failed to prove max (plus var0_0 var0_1) (plus var0_1 var0_1) == plus var0_1 (max var0_1 var0_0)
+Failed to prove max (plus var0_0 var0_1) (plus var0_0 var0_0) == plus var0_0 (max var0_1 var0_0)
+Failed to prove lq (max var0_0 var0_1) (plus var0_0 var0_0) == lq var0_1 (plus var0_0 var0_0)
+Failed to prove lq (max var0_0 var0_1) (plus var0_1 var0_1) == lq var0_0 (plus var0_1 var0_1)
+Failed to prove max (plus var0_0 var0_0) (plus var0_0 var0_1) == plus var0_0 (max var0_0 var0_1)
+Failed to prove max (plus var0_0 var0_0) (plus var0_1 var0_0) == plus var0_0 (max var0_0 var0_1)

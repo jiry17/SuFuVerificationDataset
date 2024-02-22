@@ -1,0 +1,56 @@
+Config SampleIntMin = -2;
+Config SampleIntMax = 2;
+
+Inductive List = nil Unit | cons {Int, List};
+
+tri = \op: Int -> Int. 
+    fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> 
+        let tmp1 = (nil unit) in 
+            tmp1
+    | cons {h, t} -> 
+        let tail = (let tmp2 = (fix (
+        \g: List -> List. \ys: List. 
+        match ys with
+          nil _ -> nil unit
+        | cons {h, t} -> cons {op h, g t}
+        end
+    )) in 
+            let tmp3 = (f t) in 
+                tmp2 tmp3) in 
+            cons {h, tail}
+    end
+);
+
+op = \global0: Int. \x: Int. 
+    * x global0;
+
+sum = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> + h (f t)
+    end
+);
+
+main = \global0: Int. \xs: List. 
+    let tmp4 = (tri (op global0) xs) in 
+        sum tmp4;
+
+tri_ = \global0: Int. \op: Int -> Int. 
+    fix (
+    \f: List -> {Int, Int}. \xs: List. 
+    match xs with
+      nil _ -> {0, 0}
+    | cons {h, t} -> 
+        let tail = (let tmp3 = (f t) in 
+            tmp3.2) in 
+            {+ h tail, * global0 (+ h tail)}
+    end
+);
+
+main_ = \global0: Int. \xs: List. 
+    let tmp4 = (tri_ global0 (op global0) xs) in 
+        tmp4.1;

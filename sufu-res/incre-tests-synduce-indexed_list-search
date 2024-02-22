@@ -1,0 +1,56 @@
+
+Inductive List = nil Unit | cons {Int, List};
+
+Inductive IndexedList = inil Unit | icons {Int, Int, IndexedList};
+
+length = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> + 1 (f t)
+    end
+);
+
+repr = fix (
+    \f: List -> IndexedList. \xs: List. 
+    match xs with
+      nil _ -> 
+        let tmp1 = (inil unit) in 
+            tmp1
+    | cons {h, t} -> 
+        let tmp2 = (length t) in 
+            let tmp3 = (f t) in 
+                icons {h, tmp2, tmp3}
+    end
+);
+
+spec = \global0: Int. 
+    fix (
+    \f: IndexedList -> Int. \xs: IndexedList. 
+    match xs with
+      inil _ -> 0
+    | icons {h, i, t} -> if (== h global0) then i
+        else f t
+    end
+);
+
+main = \global0: Int. \xs: List. 
+    let tmp4 = (repr xs) in 
+        spec global0 tmp4;
+
+repr_ = \global0: Int. 
+    fix (
+    \f: List -> {Int, Int}. \xs: List. 
+    match xs with
+      nil _ -> {0, global0}
+    | cons {h, t} -> 
+        let tmp2 = (length t) in 
+            let tmp3 = (f t) in 
+                {if (or (< h tmp3.2) (< tmp3.2 h)) then tmp3.1
+                else tmp2, global0}
+    end
+);
+
+main_ = \global0: Int. \xs: List. 
+    let tmp4 = (repr_ global0 xs) in 
+        tmp4.1;

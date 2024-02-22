@@ -1,0 +1,68 @@
+
+Inductive List = elt Int | cons {Int, List};
+
+is_sorted = let aux = (fix (
+    \f: Int -> List -> Bool. \pre: Int. \xs: List. 
+    match xs with
+      elt x -> <= pre x
+    | cons {h, t} -> and (<= pre h) (f h t)
+    end
+)) in 
+        \xs: List. 
+        match xs with
+          elt x -> true
+        | cons {h, t} -> aux h t
+        end
+;
+
+spec = \global0: Int. 
+    fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      elt w -> if (== w global0) then 1
+        else 0
+    | cons {h, t} -> 
+        let res = (f t) in 
+            if (== global0 h) then 1
+            else if (== res 0) then 0
+            else + 1 res
+    end
+);
+
+target = \global0: Int. 
+    fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      elt w -> xs
+    | cons {h, t} -> if (>= h global0) then xs
+        else let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+);
+
+main = \global0: Int. \xs: List. 
+    if (is_sorted xs) then let tmp2 = (target global0 xs) in 
+        spec global0 tmp2
+    else 0;
+
+target_ = \global0: Int. 
+    fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      elt w -> 
+        let c0 = (- w global0) in 
+            if (== c0 0) then 1
+            else 0
+    | cons {h, t} -> if (>= h global0) then let c0 = (- h global0) in 
+            if (== c0 0) then 1
+            else 0
+        else let tmp1 = (f t) in 
+            if (< 0 tmp1) then + 1 tmp1
+            else tmp1
+    end
+);
+
+main_ = \global0: Int. \xs: List. 
+    if (is_sorted xs) then let tmp2 = (target_ global0 xs) in 
+        tmp2
+    else 0;

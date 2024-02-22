@@ -1,0 +1,59 @@
+
+Inductive List = cons {Bool, List} | nil Unit;
+
+single_pass = \v: List -> Bool. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+inf = 100;
+
+zsos = fix (
+    \f: Bool -> List -> Bool. \an: Bool. \xs: List. 
+    match xs with
+      nil _ -> true
+    | cons {h, t} -> 
+        let an = (and an h) in 
+            if (or (not h) an) then f an t
+            else false
+    end
+) true;
+
+main = single_pass zsos;
+
+@Combine @Align al_true = true;
+
+@Combine @Align al_false = false;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_false
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Bool. 
+    let run = (fix (
+    \f: List -> {Bool, Int}. \xs: List. 
+    match xs with
+      nil _ -> {true, 0}
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            {or (and h tmp1.1) (== tmp1.2 0), if (not h) then tmp1.2
+            else + 1 tmp1.2}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2.1;
+
+main_ = single_pass_ zsos;

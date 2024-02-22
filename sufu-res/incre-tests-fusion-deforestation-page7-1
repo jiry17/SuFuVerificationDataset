@@ -1,0 +1,47 @@
+
+Inductive List = nil Unit | cons {Int, List};
+
+map = \f: Int -> Int. 
+    fix (
+    \g: List -> List. \xs: List. 
+    match xs with
+      nil _ -> nil unit
+    | cons {h, t} -> cons {f h, g t}
+    end
+);
+
+sum = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> + h (f t)
+    end
+);
+
+square = \x: Int. 
+    * x x;
+
+upto = \n: Int. 
+    fix (
+    \f: Int -> List. \now: Int. 
+    if (> now n) then let tmp1 = (nil unit) in 
+        tmp1
+    else let tmp2 = (f (+ now 1)) in 
+        cons {now, tmp2}) 1;
+
+main = \n: Int. 
+    let tmp3 = (map square) in 
+        let tmp4 = (upto n) in 
+            sum (tmp3 tmp4);
+
+upto_ = \n: Int. 
+    fix (
+    \f: Int -> Unit. \now: Int. 
+    if (> now n) then unit
+    else unit) 1;
+
+main_ = \n: Int. 
+    if (and (< 1 n) (< (+ (- n (- 0 (square n))) (square n)) (+ n (+ (- 1 n) (- (square (+ (- n 1) n)) (square n)))))) then + (- n (- 0 (square n))) (square n)
+    else if (and (< 1 n) (< (+ (- n 1) (square n)) (+ (- 1 n) (- (square (+ (- n 1) n)) (square n))))) then + (- 1 n) (- (square (+ (- n 1) n)) (square n))
+    else if (< 0 n) then + (- n 1) (square n)
+    else 0;

@@ -1,0 +1,59 @@
+
+Inductive Formula = flit Bool | fand {Formula, Formula} | forr {Formula, Formula} | fnot Formula;
+
+Inductive NnfFormula = nfneglit Bool | nflit Bool | nfand {NnfFormula, NnfFormula} | nfor {NnfFormula, NnfFormula};
+
+spec = fix (
+    \f: Formula -> Bool. \x: Formula. 
+    match x with
+      flit b -> b
+    | fand {b1, b2} -> and (f b1) (f b2)
+    | forr {b1, b2} -> or (f b1) (f b2)
+    | fnot b -> if (f b) then false
+        else true
+    end
+);
+
+repr = fix (
+    \f: NnfFormula -> Formula. \x: NnfFormula. 
+    match x with
+      nflit b -> 
+        let tmp1 = (flit b) in 
+            tmp1
+    | nfneglit b -> 
+        let tmp2 = (fnot (flit b)) in 
+            tmp2
+    | nfand {b1, b2} -> 
+        let tmp3 = (f b1) in 
+            let tmp4 = (f b2) in 
+                fand {tmp3, tmp4}
+    | nfor {b1, b2} -> 
+        let tmp5 = (f b1) in 
+            let tmp6 = (f b2) in 
+                forr {tmp5, tmp6}
+    end
+);
+
+main = \xs: NnfFormula. 
+    let tmp7 = (repr xs) in 
+        spec tmp7;
+
+repr_ = fix (
+    \f: NnfFormula -> Bool. \x: NnfFormula. 
+    match x with
+      nflit b -> b
+    | nfneglit b -> not b
+    | nfand {b1, b2} -> 
+        let tmp3 = (f b1) in 
+            let tmp4 = (f b2) in 
+                and tmp4 tmp3
+    | nfor {b1, b2} -> 
+        let tmp5 = (f b1) in 
+            let tmp6 = (f b2) in 
+                or tmp5 tmp6
+    end
+);
+
+main_ = \xs: NnfFormula. 
+    let tmp7 = (repr_ xs) in 
+        tmp7;

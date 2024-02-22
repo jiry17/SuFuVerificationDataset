@@ -1,0 +1,86 @@
+11:33:26 [0m[33m[WARN] [0mCollecting statistics
+(tf1 ?tv4 (nil ?tv5)) => ?tv4
+(tf1 ?tv4 (cons ?tv6 ?tv7)) => (cons ?tv6 (tf0 ?tv7))
+(tf0 ?tv2) => (tf1 ?tv2 ?tv2)
+(tf2 ?tv9) => (zsos (tf0 ?tv9))
+(single_pass ?tv1) => (tf2 ?tv1)
+(and false ?x) => false
+(and ?x false) => false
+(and true true) => true
+(or true ?x) => true
+(or ?x true) => true
+(or false false) => false
+(not true) => false
+(not false) => true
+(ite1 true ?x) => ?x
+(ite1 false ?x) => false
+(tf4 ?tv14 (nil ?tv15)) => true
+(tf4 ?tv14 (cons ?tv16 ?tv17)) => (ite1 (or (not ?tv16) (and ?tv14 ?tv16)) (tf3 (and ?tv14 ?tv16) ?tv17))
+(tf3 ?tv11 ?tv12) => (tf4 ?tv11 ?tv12)
+(zsos ?tv10) => (tf3 true ?tv10)
+(main ?tv18) => (single_pass ?tv18)
+(fst_2 (makeTuple2 ?x0 ?x1)) => ?x0
+(nat_eq zero zero) => true
+(nat_eq zero (succ ?x)) => false
+(nat_eq (succ ?x) zero) => false
+(nat_eq (succ ?x) (succ ?y)) => (nat_eq ?x ?y)
+(snd_2 (makeTuple2 ?x0 ?x1)) => ?x1
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(ite3 true ?x ?y) => ?x
+(ite3 false ?x ?y) => ?y
+(tf6 (nil ?tv23)) => (makeTuple2 true zero)
+(tf6 (cons ?tv24 ?tv25)) => (makeTuple2 (or (and ?tv24 (fst_2 (tf5 ?tv25))) (nat_eq (snd_2 (tf5 ?tv25)) zero)) (ite3 (not ?tv24) (snd_2 (tf5 ?tv25)) (plus (succ zero) (snd_2 (tf5 ?tv25)))))
+(tf5 ?tv21) => (tf6 ?tv21)
+(tf7 ?tv26) => (fst_2 (tf5 ?tv26))
+(single_pass_ ?tv20) => (tf7 ?tv20)
+(main_ ?tv27) => (single_pass_ ?tv27)
+Searcher: (and ?autovar1 true)
+Searcher: (and true ?autovar2)
+Searcher: (or ?autovar1 false)
+Searcher: (or false ?autovar2)
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar1))
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar4))
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq (succ ?autovar5) ?autovar8)
+Searcher: (nat_eq (succ ?autovar6) ?autovar8)
+11:33:26 [0m[33m[WARN] [0m ex is: true
+11:33:26 [0m[33m[WARN] [0m ex is: false
+11:33:26 [0m[33m[WARN] [0m ex is: null
+11:33:26 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+11:33:26 [0m[33m[WARN] [0m ex is: (cons autovar_Bool_0 (nil autovar_Unit_0))
+11:33:26 [0m[33m[WARN] [0m ex is: (cons autovar_Bool_1 (cons autovar_Bool_0 (nil autovar_Unit_0)))
+11:33:26 [0m[33m[WARN] [0m ex is: zero
+11:33:26 [0m[33m[WARN] [0m ex is: (succ zero)
+11:33:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:33:26 [0m[33m[WARN] [0m ex is: (makeTuple2 autovar_Bool_0 autovar_Nat_0)
+11:33:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:33:26 [0m[33m[WARN] [0mProof mode: true
+11:33:26 [0m[33m[WARN] [0m ex is: true
+11:33:26 [0m[33m[WARN] [0m ex is: false
+11:33:26 [0m[33m[WARN] [0m ex is: null
+11:33:26 [0m[33m[WARN] [0m ex is: (nil autovar_Unit_0)
+11:33:26 [0m[33m[WARN] [0m ex is: (cons autovar_Bool_0 (nil autovar_Unit_0))
+11:33:26 [0m[33m[WARN] [0m ex is: (cons autovar_Bool_1 (cons autovar_Bool_0 (nil autovar_Unit_0)))
+11:33:26 [0m[33m[WARN] [0m ex is: zero
+11:33:26 [0m[33m[WARN] [0m ex is: (succ zero)
+11:33:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+11:33:26 [0m[33m[WARN] [0m ex is: (makeTuple2 autovar_Bool_0 autovar_Nat_0)
+11:33:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+11:33:26 [0m[33m[WARN] [0mProof mode: true
+11:33:26 [0m[33m[WARN] [0mproved: (nil ?ts_ph_Unit_0) => (nil null)
+11:33:26 [0m[33m[WARN] [0mproved: (or ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (or ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+11:33:26 [0m[33m[WARN] [0mproved: (or ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (or ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+11:33:26 [0m[33m[WARN] [0mproved: (ite1 ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+11:33:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (ite1 ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+11:33:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+11:33:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+11:33:26 [0m[33m[WARN] [0mproved: (or ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+11:33:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+11:33:26 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+11:33:26 [0m[33m[WARN] [0mproved: (nat_eq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+11:33:26 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 zero) => (nat_eq zero ?ts_ph_Nat_0)
+11:33:26 [0m[33m[WARN] [0mproved: (ite3 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1

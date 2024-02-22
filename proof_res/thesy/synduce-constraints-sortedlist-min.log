@@ -1,0 +1,32 @@
+11:06:58 [WARN] Collecting statistics
+11:06:58 [WARN]  ex is: true
+11:06:58 [WARN]  ex is: false
+11:06:58 [WARN]  ex is: zero
+11:06:58 [WARN]  ex is: (succ zero)
+11:06:58 [WARN]  ex is: (succ (succ zero))
+11:06:58 [WARN]  ex is: (elt autovar_Nat_0)
+11:06:58 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+11:06:58 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+11:06:58 [WARN] Running exploration without proof mode, but goals were given
+11:06:58 [WARN] Proof mode: true
+11:06:58 [WARN]  ex is: true
+11:06:58 [WARN]  ex is: false
+11:06:58 [WARN]  ex is: zero
+11:06:58 [WARN]  ex is: (succ zero)
+11:06:58 [WARN]  ex is: (succ (succ zero))
+11:06:58 [WARN]  ex is: (elt autovar_Nat_0)
+11:06:58 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+11:06:58 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+11:06:58 [WARN] Running exploration without proof mode, but goals were given
+11:06:58 [WARN] Proof mode: true
+11:06:58 [WARN] proved: (tf6 ?ts_ph_List_0) => ?ts_ph_List_0
+11:06:58 [WARN] proved: (tf7 ?ts_ph_List_1 ?ts_ph_List_0) => ?ts_ph_List_1
+11:06:58 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+11:06:58 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+11:06:58 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+11:06:58 [WARN] proved: (min ?ts_ph_Nat_0 zero) => zero
+11:06:58 [WARN] proved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+11:06:58 [WARN] proved: (ite1 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1
+11:06:58 [WARN] proved: (leq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+11:06:58 [WARN] proved: (tf3 ?ts_ph_List_0) => (tf1 zero ?ts_ph_List_0)
+11:06:58 [WARN] proved: (tf1 zero ?ts_ph_List_0) => (tf3 ?ts_ph_List_0)

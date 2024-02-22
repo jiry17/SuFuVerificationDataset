@@ -1,0 +1,105 @@
+10:53:58 [0m[33m[WARN] [0mCollecting statistics
+(lq zero (succ ?x)) => true
+(lq ?x zero) => false
+(lq (succ ?x) (succ ?y)) => (lq ?x ?y)
+(ite2 true ?x ?y) => ?x
+(ite2 false ?x ?y) => ?y
+(min ?tv0 ?tv1) => (ite2 (lq ?tv0 ?tv1) ?tv0 ?tv1)
+(max ?tv2 ?tv3) => (ite2 (lq ?tv2 ?tv3) ?tv3 ?tv2)
+(tf1 (leaf ?tv7)) => ?tv7
+(tf1 (node ?tv8 ?tv9 ?tv10)) => (min ?tv8 (min (tf0 ?tv9) (tf0 ?tv10)))
+(tf0 ?tv5) => (tf1 ?tv5)
+(tmin ?tv4) => (tf0 ?tv4)
+(tf3 (leaf ?tv14)) => ?tv14
+(tf3 (node ?tv15 ?tv16 ?tv17)) => (max ?tv15 (max (tf2 ?tv16) (tf2 ?tv17)))
+(tf2 ?tv12) => (tf3 ?tv12)
+(tmax ?tv11) => (tf2 ?tv11)
+(and false ?x) => false
+(and ?x false) => false
+(and true true) => true
+(geq zero (succ ?x)) => false
+(geq ?x zero) => true
+(geq (succ ?x) (succ ?y)) => (geq ?x ?y)
+(leq zero ?x) => true
+(leq (succ ?x) zero) => false
+(leq (succ ?x) (succ ?y)) => (leq ?x ?y)
+(tf5 (leaf ?tv21)) => true
+(tf5 (node ?tv22 ?tv23 ?tv24)) => (and (and (geq ?tv22 (tmax ?tv23)) (leq ?tv22 (tmin ?tv24))) (and (tf4 ?tv23) (tf4 ?tv24)))
+(tf4 ?tv19) => (tf5 ?tv19)
+(is_bst ?tv18) => (tf4 ?tv18)
+(tf7 ?tv29 (cons ?tv31 ?tv32)) => (cons ?tv31 (tf6 ?tv32 ?tv29))
+(tf7 ?tv29 (elt ?tv33)) => (cons ?tv33 ?tv29)
+(tf6 ?tv27 ?tv28) => (tf7 ?tv28 ?tv27)
+(cat ?tv25 ?tv26) => (tf6 ?tv25 ?tv26)
+(tf9 (leaf ?tv37)) => (elt ?tv37)
+(tf9 (node ?tv38 ?tv39 ?tv40)) => (cat (tf8 ?tv39) (cons ?tv38 (tf8 ?tv40)))
+(tf8 ?tv35) => (tf9 ?tv35)
+(repr ?tv34) => (tf8 ?tv34)
+(tf11 (elt ?tv44)) => ?tv44
+(tf11 (cons ?tv45 ?tv46)) => (max ?tv45 (tf10 ?tv46))
+(tf10 ?tv42) => (tf11 ?tv42)
+(spec ?tv41) => (tf10 ?tv41)
+(tf13 (leaf ?tv50)) => (leaf ?tv50)
+(tf13 (node ?tv51 ?tv52 ?tv53)) => (node ?tv51 ?tv52 (tf12 ?tv53))
+(tf12 ?tv48) => (tf13 ?tv48)
+(target ?tv47) => (tf12 ?tv47)
+(main ?tv54) => (ite2 (is_bst ?tv54) (spec (repr (target ?tv54))) zero)
+(tf15 (leaf ?tv58)) => ?tv58
+(tf15 (node ?tv59 ?tv60 ?tv61)) => (tf14 ?tv61)
+(tf14 ?tv56) => (tf15 ?tv56)
+(target_ ?tv55) => (tf14 ?tv55)
+(main_ ?tv62) => (ite2 (is_bst ?tv62) (target_ ?tv62) zero)
+Searcher: (lq ?autovar5 (succ ?autovar1))
+Searcher: (lq ?autovar5 (succ ?autovar3))
+Searcher: (lq zero ?autovar6)
+Searcher: (lq (succ ?autovar4) ?autovar6)
+Searcher: (and ?autovar1 true)
+Searcher: (and true ?autovar2)
+Searcher: (geq ?autovar5 (succ ?autovar1))
+Searcher: (geq ?autovar5 (succ ?autovar3))
+Searcher: (geq zero ?autovar6)
+Searcher: (geq (succ ?autovar4) ?autovar6)
+Searcher: (leq ?autovar6 zero)
+Searcher: (leq ?autovar6 (succ ?autovar3))
+Searcher: (leq (succ ?autovar4) ?autovar7)
+Searcher: (leq (succ ?autovar5) ?autovar7)
+10:53:58 [0m[33m[WARN] [0m ex is: true
+10:53:58 [0m[33m[WARN] [0m ex is: false
+10:53:58 [0m[33m[WARN] [0m ex is: zero
+10:53:58 [0m[33m[WARN] [0m ex is: (succ zero)
+10:53:58 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:53:58 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+10:53:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:53:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:53:58 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:53:58 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:53:58 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:53:58 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:53:58 [0m[33m[WARN] [0mProof mode: true
+10:53:58 [0m[33m[WARN] [0m ex is: true
+10:53:58 [0m[33m[WARN] [0m ex is: false
+10:53:58 [0m[33m[WARN] [0m ex is: zero
+10:53:58 [0m[33m[WARN] [0m ex is: (succ zero)
+10:53:58 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:53:58 [0m[33m[WARN] [0m ex is: (leaf autovar_Nat_0)
+10:53:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+10:53:58 [0m[33m[WARN] [0m ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+10:53:58 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:53:58 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:53:58 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:53:58 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:53:58 [0m[33m[WARN] [0mProof mode: true
+10:53:58 [0m[33m[WARN] [0mproved: (tf13 ?ts_ph_Tree_0) => ?ts_ph_Tree_0
+10:53:58 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:53:58 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:53:58 [0m[33m[WARN] [0mproved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+10:53:58 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:53:58 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+10:53:58 [0m[33m[WARN] [0mproved: (min zero ?ts_ph_Nat_0) => zero
+10:53:58 [0m[33m[WARN] [0mproved: (leq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+10:53:58 [0m[33m[WARN] [0mproved: (geq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+10:53:58 [0m[33m[WARN] [0mproved: (leq ?ts_ph_Nat_0 zero) => (geq zero ?ts_ph_Nat_0)
+10:53:58 [0m[33m[WARN] [0mproved: (geq zero ?ts_ph_Nat_0) => (leq ?ts_ph_Nat_0 zero)
+10:53:58 [0m[33m[WARN] [0mproved: (ite2 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1
+10:53:58 [0m[33m[WARN] [0mproved: (geq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (leq ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+10:53:58 [0m[33m[WARN] [0mproved: (leq ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (geq ?ts_ph_Nat_1 ?ts_ph_Nat_0)

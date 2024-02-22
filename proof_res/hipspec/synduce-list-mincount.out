@@ -1,0 +1,58 @@
+File processed.
+Depth 1: 18 terms, 5 tests, 51 evaluations, 18 classes, 0 raw equations.
+Depth 2: 277 terms, 100 tests, 13833 evaluations, 188 classes, 89 raw equations.
+Depth 3: 34616 terms, 800 tests, 3491375 evaluations, 13469 classes, 21147 raw equations.
+QuickSpec done, 13469 classes, 21147 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034mProved ite2 var0_0 var0_1 var0_1 == var0_1 without induction[0m using Z3
+[034mProved ite2 var0_0 var0_1 (ite2 var0_0 var0_2 var0_0a) == ite2 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 var0_1 (ite2 var0_2 var0_1 var0_0a) == ite2 var0_2 var0_1 (ite2 var0_0 var0_1 var0_0a) without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_1 var0_2 var0_0a) var0_2 == ite2 var0_1 var0_2 (ite2 var0_0 var0_0a var0_2) without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_1 var0_2 var0_0a) var0_0a == ite2 var0_1 (ite2 var0_0 var0_2 var0_0a) var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_0 var0_1 var0_2) var0_0a == ite2 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 (Succ var0_1) (Succ var0_2) == Succ (ite2 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq (ite2 var0_0 var0_1 var0_2) var0_1 == lq var0_2 (ite2 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved lq (ite2 var0_0 var0_1 var0_2) var0_2 == lq var0_1 (ite2 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034m[1mProved ite2 (lq var0_0 var0_1) var0_1 var0_0 == ite2 (lq var0_1 var0_0) var0_0 var0_1 by induction on var0_0[0m using Z3
+[034mProved ite2 (lq var0_0 var0_1) var0_0 var0_1 == ite2 (lq var0_1 var0_0) var0_1 var0_0 without induction[0m using Z3
+[034mProved lq var0_0 (ite2 var0_1 var0_2 Zero) == lq var0_0 (ite2 var0_1 var0_2 var0_0) without induction[0m using Z3
+[034mProved lq var0_0 (ite2 var0_1 Zero var0_2) == lq var0_0 (ite2 var0_1 var0_0 var0_2) without induction[0m using Z3
+[034mProved lq (Succ var0_0) (ite2 var0_1 var0_2 Zero) == lq (Succ var0_0) (ite2 var0_1 var0_2 var0_0) without induction[0m using Z3
+[034mProved lq (Succ var0_0) (ite2 var0_1 Zero var0_2) == lq (Succ var0_0) (ite2 var0_1 var0_0 var0_2) without induction[0m using Z3
+[034mProved lq (ite2 var0_0 var0_1 Zero) (Succ var0_2) == lq (ite2 var0_0 var0_1 var0_2) (Succ var0_2) without induction[0m using Z3
+[034mProved lq (ite2 var0_0 Zero var0_1) (Succ var0_2) == lq (ite2 var0_0 var0_2 var0_1) (Succ var0_2) without induction[0m using Z3
+[034mProved ite2 (lq Zero var0_0) var0_1 Zero == ite2 (lq Zero var0_0) var0_1 var0_0 without induction[0m using Z3
+[034mProved ite2 (lq Zero var0_0) var0_1 (Succ Zero) == ite2 (lq Zero var0_0) var0_1 (Succ var0_0) without induction[0m using Z3
+[034m[1mProved nateq var0_0 var0_1 == nateq var0_1 var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved lq var0_0 (Succ Zero) == nateq var0_0 Zero by induction on var0_0[0m using Z3
+[034mProved nateq var0_0 (ite2 var0_1 var0_2 var0_0) == nateq var0_2 (ite2 var0_1 var0_0 var0_2) without induction[0m using Z3
+[034mProved nateq var0_0 (ite2 var0_1 var0_0 var0_2) == nateq var0_2 (ite2 var0_1 var0_2 var0_0) without induction[0m using Z3
+[034m[1mProved ite2 (nateq var0_0 var0_1) var0_1 var0_2 == ite2 (nateq var0_0 var0_1) var0_0 var0_2 by induction on var0_1[0m using Z3
+[034mProved ite2 (nateq var0_0 var0_1) (Succ var0_1) var0_2 == ite2 (nateq var0_0 var0_1) (Succ var0_0) var0_2 without induction[0m using Z3
+[034mProved nateq (Succ var0_0) (ite2 var0_1 var0_2 Zero) == nateq (ite2 var0_1 var0_2 var0_0) (Succ var0_0) without induction[0m using Z3
+[034mProved nateq (Succ var0_0) (ite2 var0_1 Zero var0_2) == nateq (ite2 var0_1 var0_0 var0_2) (Succ var0_0) without induction[0m using Z3
+[034mProved ite2 (lq Zero var0_0) var0_1 var0_2 == ite2 (nateq var0_0 Zero) var0_2 var0_1 without induction[0m using Z3
+[034mProved min var0_0 var0_1 == min var0_1 var0_0 without induction[0m using Z3
+[034mProved min var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved min var0_0 Zero == Zero without induction[0m using Z3
+[034m[1mProved min var0_0 (min var0_1 var0_2) == min var0_1 (min var0_0 var0_2) by induction on var0_2[0m using Z3
+[034mProved lq var0_0 (min var0_0 var0_1) == False without induction[0m using Z3
+[034mProved lq (min var0_0 var0_1) var0_0 == lq var0_1 var0_0 without induction[0m using Z3
+[034mProved min var0_0 (Succ var0_0) == var0_0 without induction[0m using Z3
+[034mProved lq (min var0_0 var0_1) (Succ var0_0) == True without induction[0m using Z3
+[034mProved min (Succ var0_0) (Succ var0_1) == Succ (min var0_0 var0_1) without induction[0m using Z3
+[034mProved min var0_0 (ite2 var0_1 var0_0 var0_2) == ite2 var0_1 var0_0 (min var0_0 var0_2) without induction[0m using Z3
+[034mProved ite2 var0_0 (min var0_1 var0_2) var0_1 == min var0_1 (ite2 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved ite2 (lq var0_0 var0_1) var0_0 var0_1 == min var0_0 var0_1 without induction[0m using Z3
+[034mProved min var0_0 (ite2 var0_1 var0_2 Zero) == min var0_2 (ite2 var0_1 var0_0 Zero) without induction[0m using Z3
+[034mProved min var0_0 (ite2 var0_1 Zero var0_2) == min var0_2 (ite2 var0_1 Zero var0_0) without induction[0m using Z3
+[034mProved ite2 var0_0 Zero (min var0_1 var0_2) == min var0_1 (ite2 var0_0 Zero var0_2) without induction[0m using Z3
+[034mProved ite2 var0_0 (min var0_1 var0_2) Zero == min var0_1 (ite2 var0_0 var0_2 Zero) without induction[0m using Z3
+[034m[1mProved ite2 (lq var0_0 var0_1) (Succ var0_0) var0_1 == min var0_1 (Succ var0_0) by induction on var0_0,var0_1[0m using Z3
+Failed to prove lq var0_0 (Succ var0_1) == nateq var0_0 (min var0_0 var0_1)

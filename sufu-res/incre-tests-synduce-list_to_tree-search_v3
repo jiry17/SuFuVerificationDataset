@@ -1,0 +1,70 @@
+
+Inductive Tree = empty Unit | node {Int, Tree, Tree};
+
+Inductive List = nil Unit | cons {Int, List};
+
+cat = fix (
+    \f: List -> List -> List. \x: List. \y: List. 
+    match x with
+      cons {h, t} -> cons {h, f t y}
+    | nil _ -> y
+    end
+);
+
+repr = let dec = (fix (
+    \f: List -> Tree -> List. \res: List. \t: Tree. 
+    match t with
+      empty _ -> res
+    | node {w, l, r} -> cons {w, f (f res r) l}
+    end
+)) in 
+        fix (
+        \f: Tree -> List. \t: Tree. 
+        match t with
+          empty _ -> nil unit
+        | node {w, l, r} -> cons {w, dec (f r) l}
+        end
+    );
+
+target = fix (
+    \f: Tree -> Tree. \t: Tree. 
+    match t with
+      empty _ -> 
+        let tmp1 = (empty unit) in 
+            tmp1
+    | node {w, l, r} -> 
+        let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                node {w, tmp2, tmp3}
+    end
+);
+
+spec = \global0: Int. 
+    fix (
+    \f: List -> Bool. \xs: List. 
+    match xs with
+      nil _ -> false
+    | cons {h, t} -> if (== h global0) then true
+        else f t
+    end
+);
+
+main = \global0: Int. \xs: Tree. 
+    let tmp4 = (target xs) in 
+        spec global0 (repr tmp4);
+
+target_ = \global0: Int. 
+    fix (
+    \f: Tree -> {Bool, Int}. \t: Tree. 
+    match t with
+      empty _ -> {false, global0}
+    | node {w, l, r} -> 
+        let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                {or (or (== w tmp2.2) tmp3.1) tmp2.1, global0}
+    end
+);
+
+main_ = \global0: Int. \xs: Tree. 
+    let tmp4 = (target_ global0 xs) in 
+        tmp4.1;

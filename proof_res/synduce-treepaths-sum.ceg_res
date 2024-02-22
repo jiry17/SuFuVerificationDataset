@@ -1,9 +1,0 @@
-Proving begin optimize: (main v0) === (mainNew v0)
-Property accepted by cvec analysis
-new lemma forall v0: Nat. v0 === (plus v0 Zero)
-new lemma forall v0: Nat. v1: Nat. (plus v0 v1) === (plus v1 v0)
-new lemma forall v0: Nat. v1: Nat. v2: Nat. (Succ (plus (plus v0 v1) v2)) === (Succ (plus (plus v1 v2) v0))
-prove lemma forall v0: Zipper. (main v0) === (mainNew v0)
-optimize uncyclic: VALID (154 ms)
-Attempted 1 goals:
-  1 solved (no cyclic)

@@ -1,0 +1,79 @@
+File processed.
+Depth 1: 22 terms, 100 tests, 460 evaluations, 19 classes, 3 raw equations.
+Depth 2: 263 terms, 100 tests, 12438 evaluations, 177 classes, 86 raw equations.
+Depth 3: 29650 terms, 400 tests, 2761043 evaluations, 11884 classes, 17766 raw equations.
+QuickSpec done, 11884 classes, 17766 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034mProved MakeTuple3 (fst3 var0_0) (snd3 var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved tf3 (tf3 var0_0 var0_1) var0_2 == tf3 var0_0 (tf3 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf3 (Nil var0_0) var0_1 == var0_1 by induction on var0_1[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq var0_0 (plus var0_0 var0_1) == lq Zero var0_1 by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (plus var0_0 var0_2) == lq var0_1 var0_2 by induction on var0_2[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (Succ var0_1) == lq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved lq (Succ var0_0) (plus var0_0 var0_1) == lq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_0) (plus var0_1 var0_1) == lq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034mProved lq (plus var0_0 var0_0) (Succ Zero) == lq (plus var0_0 var0_1) (Succ var0_1) without induction[0m using Z3
+[034mProved lq (Succ Zero) (plus var0_0 var0_0) == lq Zero var0_0 without induction[0m using Z3
+Failed to prove tf1 (Cons Zero var0_0) == tf1 var0_0
+[034m[1mProved fst3 (tf1 var0_0) == snd3 (tf1 var0_0) by induction on var0_0[0m using Z3
+[034mProved tf0 (Cons Zero var0_0) == tf1 var0_0 without induction[0m using Z3
+[034mProved plus var0_0 (spec var0_1) == spec (Cons var0_0 var0_1) without induction[0m using Z3
+[034mProved spec (Nil var0_0) == Zero without induction[0m using Z3
+[034mProved MakeTuple3 (spec var0_0) (spec var0_0) == tf1 var0_0 without induction[0m using Z3
+[034mProved snd3 (tf1 var0_0) == spec var0_0 without induction[0m using Z3
+[034m[1mProved tf1 (tf3 var0_0 var0_1) == tf1 (tf3 var0_1 var0_0) by induction on var0_1,var0_0[0m using Z3
+Failed to prove plus (spec var0_0) (spec var0_1) == spec (tf3 var0_0 var0_1)
+Failed to prove plus (spec var0_0) (spec var0_0) == spec (tf3 var0_0 var0_0)
+[034mProved main (Concat var0_0 var0_1) == main (Concat var0_1 var0_0) without induction[0m using Z3
+[034mProved plus (main var0_0) var0_1 == plus var0_1 (main var0_0) without induction[0m using Z3
+[034m[1mProved main (Cnil var0_0) == Zero by induction on var0_0[0m using Z3
+[034mProved main (Single var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved plus (main var0_0) (main var0_1) == main (Concat var0_0 var0_1) by induction on var0_1[0m using Z3
+[034mProved plus Zero (main var0_0) == main var0_0 without induction[0m using Z3
+[034mProved MakeTuple3 (main var0_0) (main var0_0) == tf1 (tf5 var0_0) without induction[0m using Z3
+[034mProved lq (main var0_0) Zero == False without induction[0m using Z3
+[034mProved lq (main var0_0) (main var0_0) == False without induction[0m using Z3
+[034mProved plus (main var0_0) (Succ Zero) == Succ (main var0_0) without induction[0m using Z3
+Failed to prove tf7 (Concat var0_0 var0_1) == tf7 (Concat var0_1 var0_0)
+[034mProved tf7 (Single var0_0) == MakeTuple3 var0_0 var0_0 without induction[0m using Z3
+Failed to prove fst3 (tf7 var0_0) == snd3 (tf7 var0_0)
+[034m[1mProved tf1 (tf5 var0_0) == tf7 var0_0 by induction on var0_0[0m using Z3
+[034mProved snd3 (tf7 var0_0) == main var0_0 without induction[0m using Z3
+[034mProved spec (tf5 var0_0) == fst3 (tf7 var0_0) without induction[0m using Z3
+[034mProved tf6 (Concat var0_0 var0_1) == tf7 (Concat var0_1 var0_0) without induction[0m using Z3
+[034mProved mainNew (Concat var0_0 var0_1) == mainNew (Concat var0_1 var0_0) without induction[0m using Z3
+[034mProved mainNew (Cnil var0_0) == Zero without induction[0m using Z3
+[034mProved mainNew (Single var0_0) == var0_0 without induction[0m using Z3
+[034mProved plus (mainNew var0_0) (mainNew var0_1) == mainNew (Concat var0_0 var0_1) without induction[0m using Z3
+[034mProved MakeTuple3 (mainNew var0_0) (mainNew var0_0) == tf7 var0_0 without induction[0m using Z3
+[034m[1mProved main var0_0 == mainNew var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved max var0_0 var0_1 == max var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034mProved max var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034m[1mProved max var0_0 Zero == var0_0 by induction on var0_0[0m using Z3
+Failed to prove max var0_0 (max var0_1 var0_2) == max var0_1 (max var0_0 var0_2)
+Failed to prove max var0_0 (max var0_1 var0_2) == max var0_1 (max var0_2 var0_0)
+Failed to prove max (max var0_0 var0_1) var0_2 == max var0_0 (max var0_1 var0_2)
+Failed to prove max (max var0_0 var0_1) var0_2 == max var0_0 (max var0_2 var0_1)
+[034mProved max var0_0 (max var0_0 var0_1) == max var0_0 var0_1 without induction[0m using Z3
+[034mProved lq var0_0 (max var0_0 var0_1) == lq var0_0 var0_1 without induction[0m using Z3
+[034mProved max var0_0 (Succ var0_0) == Succ var0_0 without induction[0m using Z3
+Failed to prove max (max var0_0 var0_1) (max var0_0 var0_2) == max var0_0 (max var0_1 var0_2)
+Failed to prove max (max var0_0 var0_1) (max var0_1 var0_2) == max var0_0 (max var0_1 var0_2)
+Failed to prove max (max var0_0 var0_1) (max var0_2 var0_2) == max var0_0 (max var0_1 var0_2)
+Failed to prove max (max var0_0 var0_1) (max var0_0 var0_2) == max var0_0 (max var0_2 var0_1)
+Failed to prove max (max var0_0 var0_1) (max var0_2 var0_1) == max var0_0 (max var0_2 var0_1)
+Failed to prove max (max var0_0 var0_1) (max var0_2 var0_2) == max var0_0 (max var0_2 var0_1)
+Failed to prove max (max var0_0 var0_1) (max var0_2 var0_0) == max var0_2 (max var0_0 var0_1)
+Failed to prove max (max var0_0 var0_1) (max var0_2 var0_1) == max var0_2 (max var0_0 var0_1)
+Failed to prove lq (max var0_0 var0_1) (max var0_0 var0_2) == lq (max var0_0 var0_1) var0_2
+Failed to prove lq (max var0_0 var0_1) (max var0_1 var0_2) == lq (max var0_0 var0_1) var0_2
+Failed to prove lq (max var0_0 var0_1) (max var0_2 var0_1) == lq (max var0_0 var0_1) var0_2

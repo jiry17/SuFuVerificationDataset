@@ -1,0 +1,9 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Bool. v1: Nat. v2: Nat. (Succ (ite1 v0 v1 v2)) === (ite1 v0 (Succ v1) (Succ v2))
+prove lemma forall v0: Tree. (Succ (tf5 v0)) === (tf5 (tf3 v0))
+prove lemma forall v0: Tree. (main v0) === (mainNew v0)
+prove lemma forall v0: Tree. (Succ (tf7 v0)) === (tf5 (tf3 (tf1 v0)))
+optimize uncyclic: VALID (1023 ms)
+Attempted 1 goals:
+  1 solved (no cyclic)

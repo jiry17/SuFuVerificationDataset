@@ -1,0 +1,28 @@
+11:23:26 [WARN] Collecting statistics
+11:23:26 [WARN]  ex is: true
+11:23:26 [WARN]  ex is: false
+11:23:26 [WARN]  ex is: zero
+11:23:26 [WARN]  ex is: (succ zero)
+11:23:26 [WARN]  ex is: (succ (succ zero))
+11:23:26 [WARN]  ex is: (leaf autovar_Nat_0)
+11:23:26 [WARN]  ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:23:26 [WARN]  ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:23:26 [WARN]  ex is: (mleaf autovar_Nat_0)
+11:23:26 [WARN]  ex is: (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0))
+11:23:26 [WARN]  ex is: (mnode autovar_Nat_3 autovar_Nat_4 (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)) (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)))
+11:23:26 [WARN] Running exploration without proof mode, but goals were given
+11:23:26 [WARN] Proof mode: true
+11:23:26 [WARN]  ex is: true
+11:23:26 [WARN]  ex is: false
+11:23:26 [WARN]  ex is: zero
+11:23:26 [WARN]  ex is: (succ zero)
+11:23:26 [WARN]  ex is: (succ (succ zero))
+11:23:26 [WARN]  ex is: (leaf autovar_Nat_0)
+11:23:26 [WARN]  ex is: (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0))
+11:23:26 [WARN]  ex is: (node autovar_Nat_2 (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)) (node autovar_Nat_1 (leaf autovar_Nat_0) (leaf autovar_Nat_0)))
+11:23:26 [WARN]  ex is: (mleaf autovar_Nat_0)
+11:23:26 [WARN]  ex is: (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0))
+11:23:26 [WARN]  ex is: (mnode autovar_Nat_3 autovar_Nat_4 (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)) (mnode autovar_Nat_1 autovar_Nat_2 (mleaf autovar_Nat_0) (mleaf autovar_Nat_0)))
+11:23:26 [WARN] Running exploration without proof mode, but goals were given
+11:23:26 [WARN] Proof mode: true
+11:23:26 [WARN] Found all lemmas

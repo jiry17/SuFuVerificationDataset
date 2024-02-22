@@ -1,0 +1,25 @@
+10:24:26 [WARN] Collecting statistics
+10:24:26 [WARN]  ex is: true
+10:24:26 [WARN]  ex is: false
+10:24:26 [WARN]  ex is: null
+10:24:26 [WARN]  ex is: zero
+10:24:26 [WARN]  ex is: (succ zero)
+10:24:26 [WARN]  ex is: (succ (succ zero))
+10:24:26 [WARN]  ex is: (nil autovar_Unit_0)
+10:24:26 [WARN]  ex is: (node autovar_Nat_0 (nil autovar_Unit_0) (nil autovar_Unit_0))
+10:24:26 [WARN]  ex is: (node autovar_Nat_1 (node autovar_Nat_0 (nil autovar_Unit_0) (nil autovar_Unit_0)) (node autovar_Nat_0 (nil autovar_Unit_0) (nil autovar_Unit_0)))
+10:24:26 [WARN] Running exploration without proof mode, but goals were given
+10:24:26 [WARN] Proof mode: true
+10:24:26 [WARN]  ex is: true
+10:24:26 [WARN]  ex is: false
+10:24:26 [WARN]  ex is: null
+10:24:26 [WARN]  ex is: zero
+10:24:26 [WARN]  ex is: (succ zero)
+10:24:26 [WARN]  ex is: (succ (succ zero))
+10:24:26 [WARN]  ex is: (nil autovar_Unit_0)
+10:24:26 [WARN]  ex is: (node autovar_Nat_0 (nil autovar_Unit_0) (nil autovar_Unit_0))
+10:24:26 [WARN]  ex is: (node autovar_Nat_1 (node autovar_Nat_0 (nil autovar_Unit_0) (nil autovar_Unit_0)) (node autovar_Nat_0 (nil autovar_Unit_0) (nil autovar_Unit_0)))
+10:24:26 [WARN] Running exploration without proof mode, but goals were given
+10:24:26 [WARN] Proof mode: true
+10:24:26 [WARN] proved: (nil ?ts_ph_Unit_0) => (nil null)
+10:24:26 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0

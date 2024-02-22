@@ -1,0 +1,86 @@
+File processed.
+Depth 1: 12 terms, 5 tests, 37 evaluations, 12 classes, 0 raw equations.
+Depth 2: 257 terms, 200 tests, 15577 evaluations, 151 classes, 106 raw equations.
+Depth 3: 25599 terms, 800 tests, 3798218 evaluations, 8712 classes, 16887 raw equations.
+QuickSpec done, 8712 classes, 16887 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034mProved and var0_0 var0_1 == and var0_1 var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (and var0_1 var0_2) == and var0_1 (and var0_0 var0_2) without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 var0_1 == var0_1 without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 (ite1 var0_0 var0_2 var0_0a) == ite1 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 (ite1 var0_2 var0_1 var0_0a) == ite1 var0_2 var0_1 (ite1 var0_0 var0_1 var0_0a) without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_2 == ite1 var0_1 var0_2 (ite1 var0_0 var0_0a var0_2) without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_0a == ite1 var0_1 (ite1 var0_0 var0_2 var0_0a) var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_0 var0_1 var0_2) var0_0a == ite1 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 (Succ var0_1) (Succ var0_2) == Succ (ite1 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034mProved ite1 (and var0_0 var0_1) var0_2 var0_0a == ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_0a without induction[0m using Z3
+[034m[1mProved gq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ var0_0) var0_0 == True by induction on var0_0[0m using Z3
+[034mProved gq (ite1 var0_0 var0_1 var0_2) var0_1 == gq var0_2 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 var0_1 var0_2) var0_2 == gq var0_1 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034m[1mProved ite1 (gq var0_0 var0_1) var0_1 var0_0 == ite1 (gq var0_1 var0_0) var0_0 var0_1 by induction on var0_0[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) var0_0 var0_1 == ite1 (gq var0_1 var0_0) var0_1 var0_0 without induction[0m using Z3
+Failed to prove gq (ite1 var0_0 var0_1 var0_2) (Succ var0_1) == gq var0_2 (ite1 var0_0 var0_2 var0_1)
+[034mProved gq (ite1 var0_0 var0_1 Zero) var0_2 == gq var0_1 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 Zero var0_1) var0_2 == gq var0_1 (ite1 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034mProved gq (Succ var0_0) (ite1 var0_1 var0_2 Zero) == gq (Succ var0_0) (ite1 var0_1 var0_2 var0_0) without induction[0m using Z3
+[034mProved gq (Succ var0_0) (ite1 var0_1 Zero var0_2) == gq (Succ var0_0) (ite1 var0_1 var0_0 var0_2) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 var0_1 Zero) (Succ var0_2) == gq (ite1 var0_0 var0_1 var0_2) (Succ var0_2) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 Zero var0_1) (Succ var0_2) == gq (ite1 var0_0 var0_2 var0_1) (Succ var0_2) without induction[0m using Z3
+Failed to prove gq (ite1 var0_0 Zero var0_1) (Succ var0_2) == gq var0_1 (ite1 var0_0 var0_1 var0_2)
+[034mProved ite1 (gq var0_0 Zero) var0_1 Zero == ite1 (gq var0_0 Zero) var0_1 var0_0 without induction[0m using Z3
+[034mProved ite1 (gq var0_0 Zero) var0_1 (Succ Zero) == ite1 (gq var0_0 Zero) var0_1 (Succ var0_0) without induction[0m using Z3
+[034mProved and (gq var0_0 var0_1) (gq var0_1 var0_0) == False without induction[0m using Z3
+[034mProved and (gq var0_0 var0_1) (gq var0_0 Zero) == gq var0_0 var0_1 without induction[0m using Z3
+[034mProved and var0_0 (gq var0_1 var0_2) == gq var0_1 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034m[1mProved leq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ var0_0) var0_1 == gq var0_1 var0_0 by induction on var0_1[0m using Z3
+[034mProved leq (ite1 var0_0 var0_1 var0_2) var0_1 == leq var0_2 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved leq (ite1 var0_0 var0_1 var0_2) var0_2 == leq var0_1 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034m[1mProved ite1 (leq var0_0 var0_1) var0_1 var0_0 == ite1 (leq var0_1 var0_0) var0_0 var0_1 by induction on var0_0[0m using Z3
+[034mProved ite1 (leq var0_0 var0_1) var0_0 var0_1 == ite1 (leq var0_1 var0_0) var0_1 var0_0 without induction[0m using Z3
+Failed to prove leq (ite1 var0_0 var0_1 var0_2) (Succ var0_1) == leq var0_2 (ite1 var0_0 var0_2 var0_1)
+[034mProved leq (ite1 var0_0 var0_1 Zero) (Succ var0_2) == leq (ite1 var0_0 var0_1 var0_2) (Succ var0_2) without induction[0m using Z3
+[034mProved leq (ite1 var0_0 Zero var0_1) (Succ var0_2) == leq (ite1 var0_0 var0_2 var0_1) (Succ var0_2) without induction[0m using Z3
+Failed to prove leq (ite1 var0_0 Zero var0_1) (Succ var0_2) == leq var0_1 (ite1 var0_0 var0_1 var0_2)
+[034mProved ite1 (leq var0_0 Zero) Zero var0_1 == ite1 (leq var0_0 Zero) var0_0 var0_1 without induction[0m using Z3
+[034mProved ite1 (leq var0_0 Zero) (Succ Zero) var0_1 == ite1 (leq var0_0 Zero) (Succ var0_0) var0_1 without induction[0m using Z3
+[034m[1mProved ite1 (leq var0_0 var0_1) var0_0 var0_2 == ite1 (gq var0_0 var0_1) var0_2 var0_0 by induction on var0_1[0m using Z3
+[034mProved ite1 (leq var0_0 var0_1) var0_1 var0_2 == ite1 (gq var0_0 var0_1) var0_2 var0_1 without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) var0_0 var0_2 == ite1 (leq var0_0 var0_1) var0_2 var0_0 without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) var0_1 var0_2 == ite1 (leq var0_0 var0_1) var0_2 var0_1 without induction[0m using Z3
+[034mProved ite1 (leq var0_0 var0_1) (Succ var0_2) var0_2 == ite1 (gq var0_0 var0_1) var0_2 (Succ var0_2) without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) (Succ var0_2) var0_2 == ite1 (leq var0_0 var0_1) var0_2 (Succ var0_2) without induction[0m using Z3
+[034mProved ite1 (leq var0_0 var0_1) Zero var0_2 == ite1 (gq var0_0 var0_1) var0_2 Zero without induction[0m using Z3
+[034mProved ite1 (leq var0_0 var0_1) (Succ var0_0) var0_2 == ite1 (gq var0_0 var0_1) var0_2 (Succ var0_0) without induction[0m using Z3
+[034mProved ite1 (leq var0_0 var0_1) (Succ var0_1) var0_2 == ite1 (gq var0_0 var0_1) var0_2 (Succ var0_1) without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) Zero var0_2 == ite1 (leq var0_0 var0_1) var0_2 Zero without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) (Succ var0_0) var0_2 == ite1 (leq var0_0 var0_1) var0_2 (Succ var0_0) without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) (Succ var0_1) var0_2 == ite1 (leq var0_0 var0_1) var0_2 (Succ var0_1) without induction[0m using Z3
+[034mProved ite1 (gq var0_0 Zero) var0_1 var0_2 == ite1 (leq var0_0 Zero) var0_2 var0_1 without induction[0m using Z3
+[034mProved ite1 (leq var0_0 var0_1) (Succ Zero) var0_2 == ite1 (gq var0_0 var0_1) var0_2 (Succ Zero) without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) (Succ Zero) var0_2 == ite1 (leq var0_0 var0_1) var0_2 (Succ Zero) without induction[0m using Z3
+Failed to prove and (and var0_0 var0_1) (leq var0_2 Zero) == and var0_1 (leq var0_2 Zero)
+Failed to prove and (and var0_0 var0_1) (leq var0_2 Zero) == and var0_0 (leq var0_2 Zero)
+Failed to prove and (leq var0_0 Zero) (and var0_1 var0_2) == and var0_2 (leq var0_0 Zero)
+Failed to prove and (leq var0_0 Zero) (and var0_1 var0_2) == and var0_1 (leq var0_0 Zero)
+[034mProved and (leq var0_0 var0_1) (leq var0_0 Zero) == leq var0_0 Zero without induction[0m using Z3
+[034mProved and (leq var0_0 var0_1) (leq var0_1 Zero) == and (leq var0_1 var0_0) (leq var0_0 Zero) without induction[0m using Z3
+[034mProved and (leq var0_0 Zero) (leq var0_1 Zero) == and (leq var0_0 var0_1) (leq var0_1 Zero) without induction[0m using Z3
+Failed to prove and (gq var0_0 var0_1) (leq var0_2 Zero) == and (leq var0_1 var0_0) (leq var0_2 Zero)
+Failed to prove and (leq var0_0 Zero) (gq var0_1 var0_2) == and (leq var0_2 var0_1) (leq var0_0 Zero)
+Failed to prove and (leq var0_0 var0_1) (gq var0_1 Zero) == leq var0_0 var0_1
+[034mProved and (gq var0_0 var0_1) (leq var0_0 Zero) == False without induction[0m using Z3
+Failed to prove and (gq var0_0 var0_1) (leq var0_1 Zero) == leq var0_1 Zero
+Failed to prove and (leq var0_0 Zero) (gq var0_1 var0_0) == leq var0_0 Zero
+Failed to prove and (gq var0_0 Zero) (leq var0_1 var0_0) == leq var0_1 var0_0
+Failed to prove and (leq var0_0 Zero) (gq var0_1 Zero) == leq var0_0 Zero
+Failed to prove and (gq var0_0 Zero) (leq var0_1 Zero) == leq var0_1 Zero
+[034mProved min var0_0 var0_1 == min var0_1 var0_0 without induction[0m using Z3
+[034mProved min var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034m[1mProved min var0_0 Zero == Zero by induction on var0_0[0m using Z3
+Failed to prove min var0_0 (min var0_1 var0_2) == min var0_1 (min var0_0 var0_2)

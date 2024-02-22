@@ -1,0 +1,69 @@
+
+Inductive List = two {Int, Int} | cons {Int, List};
+
+Inductive CList = ctwo {Int, Int} | concat {CList, CList};
+
+max = \a: Int. \b: Int. 
+    if (< a b) then b
+    else a;
+
+min = \a: Int. \b: Int. 
+    if (> a b) then b
+    else a;
+
+cat_list = fix (
+    \f: List -> List -> List. \xs: List. \ys: List. 
+    match xs with
+      two {a, b} -> cons {a, cons {b, ys}}
+    | cons {hd, tl} -> cons {hd, f tl ys}
+    end
+);
+
+repr = fix (
+    \f: CList -> List. \xs: CList. 
+    match xs with
+      ctwo {a, b} -> 
+        let tmp1 = (two {a, b}) in 
+            tmp1
+    | concat {a, b} -> 
+        let tmp2 = (f a) in 
+            let tmp3 = (f b) in 
+                cat_list tmp2 tmp3
+    end
+);
+
+spec = \xs: List. 
+    (fix (
+    \f: List -> {Int, Int}. \xs: List. 
+    match xs with
+      two {a, b} -> {max a b, min a b}
+    | cons {hd, tl} -> 
+        let result = (f tl) in 
+            let new_max = (max hd result.1) in 
+                let new_snd = (max result.2 (min hd result.1)) in 
+                    {new_max, new_snd}
+    end
+) xs).2;
+
+main = \x: CList. 
+    let tmp4 = (repr x) in 
+        spec tmp4;
+
+repr_ = fix (
+    \f: CList -> {Int, Int}. \xs: CList. 
+    match xs with
+      ctwo {a, b} -> 
+        let c0 = (min b a) in 
+            let c1 = (max b a) in 
+                {c0, c1}
+    | concat {a, b} -> 
+        let tmp2 = (f a) in 
+            let tmp3 = (f b) in 
+                {- (+ (max tmp2.1 tmp3.2) (max tmp2.2 tmp3.1)) (max tmp2.2 tmp3.2), if (< tmp2.2 tmp3.2) then tmp3.2
+                else tmp2.2}
+    end
+);
+
+main_ = \x: CList. 
+    let tmp4 = (repr_ x) in 
+        tmp4.1;

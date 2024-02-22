@@ -1,0 +1,59 @@
+
+Inductive List = cons {Bool, List} | nil Unit;
+
+single_pass = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+inf = 100;
+
+cnt1s = fix (
+    \f: Bool -> Int -> List -> Int. \pre: Bool. \cnt: Int. \xs: List. 
+    match xs with
+      nil _ -> cnt
+    | cons {h, t} -> 
+        let cnt = (if (and (not pre) h) then + cnt 1
+        else cnt) in 
+            f h cnt t
+    end
+) false 0;
+
+main = single_pass cnt1s;
+
+@Combine @Align al_true = true;
+
+@Combine @Align al_false = false;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_false
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> {Int, Bool}. \xs: List. 
+    match xs with
+      nil _ -> {0, false}
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            {if (or (not h) tmp1.2) then tmp1.1
+            else + 1 tmp1.1, h}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2.1;
+
+main_ = single_pass_ cnt1s;

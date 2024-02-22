@@ -1,0 +1,21 @@
+File processed.
+Depth 1: 15 terms, 6 tests, 53 evaluations, 15 classes, 0 raw equations.
+Depth 2: 319 terms, 200 tests, 22550 evaluations, 171 classes, 148 raw equations.
+Depth 3: 32576 terms, 800 tests, 5764643 evaluations, 11734 classes, 20842 raw equations.
+QuickSpec done, 11734 classes, 20842 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034m[1mProved tf12 var0_0 == var0_0 by induction on var0_0[0m using Z3
+Failed to prove tf13 var0_0 (tf13 var0_1 var0_2) == tf13 var0_1 var0_2
+[034mProved tf13 (tf13 var0_0 var0_1) var0_2 == tf13 var0_0 (tf13 var0_1 var0_2) without induction[0m using Z3
+Failed to prove tf13 (tf13 var0_0 var0_1) var0_2 == tf13 var0_1 var0_2
+Failed to prove tf13 var0_0 (tf13 var0_1 var0_0) == tf13 var0_1 var0_0
+Failed to prove tf13 (tf13 var0_0 var0_1) var0_0 == tf13 var0_1 var0_0
+Failed to prove tf13 (Concat var0_0 var0_1) (tf13 var0_0 var0_2) == tf13 var0_0 var0_2
+Failed to prove tf13 (Concat var0_0 var0_1) (tf13 var0_2 var0_0) == tf13 var0_2 var0_0
+Failed to prove tf13 (Concat var0_0 var0_1) (tf13 var0_1 var0_2) == tf13 var0_1 var0_2
+Failed to prove tf13 (Concat var0_0 var0_1) (tf13 var0_2 var0_1) == tf13 var0_2 var0_1
+Failed to prove tf13 (tf13 var0_0 var0_1) (tf13 var0_0 var0_2) == tf13 var0_1 (tf13 var0_0 var0_2)
+Failed to prove tf13 (tf13 var0_0 var0_1) (tf13 var0_2 var0_0) == tf13 var0_1 (tf13 var0_2 var0_0)
+[034mProved tf13 (tf13 var0_0 var0_1) (tf13 var0_2 var0_1) == tf13 var0_0 (tf13 var0_2 var0_1) without induction[0m using Z3
+Failed to prove tf13 (tf13 var0_0 var0_1) (tf13 var0_0 var0_2) == tf13 var0_0 var0_2
+Failed to prove tf13 (tf13 var0_0 var0_1) (tf13 var0_2 var0_0) == tf13 var0_2 var0_0

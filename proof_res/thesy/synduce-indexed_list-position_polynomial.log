@@ -1,0 +1,31 @@
+11:14:59 [WARN] Collecting statistics
+11:14:59 [WARN]  ex is: true
+11:14:59 [WARN]  ex is: false
+11:14:59 [WARN]  ex is: null
+11:14:59 [WARN]  ex is: zero
+11:14:59 [WARN]  ex is: (succ zero)
+11:14:59 [WARN]  ex is: (succ (succ zero))
+11:14:59 [WARN]  ex is: (nil autovar_Unit_0)
+11:14:59 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:14:59 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:14:59 [WARN]  ex is: (inil autovar_Unit_0)
+11:14:59 [WARN]  ex is: (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0))
+11:14:59 [WARN]  ex is: (icons autovar_Nat_2 autovar_Nat_3 (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0)))
+11:14:59 [WARN] Running exploration without proof mode, but goals were given
+11:14:59 [WARN] Proof mode: true
+11:14:59 [WARN]  ex is: true
+11:14:59 [WARN]  ex is: false
+11:14:59 [WARN]  ex is: null
+11:14:59 [WARN]  ex is: zero
+11:14:59 [WARN]  ex is: (succ zero)
+11:14:59 [WARN]  ex is: (succ (succ zero))
+11:14:59 [WARN]  ex is: (nil autovar_Unit_0)
+11:14:59 [WARN]  ex is: (cons autovar_Nat_0 (nil autovar_Unit_0))
+11:14:59 [WARN]  ex is: (cons autovar_Nat_1 (cons autovar_Nat_0 (nil autovar_Unit_0)))
+11:14:59 [WARN]  ex is: (inil autovar_Unit_0)
+11:14:59 [WARN]  ex is: (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0))
+11:14:59 [WARN]  ex is: (icons autovar_Nat_2 autovar_Nat_3 (icons autovar_Nat_0 autovar_Nat_1 (inil autovar_Unit_0)))
+11:14:59 [WARN] Running exploration without proof mode, but goals were given
+11:14:59 [WARN] Proof mode: true
+11:14:59 [WARN] proved: (nil ?ts_ph_Unit_0) => (nil null)
+11:14:59 [WARN] proved: (times ?ts_ph_Nat_0 zero) => zero

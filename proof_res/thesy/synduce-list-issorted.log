@@ -1,0 +1,54 @@
+10:40:26 [WARN] Collecting statistics
+10:40:26 [WARN]  ex is: true
+10:40:26 [WARN]  ex is: false
+10:40:26 [WARN]  ex is: zero
+10:40:26 [WARN]  ex is: (succ zero)
+10:40:26 [WARN]  ex is: (succ (succ zero))
+10:40:26 [WARN]  ex is: (elt autovar_Nat_0)
+10:40:26 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:40:26 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:40:26 [WARN]  ex is: (single autovar_Nat_0)
+10:40:26 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:40:26 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:40:26 [WARN]  ex is: (makeTuple2 autovar_Nat_0 autovar_Nat_1 autovar_Bool_0)
+10:40:26 [WARN]  ex is: (makeTuple3 autovar_Bool_0 autovar_Nat_0 autovar_Nat_1)
+10:40:26 [WARN] Running exploration without proof mode, but goals were given
+10:40:26 [WARN] Proof mode: true
+10:40:26 [WARN]  ex is: true
+10:40:26 [WARN]  ex is: false
+10:40:26 [WARN]  ex is: zero
+10:40:26 [WARN]  ex is: (succ zero)
+10:40:26 [WARN]  ex is: (succ (succ zero))
+10:40:26 [WARN]  ex is: (elt autovar_Nat_0)
+10:40:26 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:40:26 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:40:26 [WARN]  ex is: (single autovar_Nat_0)
+10:40:26 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:40:26 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:40:26 [WARN]  ex is: (makeTuple2 autovar_Nat_0 autovar_Nat_1 autovar_Bool_0)
+10:40:26 [WARN]  ex is: (makeTuple3 autovar_Bool_0 autovar_Nat_0 autovar_Nat_1)
+10:40:26 [WARN] Running exploration without proof mode, but goals were given
+10:40:26 [WARN] Proof mode: true
+10:40:26 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:40:26 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:40:26 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:40:26 [WARN] proved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+10:40:52 [WARN] generalized case_split proof as: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) -- (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+10:40:52 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1))
+10:40:52 [WARN] proved: (and ?ts_ph_Bool_1 (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:40:52 [WARN] generalized case_split proof as: (tf1 (tf1 ?ts_ph_SList_1 ?ts_ph_SList_2) ?ts_ph_SList_0) -- (tf1 ?ts_ph_SList_1 (tf1 ?ts_ph_SList_2 ?ts_ph_SList_0))
+10:40:52 [WARN] proved: (tf1 (tf1 ?ts_ph_SList_1 ?ts_ph_SList_2) ?ts_ph_SList_0) => (tf1 ?ts_ph_SList_1 (tf1 ?ts_ph_SList_2 ?ts_ph_SList_0))
+10:40:52 [WARN] proved: (tf1 ?ts_ph_SList_1 (tf1 ?ts_ph_SList_2 ?ts_ph_SList_0)) => (tf1 (tf1 ?ts_ph_SList_1 ?ts_ph_SList_2) ?ts_ph_SList_0)
+10:40:52 [WARN] proved: (and (lq zero ?ts_ph_Nat_0) (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+10:40:52 [WARN] proved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (and (lq zero ?ts_ph_Nat_0) (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0))
+10:40:52 [WARN] proved: (makeTuple3
+  (fst_3 ?ts_ph_Tuple3_0)
+  (snd_3 ?ts_ph_Tuple3_0)
+  (third_3 ?ts_ph_Tuple3_0)) => ?ts_ph_Tuple3_0
+10:40:53 [WARN] proved: (lq (succ ?ts_ph_Nat_0) ?ts_ph_Nat_0) => false
+10:40:53 [WARN] proved: (lq ?ts_ph_Nat_0 (succ ?ts_ph_Nat_0)) => true
+10:40:55 [WARN] proved: (and (lq ?ts_ph_Nat_0 ?ts_ph_Nat_1) (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)) => false
+10:40:56 [WARN] proved: (makeTuple2
+  (fst_2 ?ts_ph_Tuple2_0)
+  (snd_2 ?ts_ph_Tuple2_0)
+  (third_2 ?ts_ph_Tuple2_0)) => ?ts_ph_Tuple2_0

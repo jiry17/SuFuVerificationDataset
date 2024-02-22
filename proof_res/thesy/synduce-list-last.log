@@ -1,0 +1,33 @@
+10:45:58 [WARN] Collecting statistics
+10:45:58 [WARN]  ex is: true
+10:45:58 [WARN]  ex is: false
+10:45:58 [WARN]  ex is: zero
+10:45:58 [WARN]  ex is: (succ zero)
+10:45:58 [WARN]  ex is: (succ (succ zero))
+10:45:58 [WARN]  ex is: (elt autovar_Nat_0)
+10:45:58 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:45:58 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:45:58 [WARN]  ex is: (single autovar_Nat_0)
+10:45:58 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:45:58 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:45:58 [WARN] Running exploration without proof mode, but goals were given
+10:45:58 [WARN] Proof mode: true
+10:45:58 [WARN]  ex is: true
+10:45:58 [WARN]  ex is: false
+10:45:58 [WARN]  ex is: zero
+10:45:58 [WARN]  ex is: (succ zero)
+10:45:58 [WARN]  ex is: (succ (succ zero))
+10:45:58 [WARN]  ex is: (elt autovar_Nat_0)
+10:45:58 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:45:58 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:45:58 [WARN]  ex is: (single autovar_Nat_0)
+10:45:58 [WARN]  ex is: (concat (single autovar_Nat_0) (single autovar_Nat_0))
+10:45:58 [WARN]  ex is: (concat (concat (single autovar_Nat_0) (single autovar_Nat_0)) (concat (single autovar_Nat_0) (single autovar_Nat_0)))
+10:45:58 [WARN] Running exploration without proof mode, but goals were given
+10:45:58 [WARN] Proof mode: true
+10:45:58 [WARN] proved: (tf1 (tf3 ?ts_ph_List_1 ?ts_ph_List_0)) => (tf1 ?ts_ph_List_1)
+10:45:58 [WARN] proved: (cons (tf7 ?ts_ph_CList_0) ?ts_ph_List_0) => (cons (main ?ts_ph_CList_0) ?ts_ph_List_0)
+10:45:58 [WARN] proved: (cons (main ?ts_ph_CList_0) ?ts_ph_List_0) => (cons (tf7 ?ts_ph_CList_0) ?ts_ph_List_0)
+10:45:58 [WARN] proved: (tf7 ?ts_ph_CList_0) => (main ?ts_ph_CList_0)
+10:45:58 [WARN] proved: (main ?ts_ph_CList_0) => (tf7 ?ts_ph_CList_0)
+10:45:58 [WARN] Found all lemmas

@@ -1,0 +1,55 @@
+Config SampleIntMin = 0;
+Config SampleIntMax = 9;
+
+Inductive List = cons {Int, List} | nil Unit;
+
+base = 10;
+
+single_pass = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+atoi = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> + (* base (f t)) h
+    end
+);
+
+main = single_pass atoi;
+
+@Combine al_inf = 100;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_inf
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            + h (* tmp1 base)
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2;
+
+main_ = single_pass_ atoi;

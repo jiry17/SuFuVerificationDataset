@@ -1,9 +1,0 @@
-Proving begin optimize: (main v0 v1) === (mainNew v0 v1)
-Property accepted by cvec analysis
-new lemma forall v0: Bool. v1: Nat. (ite v0 v1 Zero) === (plus (ite v0 v1 Zero) Zero)
-new lemma forall v0: Nat. v0 === (ite (gq v0 Zero) v0 Zero)
-new lemma forall g_119 === (gq False Zero)
-new lemma forall (gq False Zero) === (ite g_139 g_119 Zero)
-new lemma forall (gq g_119 Zero) === (gq (gq False Zero) Zero)
-new lemma forall g_189 === (gq (gq (gq False Zero) Zero) Zero)
-new lemma forall (gq False Zero) === (gq (ite g_119 g_75 Zero) Zero)

@@ -1,0 +1,92 @@
+File processed.
+Depth 1: 21 terms, 100 tests, 453 evaluations, 18 classes, 3 raw equations.
+Depth 2: 963 terms, 100 tests, 18404 evaluations, 865 classes, 98 raw equations.
+Depth 3: 236610 terms, 200 tests, 6190078 evaluations, 206366 classes, 30244 raw equations.
+QuickSpec done, 206366 classes, 30244 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 var0_2 var0_0) == var0_2 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 var0_2 var0_1) == var0_2 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 var0_2 var0_2) == var0_2 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 var0_0 var0_2) == var0_0 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 var0_1 var0_2) == var0_1 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_0 var0_1 var0_2) == var0_1 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 var0_2 False) == var0_2 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 var0_2 True) == var0_2 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 False var0_2) == False without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 var0_1 True var0_2) == True without induction[0m using Z3
+[034mProved third3 (MakeTuple3 var0_0 False var0_1 var0_2) == var0_1 without induction[0m using Z3
+[034m[1mProved third3 (MakeTuple3 var0_0 True var0_1 var0_2) == var0_1 by induction on var0_1[0m using Z3
+[034mProved third3 (MakeTuple3 False var0_0 var0_1 var0_2) == var0_1 without induction[0m using Z3
+[034mProved third3 (MakeTuple3 True var0_0 var0_1 var0_2) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 var0_2 var0_0) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 var0_2 var0_1) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 var0_2 var0_2) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 var0_0 var0_2) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 var0_1 var0_2) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_0 var0_1 var0_2) == var0_0 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 var0_2 False) == var0_1 without induction[0m using Z3
+[034m[1mProved snd3 (MakeTuple3 var0_0 var0_1 var0_2 True) == var0_1 by induction on var0_2[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 False var0_2) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 var0_1 True var0_2) == var0_1 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 False var0_1 var0_2) == False without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 var0_0 True var0_1 var0_2) == True without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 False var0_0 var0_1 var0_2) == var0_0 without induction[0m using Z3
+[034mProved snd3 (MakeTuple3 True var0_0 var0_1 var0_2) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 var0_2 var0_0) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 var0_2 var0_1) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 var0_2 var0_2) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 var0_0 var0_2) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 var0_1 var0_2) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_0 var0_1 var0_2) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 var0_2 False) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 var0_2 True) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 var0_1 False var0_2) == var0_0 without induction[0m using Z3
+[034m[1mProved fst3 (MakeTuple3 var0_0 var0_1 True var0_2) == var0_0 by induction on var0_2[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 False var0_1 var0_2) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 var0_0 True var0_1 var0_2) == var0_0 without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 False var0_0 var0_1 var0_2) == False without induction[0m using Z3
+[034mProved fst3 (MakeTuple3 True var0_0 var0_1 var0_2) == True without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 var0_2 var0_0) == var0_0 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 var0_2 var0_1) == var0_1 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 var0_2 var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 var0_0 var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 var0_1 var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_0 var0_1 var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 var0_2 False) == False without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 var0_2 True) == True without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 False var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 var0_1 True var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 False var0_1 var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 var0_0 True var0_1 var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 False var0_0 var0_1 var0_2) == var0_2 without induction[0m using Z3
+[034mProved fourth3 (MakeTuple3 True var0_0 var0_1 var0_2) == var0_2 without induction[0m using Z3
+[034m[1mProved spec (Nil var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved spec (Cons True var0_0) == spec var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf1 (Nil var0_0) var0_1 == var0_1 by induction on var0_1[0m using Z3
+[034m[1mProved main (Emp var0_0) == False by induction on var0_0[0m using Z3
+[034mProved main (Single var0_0) == False without induction[0m using Z3
+[034mProved not (not var0_0) == var0_0 without induction[0m using Z3
+[034mProved or var0_0 var0_1 == or var0_1 var0_0 without induction[0m using Z3
+[034mProved or var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved or var0_0 (or var0_1 var0_2) == or var0_1 (or var0_0 var0_2) without induction[0m using Z3
+[034mProved or var0_0 (not var0_0) == True without induction[0m using Z3
+[034mProved opor var0_0 var0_1 == opor var0_1 var0_0 without induction[0m using Z3
+[034mProved opor var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved opor var0_0 (not var0_0) == True without induction[0m using Z3
+[034mProved opor var0_0 var0_1 == or var0_0 var0_1 without induction[0m using Z3
+[034mProved and var0_0 var0_1 == and var0_1 var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (and var0_1 var0_2) == and var0_1 (and var0_0 var0_2) without induction[0m using Z3
+[034mProved and var0_0 (not var0_0) == False without induction[0m using Z3
+[034mProved or var0_0 (and var0_0 var0_1) == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (or var0_0 var0_1) == var0_0 without induction[0m using Z3
+[034mProved or (and var0_0 var0_1) (and var0_0 var0_2) == and var0_0 (or var0_1 var0_2) without induction[0m using Z3
+[034mProved and (or var0_0 var0_1) (or var0_0 var0_2) == or var0_0 (and var0_1 var0_2) without induction[0m using Z3
+[034mProved or (not var0_0) (not var0_1) == not (and var0_0 var0_1) without induction[0m using Z3
+[034mProved and (not var0_0) (not var0_1) == not (or var0_0 var0_1) without induction[0m using Z3
+[034mProved snd2 (tf5 var0_0) == spec var0_0 without induction[0m using Z3
+Failed to prove spec (Cons False var0_0) == fst2 (tf5 var0_0)
+[034mProved MakeTuple2 (fst2 var0_0) (snd2 var0_0) (third2 var0_0) == var0_0 without induction[0m using Z3

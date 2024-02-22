@@ -1,0 +1,34 @@
+File processed.
+Depth 1: 14 terms, 100 tests, 428 evaluations, 11 classes, 3 raw equations.
+Depth 2: 121 terms, 100 tests, 7501 evaluations, 72 classes, 49 raw equations.
+Depth 3: 4333 terms, 100 tests, 374285 evaluations, 1717 classes, 2616 raw equations.
+QuickSpec done, 1717 classes, 2616 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf3 (tf3 var0_0 var0_1) var0_2 == tf3 var0_0 (tf3 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf3 (Nil var0_0) var0_1 == var0_1 by induction on var0_1[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf1 (tf3 var0_0 var0_1) == tf1 (tf3 var0_1 var0_0) by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus (tf1 var0_0) (tf1 var0_1) == tf1 (tf3 var0_0 var0_1) by induction on var0_1[0m using Z3
+[034mProved main (Concat var0_0 var0_1) == main (Concat var0_1 var0_0) without induction[0m using Z3
+[034mProved plus (main var0_0) var0_1 == plus var0_1 (main var0_0) without induction[0m using Z3
+[034mProved main (Single var0_0) == Succ Zero without induction[0m using Z3
+[034mProved plus (main var0_0) (main var0_1) == main (Concat var0_0 var0_1) without induction[0m using Z3
+[034mProved plus Zero (main var0_0) == main var0_0 without induction[0m using Z3
+[034mProved plus (main var0_0) (Succ Zero) == Succ (main var0_0) without induction[0m using Z3
+[034m[1mProved main var0_0 == tf7 var0_0 by induction on var0_0[0m using Z3
+Merry-go-round!
+[034mProved optimize {- main inp0 == mainNew inp0 -} without induction[0m using Z3
+Proved:
+    main var0_0 == tf7 var0_0
+    plus (tf1 var0_0) (tf1 var0_1) == tf1 (tf3 var0_0 var0_1)
+    tf1 (tf3 var0_0 var0_1) == tf1 (tf3 var0_1 var0_0)
+    plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2)
+    plus var0_0 var0_1 == plus var0_1 var0_0
+    tf3 (Nil var0_0) var0_1 == var0_1
+    tf3 (tf3 var0_0 var0_1) var0_2 == tf3 var0_0 (tf3 var0_1 var0_2)
+    Null == var0_0
+    optimize {- main inp0 == mainNew inp0 -}
+

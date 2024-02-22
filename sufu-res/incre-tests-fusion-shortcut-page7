@@ -1,0 +1,52 @@
+
+Inductive List = nil Unit | cons {Int, List};
+
+div = \x: Int. \y: Int. 
+    if (== y 0) then 0
+    else / x y;
+
+sum = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> + h (f t)
+    end
+);
+
+length = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> + 1 (f t)
+    end
+);
+
+res = fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> 
+        let tmp1 = (nil unit) in 
+            tmp1
+    | cons {h, t} -> 
+        let tmp2 = (f t) in 
+            cons {h, tmp2}
+    end
+);
+
+main = \xs: List. 
+    let oup = (res xs) in 
+        div (sum oup) (length oup);
+
+res_ = fix (
+    \f: List -> {Int, Int}. \xs: List. 
+    match xs with
+      nil _ -> {0, 0}
+    | cons {h, t} -> 
+        let tmp2 = (f t) in 
+            {+ tmp2.1 h, + tmp2.2 1}
+    end
+);
+
+main_ = \xs: List. 
+    let oup = (res_ xs) in 
+        div oup.1 oup.2;

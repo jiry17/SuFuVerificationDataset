@@ -1,0 +1,45 @@
+File processed.
+Depth 1: 22 terms, 100 tests, 456 evaluations, 19 classes, 3 raw equations.
+Depth 2: 354 terms, 200 tests, 18522 evaluations, 227 classes, 127 raw equations.
+Depth 3: 47267 terms, 6400 tests, 11526614 evaluations, 24977 classes, 22290 raw equations.
+QuickSpec done, 24977 classes, 22290 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034mProved MakeTuple3 (fst3 var0_0) (snd3 var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved nateq var0_0 var0_1 == nateq var0_1 var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved nateq var0_0 (plus var0_0 var0_1) == nateq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_1) (plus var0_0 var0_2) == nateq var0_1 var0_2 by induction on var0_1[0m using Z3
+[034mProved nateq (plus var0_0 var0_1) (Succ var0_1) == nateq (plus var0_0 var0_2) (Succ var0_2) without induction[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_0) (plus var0_1 var0_1) == nateq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved nateq (plus var0_0 var0_0) (Succ Zero) == False by induction on var0_0[0m using Z3
+[034mProved tf3 (Icons var0_0 var0_1 var0_2) == tf3 (Icons var0_0a var0_1 var0_2) without induction[0m using Z3
+[034mProved nateq Zero (tf1 var0_0) == tf3 (Icons var0_1 Zero var0_0) without induction[0m using Z3
+[034m[1mProved leq var0_0 var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 (plus var0_0 var0_1) == True by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) var0_0 == leq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) (plus var0_0 var0_2) == leq var0_1 var0_2 by induction on var0_0[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_1) (Succ var0_1) == leq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved leq (Succ var0_0) (plus var0_0 var0_1) == leq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_0) (plus var0_1 var0_1) == leq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+[034m[1mProved leq (plus var0_0 var0_0) (Succ Zero) == leq var0_0 Zero by induction on var0_0[0m using Z3
+[034m[1mProved leq (Succ Zero) (plus var0_0 var0_0) == leq (Succ var0_1) (plus var0_0 var0_1) by induction on var0_0[0m using Z3
+[034mProved tf13 (Icons var0_0 var0_1 var0_2) == tf13 (Icons var0_0 var0_0a var0_2) without induction[0m using Z3
+[034m[1mProved snd3 (tf13 var0_0) == tf1 var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved leq var0_0 Zero == nateq var0_0 Zero by induction on var0_0[0m using Z3
+Failed to prove Icons var0_0 (mainNew var0_1) var0_2 == Icons var0_0 Zero var0_2
+Failed to prove Icons (mainNew var0_0) var0_1 var0_2 == Icons Zero var0_1 var0_2
+Failed to prove MakeTuple3 var0_0 (mainNew var0_1) == MakeTuple3 var0_0 Zero
+Failed to prove Icons var0_0 (mainNew var0_1) var0_1 == Icons var0_0 Zero var0_1
+Failed to prove Icons (mainNew var0_0) var0_1 var0_0 == Icons Zero var0_1 var0_0
+Failed to prove Cons (mainNew var0_0) var0_1 == Cons Zero var0_1
+Failed to prove MakeTuple3 (mainNew var0_0) var0_1 == MakeTuple3 Zero var0_1
+Failed to prove Succ (mainNew var0_0) == Succ Zero
+[034m[1mProved mainNew (Inil var0_0) == Zero by induction on var0_0[0m using Z3
+Failed to prove plus (plus var0_0 var0_1) (mainNew var0_2) == plus var0_0 var0_1

@@ -1,0 +1,38 @@
+File processed.
+Depth 1: 19 terms, 100 tests, 449 evaluations, 16 classes, 3 raw equations.
+Depth 2: 282 terms, 200 tests, 18456 evaluations, 169 classes, 113 raw equations.
+Depth 3: 30338 terms, 400 tests, 2703699 evaluations, 12256 classes, 18082 raw equations.
+QuickSpec done, 12256 classes, 18082 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf0 var0_0 == var0_0 by induction on var0_0[0m using Z3
+[034mProved tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2) without induction[0m using Z3
+[034mProved tf1 var0_0 (tf1 var0_1 var0_0) == tf1 var0_1 var0_0 without induction[0m using Z3
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_0a) == tf1 var0_1 (tf1 var0_2 var0_0a)
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_0a) == tf1 (Cons var0_1a var0_1) (tf1 var0_2 var0_0a)
+[034mProved tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_1) == tf1 (Cons var0_0 var0_2) (tf1 var0_2 var0_1) without induction[0m using Z3
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_1 var0_2) == tf1 (Cons var0_0a var0_1) (tf1 var0_1 var0_2)
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_1) == tf1 (Cons var0_0a var0_1) (tf1 var0_2 var0_1)
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_2 var0_1) == tf1 (Cons var0_0a var0_2) (tf1 var0_2 var0_1)
+Failed to prove tf1 (Cons var0_0 var0_1) (tf1 var0_1 var0_2) == tf1 (Cons var0_0a var0_2) (tf1 var0_1 var0_2)
+Failed to prove tf1 (Cons False var0_0) (tf1 var0_1 var0_2) == tf1 (Cons var0_0a var0_0) (tf1 var0_1 var0_2)
+Failed to prove tf1 (Cons True var0_0) (tf1 var0_1 var0_2) == tf1 var0_0 (tf1 var0_1 var0_2)
+Failed to prove tf1 (Cons True var0_0) (tf1 var0_1 var0_2) == tf1 (Cons var0_0a var0_0) (tf1 var0_1 var0_2)
+Failed to prove tf1 (Cons False var0_0) (tf1 var0_0 var0_1) == tf1 (Cons var0_2 var0_0) (tf1 var0_0 var0_1)
+Failed to prove tf1 (Cons False var0_0) (tf1 var0_1 var0_0) == tf1 (Cons var0_2 var0_0) (tf1 var0_1 var0_0)
+Failed to prove tf1 (Cons False var0_0) (tf1 var0_1 var0_0) == tf1 (Cons var0_2 var0_1) (tf1 var0_1 var0_0)
+Failed to prove tf1 (Cons False var0_0) (tf1 var0_0 var0_1) == tf1 (Cons var0_2 var0_1) (tf1 var0_0 var0_1)
+Failed to prove tf1 (Cons True var0_0) (tf1 var0_0 var0_1) == tf1 (Cons var0_2 var0_0) (tf1 var0_0 var0_1)
+Failed to prove tf1 (Cons True var0_0) (tf1 var0_1 var0_0) == tf1 (Cons var0_2 var0_0) (tf1 var0_1 var0_0)
+Failed to prove tf1 (Cons True var0_0) (tf1 var0_1 var0_0) == tf1 (Cons var0_2 var0_1) (tf1 var0_1 var0_0)
+Failed to prove tf1 (Cons True var0_0) (tf1 var0_0 var0_1) == tf1 (Cons var0_2 var0_1) (tf1 var0_0 var0_1)
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq var0_0 (plus var0_0 var0_1) == lq Zero var0_1 by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (plus var0_0 var0_2) == lq var0_1 var0_2 by induction on var0_2[0m using Z3

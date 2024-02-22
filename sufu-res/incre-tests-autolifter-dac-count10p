@@ -1,0 +1,97 @@
+
+Inductive List = cons {Bool, List} | nil Unit;
+
+length = fix (
+    \f: List -> Int. \x: List. 
+    match x with
+      cons {h, t} -> + (f t) 1
+    | nil _ -> 0
+    end
+);
+
+concat = fix (
+    \f: List -> List -> List. \x: List. \y: List. 
+    match x with
+      cons {h, t} -> cons {h, f t y}
+    | nil _ -> y
+    end
+);
+
+split = \xs: List. 
+    fix (
+    \f: List -> Int -> {List, List}. \x: List. \n: Int. 
+    if (< n 1) then {nil unit, x}
+    else match x with
+      cons {h, t} -> 
+        let res = (f t (- n 1)) in 
+            {cons {h, res.1}, res.2}
+    | _ -> {nil unit, nil unit}
+    end
+) xs (/ (length xs) 2);
+
+dac = \v: List -> Int. \xs: List. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {_, nil _} -> xs
+    | _ -> 
+        let sp = (split xs) in 
+            let tmp1 = (f sp.1) in 
+                let tmp2 = (f sp.2) in 
+                    concat tmp1 tmp2
+    end
+)) in 
+        let tmp3 = (run xs) in 
+            v tmp3;
+
+inf = 100;
+
+count10p = fix (
+    \f: Bool -> Bool -> List -> Int. \s0: Bool. \s1: Bool. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> 
+        let upd = (if (and s1 h) then 1
+        else 0) in 
+            let s1 = (and (not h) (or s0 s1)) in 
+                let s0 = h in 
+                    + upd (f s0 s1 t)
+    end
+) false false;
+
+main = dac count10p;
+
+@Combine @Align al_true = true;
+
+@Combine @Align al_false = false;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_false
+    | cons {h, _} -> h
+    end
+;
+
+dac_ = \v: List -> Int. \xs: List. 
+    let run = (fix (
+    \f: List -> {Int, Bool, Int}. \xs: List. 
+    match xs with
+      nil _ -> {0, false, 0}
+    | cons {_, nil _} -> 
+        let c0 = (al_head xs) in 
+            {0, c0, if (c0) then 1
+            else 0}
+    | _ -> 
+        let sp = (split xs) in 
+            let tmp1 = (f sp.1) in 
+                let tmp2 = (f sp.2) in 
+                    let c0 = (al_head sp.2) in 
+                        {if (or (or (and c0 tmp1.2) (== tmp1.1 tmp1.3)) (== tmp2.1 tmp2.3)) then + tmp1.1 tmp2.1
+                        else + (- tmp1.1 (- 0 tmp2.1)) 1, tmp2.2, + tmp1.3 tmp2.3}
+    end
+)) in 
+        let tmp3 = (run xs) in 
+            tmp3.1;
+
+main_ = dac_ count10p;

@@ -1,0 +1,113 @@
+10:29:26 [0m[33m[WARN] [0mCollecting statistics
+(tf1 ?tv5 (elt ?tv6)) => (cons ?tv6 ?tv5)
+(tf1 ?tv5 (cons ?tv7 ?tv8)) => (cons ?tv7 (tf0 ?tv8 ?tv5))
+(tf0 ?tv2 ?tv3) => (tf1 ?tv3 ?tv2)
+(cat ?tv0 ?tv1) => (tf0 ?tv0 ?tv1)
+(tf3 (single ?tv12)) => (elt ?tv12)
+(tf3 (concat ?tv13 ?tv14 ?tv15)) => (cat (tf2 ?tv14) (tf2 ?tv15))
+(tf2 ?tv10) => (tf3 ?tv10)
+(repr ?tv9) => (tf2 ?tv9)
+(lq zero (succ ?x)) => true
+(lq ?x zero) => false
+(lq (succ ?x) (succ ?y)) => (lq ?x ?y)
+(ite2 true ?x ?y) => ?x
+(ite2 false ?x ?y) => ?y
+(max ?tv16 ?tv17) => (ite2 (lq ?tv16 ?tv17) ?tv17 ?tv16)
+(min ?tv18 ?tv19) => (ite2 (lq ?tv18 ?tv19) ?tv18 ?tv19)
+(tf5 (single ?tv23)) => ?tv23
+(tf5 (concat ?tv24 ?tv25 ?tv26)) => (max (tf4 ?tv25) (tf4 ?tv26))
+(tf4 ?tv21) => (tf5 ?tv21)
+(tf7 (single ?tv29)) => ?tv29
+(tf7 (concat ?tv30 ?tv31 ?tv32)) => (min (tf6 ?tv31) (tf6 ?tv32))
+(tf6 ?tv27) => (tf7 ?tv27)
+(and false ?x) => false
+(and ?x false) => false
+(and true true) => true
+(tf9 (single ?tv35)) => true
+(tf9 (concat ?tv36 ?tv37 ?tv38)) => (and (and (lq (tf4 ?tv37) ?tv36) (lq ?tv36 (tf6 ?tv38))) (and (tf8 ?tv37) (tf8 ?tv38)))
+(tf8 ?tv33) => (tf9 ?tv33)
+(is_parti ?tv20) => (tf8 ?tv20)
+(geq zero (succ ?x)) => false
+(geq ?x zero) => true
+(geq (succ ?x) (succ ?y)) => (geq ?x ?y)
+(snd_3 (makeTuple3 ?x0 ?x1)) => ?x1
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(fst_3 (makeTuple3 ?x0 ?x1)) => ?x0
+(tf11 (elt ?tv42)) => (makeTuple3 (max zero ?tv42) (geq ?tv42 zero))
+(tf11 (cons ?tv43 ?tv44)) => (makeTuple3 (ite2 (and (geq ?tv43 zero) (snd_3 (tf10 ?tv44))) (plus (fst_3 (tf10 ?tv44)) ?tv43) (fst_3 (tf10 ?tv44))) (and (geq ?tv43 zero) (snd_3 (tf10 ?tv44))))
+(tf10 ?tv40) => (tf11 ?tv40)
+(spec ?tv39) => (fst_3 (tf10 ?tv39))
+(leq zero ?x) => true
+(leq (succ ?x) zero) => false
+(leq (succ ?x) (succ ?y)) => (leq ?x ?y)
+(ite4 true ?x ?y) => ?x
+(ite4 false ?x ?y) => ?y
+(tf13 ?tv48 (single ?tv49)) => ?tv48
+(tf13 ?tv48 (concat ?tv50 ?tv51 ?tv52)) => (ite4 (leq ?tv50 zero) (concat ?tv50 ?tv51 (tf12 ?tv52)) (concat ?tv50 (tf12 ?tv51) (tf12 ?tv52)))
+(tf12 ?tv46) => (tf13 ?tv46 ?tv46)
+(target ?tv45) => (tf12 ?tv45)
+(main ?tv53) => (ite2 (is_parti ?tv53) (spec (repr (target ?tv53))) zero)
+(tf15 (single ?tv57)) => (max ?tv57 zero)
+(tf15 (concat ?tv58 ?tv59 ?tv60)) => (ite2 (leq ?tv58 zero) (tf14 ?tv60) (plus (tf14 ?tv60) (tf14 ?tv59)))
+(tf14 ?tv55) => (tf15 ?tv55)
+(target_ ?tv54) => (tf14 ?tv54)
+(main_ ?tv61) => (ite2 (is_parti ?tv61) (target_ ?tv61) zero)
+Searcher: (lq ?autovar5 (succ ?autovar1))
+Searcher: (lq ?autovar5 (succ ?autovar3))
+Searcher: (lq zero ?autovar6)
+Searcher: (lq (succ ?autovar4) ?autovar6)
+Searcher: (and ?autovar1 true)
+Searcher: (and true ?autovar2)
+Searcher: (geq ?autovar5 (succ ?autovar1))
+Searcher: (geq ?autovar5 (succ ?autovar3))
+Searcher: (geq zero ?autovar6)
+Searcher: (geq (succ ?autovar4) ?autovar6)
+Searcher: (leq ?autovar6 zero)
+Searcher: (leq ?autovar6 (succ ?autovar3))
+Searcher: (leq (succ ?autovar4) ?autovar7)
+Searcher: (leq (succ ?autovar5) ?autovar7)
+10:29:26 [0m[33m[WARN] [0m ex is: true
+10:29:26 [0m[33m[WARN] [0m ex is: false
+10:29:26 [0m[33m[WARN] [0m ex is: zero
+10:29:26 [0m[33m[WARN] [0m ex is: (succ zero)
+10:29:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:29:26 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:29:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:29:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:29:26 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+10:29:26 [0m[33m[WARN] [0m ex is: (concat autovar_Nat_1 (single autovar_Nat_0) (single autovar_Nat_0))
+10:29:26 [0m[33m[WARN] [0m ex is: (concat autovar_Nat_2 (concat autovar_Nat_1 (single autovar_Nat_0) (single autovar_Nat_0)) (concat autovar_Nat_1 (single autovar_Nat_0) (single autovar_Nat_0)))
+10:29:26 [0m[33m[WARN] [0m ex is: (makeTuple3 autovar_Nat_0 autovar_Bool_0)
+10:29:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:29:26 [0m[33m[WARN] [0mProof mode: true
+10:29:26 [0m[33m[WARN] [0m ex is: true
+10:29:26 [0m[33m[WARN] [0m ex is: false
+10:29:26 [0m[33m[WARN] [0m ex is: zero
+10:29:26 [0m[33m[WARN] [0m ex is: (succ zero)
+10:29:26 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+10:29:26 [0m[33m[WARN] [0m ex is: (elt autovar_Nat_0)
+10:29:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:29:26 [0m[33m[WARN] [0m ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:29:26 [0m[33m[WARN] [0m ex is: (single autovar_Nat_0)
+10:29:26 [0m[33m[WARN] [0m ex is: (concat autovar_Nat_1 (single autovar_Nat_0) (single autovar_Nat_0))
+10:29:26 [0m[33m[WARN] [0m ex is: (concat autovar_Nat_2 (concat autovar_Nat_1 (single autovar_Nat_0) (single autovar_Nat_0)) (concat autovar_Nat_1 (single autovar_Nat_0) (single autovar_Nat_0)))
+10:29:26 [0m[33m[WARN] [0m ex is: (makeTuple3 autovar_Nat_0 autovar_Bool_0)
+10:29:26 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+10:29:26 [0m[33m[WARN] [0mProof mode: true
+10:29:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:29:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:29:26 [0m[33m[WARN] [0mproved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:29:26 [0m[33m[WARN] [0mproved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+10:29:26 [0m[33m[WARN] [0mproved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+10:29:26 [0m[33m[WARN] [0mproved: (min zero ?ts_ph_Nat_0) => zero
+10:29:26 [0m[33m[WARN] [0mproved: (geq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+10:29:26 [0m[33m[WARN] [0mproved: (geq zero ?ts_ph_Nat_0) => (leq ?ts_ph_Nat_0 zero)
+10:29:26 [0m[33m[WARN] [0mproved: (leq ?ts_ph_Nat_0 zero) => (geq zero ?ts_ph_Nat_0)
+10:29:26 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => (max zero ?ts_ph_Nat_0)
+10:29:26 [0m[33m[WARN] [0mproved: (max zero ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 zero)
+10:29:26 [0m[33m[WARN] [0mproved: (ite2 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1
+10:29:26 [0m[33m[WARN] [0mproved: (ite4 ?ts_ph_Bool_0 ?ts_ph_CList_1 ?ts_ph_CList_1) => ?ts_ph_CList_1
+10:29:26 [0m[33m[WARN] [0mproved: (tf12 ?ts_ph_CList_0) => ?ts_ph_CList_0
+10:29:26 [0m[33m[WARN] [0mproved: (leq ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (geq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+10:29:26 [0m[33m[WARN] [0mproved: (geq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (leq ?ts_ph_Nat_0 ?ts_ph_Nat_1)

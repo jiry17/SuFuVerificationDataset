@@ -1,3 +1,0 @@
-Proving begin optimize: (main v0) === (mainNew v0)
-Property accepted by cvec analysis
-new lemma forall v0: Nat. v0 === (plus v0 Zero)

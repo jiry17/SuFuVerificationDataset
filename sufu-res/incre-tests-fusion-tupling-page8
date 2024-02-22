@@ -1,0 +1,47 @@
+
+Inductive MyNat = myzero Unit | mysucc MyNat;
+
+pred = \n: MyNat. 
+    match n with
+      myzero _ -> n
+    | mysucc m -> m
+    end
+;
+
+fib = fix (
+    \f: MyNat -> Int. \n: MyNat. 
+    match n with
+      myzero _ -> 0
+    | mysucc myzero _ -> 1
+    | mysucc mysucc m -> + (f m) (f (mysucc m))
+    end
+);
+
+repr = fix (
+    \f: MyNat -> MyNat. \n: MyNat. 
+    match n with
+      myzero _ -> n
+    | mysucc m -> 
+        let tmp1 = (f m) in 
+            mysucc tmp1
+    end
+);
+
+main = \n: MyNat. 
+    let tmp2 = (repr n) in 
+        fib tmp2;
+
+repr_ = fix (
+    \f: MyNat -> {Int, Int}. \n: MyNat. 
+    match n with
+      myzero _ -> {0, 0}
+    | mysucc m -> 
+        let tmp1 = (f m) in 
+            {if (== tmp1.1 tmp1.2) then + 1 tmp1.1
+            else + tmp1.1 tmp1.2, tmp1.1}
+    end
+);
+
+main_ = \n: MyNat. 
+    let tmp2 = (repr_ n) in 
+        tmp2.1;

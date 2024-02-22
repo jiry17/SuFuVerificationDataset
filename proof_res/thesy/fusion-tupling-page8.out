@@ -1,0 +1,64 @@
+21:50:07 [0m[33m[WARN] [0mCollecting statistics
+(plus zero ?x) => ?x
+(plus (succ ?x) ?y) => (succ (plus ?x ?y))
+(tf1 (myzero ?tv3)) => zero
+(tf1 (mysucc (myzero ?tv4))) => (succ zero)
+(tf1 (mysucc (mysucc ?tv5))) => (plus (tf0 ?tv5) (tf0 (mysucc ?tv5)))
+(tf0 ?tv1) => (tf1 ?tv1)
+(fib ?tv0) => (tf0 ?tv0)
+(tf3 ?tv9 (myzero ?tv10)) => ?tv9
+(tf3 ?tv9 (mysucc ?tv11)) => (mysucc (tf2 ?tv11))
+(tf2 ?tv7) => (tf3 ?tv7 ?tv7)
+(repr ?tv6) => (tf2 ?tv6)
+(main ?tv12) => (fib (repr ?tv12))
+(nat_eq zero zero) => true
+(nat_eq zero (succ ?x)) => false
+(nat_eq (succ ?x) zero) => false
+(nat_eq (succ ?x) (succ ?y)) => (nat_eq ?x ?y)
+(fst_0 (makeTuple0 ?x0 ?x1)) => ?x0
+(snd_0 (makeTuple0 ?x0 ?x1)) => ?x1
+(ite1 true ?x ?y) => ?x
+(ite1 false ?x ?y) => ?y
+(tf5 (myzero ?tv16)) => (makeTuple0 zero zero)
+(tf5 (mysucc ?tv17)) => (makeTuple0 (ite1 (nat_eq (fst_0 (tf4 ?tv17)) (snd_0 (tf4 ?tv17))) (plus (succ zero) (fst_0 (tf4 ?tv17))) (plus (fst_0 (tf4 ?tv17)) (snd_0 (tf4 ?tv17)))) (fst_0 (tf4 ?tv17)))
+(tf4 ?tv14) => (tf5 ?tv14)
+(repr_ ?tv13) => (tf4 ?tv13)
+(main_ ?tv18) => (fst_0 (repr_ ?tv18))
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar1))
+Searcher: (nat_eq ?autovar7 zero)
+Searcher: (nat_eq ?autovar7 (succ ?autovar4))
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq zero ?autovar8)
+Searcher: (nat_eq (succ ?autovar5) ?autovar8)
+Searcher: (nat_eq (succ ?autovar6) ?autovar8)
+21:50:07 [0m[33m[WARN] [0m ex is: true
+21:50:07 [0m[33m[WARN] [0m ex is: false
+21:50:07 [0m[33m[WARN] [0m ex is: null
+21:50:07 [0m[33m[WARN] [0m ex is: (myzero autovar_Unit_0)
+21:50:07 [0m[33m[WARN] [0m ex is: (mysucc (myzero autovar_Unit_0))
+21:50:07 [0m[33m[WARN] [0m ex is: (mysucc (mysucc (myzero autovar_Unit_0)))
+21:50:07 [0m[33m[WARN] [0m ex is: zero
+21:50:07 [0m[33m[WARN] [0m ex is: (succ zero)
+21:50:07 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+21:50:07 [0m[33m[WARN] [0m ex is: (makeTuple0 autovar_Nat_0 autovar_Nat_1)
+21:50:07 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+21:50:07 [0m[33m[WARN] [0mProof mode: true
+21:50:07 [0m[33m[WARN] [0m ex is: true
+21:50:07 [0m[33m[WARN] [0m ex is: false
+21:50:07 [0m[33m[WARN] [0m ex is: null
+21:50:07 [0m[33m[WARN] [0m ex is: (myzero autovar_Unit_0)
+21:50:07 [0m[33m[WARN] [0m ex is: (mysucc (myzero autovar_Unit_0))
+21:50:07 [0m[33m[WARN] [0m ex is: (mysucc (mysucc (myzero autovar_Unit_0)))
+21:50:07 [0m[33m[WARN] [0m ex is: zero
+21:50:07 [0m[33m[WARN] [0m ex is: (succ zero)
+21:50:07 [0m[33m[WARN] [0m ex is: (succ (succ zero))
+21:50:07 [0m[33m[WARN] [0m ex is: (makeTuple0 autovar_Nat_0 autovar_Nat_1)
+21:50:07 [0m[33m[WARN] [0mRunning exploration without proof mode, but goals were given
+21:50:07 [0m[33m[WARN] [0mProof mode: true
+21:50:07 [0m[33m[WARN] [0mproved: (tf2 ?ts_ph_MyNat_0) => ?ts_ph_MyNat_0
+21:50:07 [0m[33m[WARN] [0mproved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+21:50:07 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => true
+21:50:07 [0m[33m[WARN] [0mproved: (nat_eq zero ?ts_ph_Nat_0) => (nat_eq ?ts_ph_Nat_0 zero)
+21:50:07 [0m[33m[WARN] [0mproved: (nat_eq ?ts_ph_Nat_0 zero) => (nat_eq zero ?ts_ph_Nat_0)
+21:50:07 [0m[33m[WARN] [0mproved: (ite1 ?ts_ph_Bool_0 ?ts_ph_Nat_0 ?ts_ph_Nat_0) => ?ts_ph_Nat_0

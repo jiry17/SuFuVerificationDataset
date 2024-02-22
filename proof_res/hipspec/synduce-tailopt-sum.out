@@ -1,0 +1,37 @@
+File processed.
+Depth 1: 11 terms, 100 tests, 424 evaluations, 8 classes, 3 raw equations.
+Depth 2: 143 terms, 100 tests, 11362 evaluations, 73 classes, 70 raw equations.
+Depth 3: 12228 terms, 400 tests, 1515301 evaluations, 3276 classes, 8952 raw equations.
+QuickSpec done, 3276 classes, 8952 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+Failed to prove tf5 (tf5 var0_0 var0_1) var0_2 == tf5 var0_0 (tf5 var0_1 var0_2)
+[034m[1mProved tf5 (Cons var0_0 var0_1) var0_2 == Cons var0_0 (tf5 var0_1 var0_2) by induction on var0_2[0m using Z3
+Failed to prove tf5 (tf5 var0_0 var0_1) var0_0 == tf5 var0_0 (tf5 var0_1 var0_0)
+Failed to prove tf5 (tf5 var0_0 var0_1) var0_1 == tf5 var0_0 (tf5 var0_1 var0_1)
+[034m[1mProved tf5 (Nil var0_0) var0_1 == var0_1 by induction on var0_1[0m using Z3
+Failed to prove tf5 (tf5 var0_0 var0_0) var0_1 == tf5 var0_0 (tf5 var0_0 var0_1)
+Failed to prove tf5 (tf5 var0_0 var0_0) var0_0 == tf5 var0_0 (tf5 var0_0 var0_0)
+[034m[1mProved tf5 (tf5 var0_0 var0_1) (repr var0_2) == tf5 var0_0 (tf5 var0_1 var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved tf3 var0_0 (tf5 var0_1 var0_2) == tf5 var0_1 (tf2 var0_2 var0_0) by induction on var0_2[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf1 (tf5 var0_0 var0_1) == tf1 (tf5 var0_1 var0_0) by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved tf1 (Cons var0_0 var0_1) == tf1 (tf2 var0_1 var0_0) by induction on var0_1[0m using Z3
+[034m[1mProved plus var0_0 (tf7 var0_1 var0_2) == tf7 var0_0 (Cons var0_1 var0_2) by induction on var0_2[0m using Z3
+[034mProved tf7 (tf7 var0_0 var0_1) var0_2 == tf7 (tf7 var0_0 var0_2) var0_1 without induction[0m using Z3
+Failed to prove tf7 (tf7 var0_0 var0_1) var0_1 == tf7 var0_0 var0_1
+Failed to prove tf7 (tf7 var0_0 var0_1) (Cons var0_2 var0_1) == tf7 var0_0 (Cons var0_2 var0_1)
+Failed to prove tf7 (tf7 var0_0 var0_1) (Cons var0_2 var0_1) == tf7 var0_2 (Cons var0_0 var0_1)
+Failed to prove tf7 (tf7 var0_0 var0_1) (Cons var0_0 var0_2) == tf7 (tf7 var0_0 var0_1) var0_2
+Failed to prove tf7 (tf7 var0_0 var0_1) (Cons var0_0 var0_2) == tf7 (tf7 var0_0 var0_2) var0_1
+Failed to prove plus (tf7 var0_0 var0_1) (tf7 var0_2 var0_1) == tf7 var0_0 (Cons var0_2 var0_1)
+Failed to prove plus (tf7 var0_0 var0_1) (tf7 var0_2 var0_1) == tf7 var0_2 (Cons var0_0 var0_1)
+Failed to prove plus (tf7 var0_0 var0_1) (tf7 var0_0 var0_2) == tf7 (tf7 var0_0 var0_1) var0_2
+Failed to prove plus (tf7 var0_0 var0_1) (tf7 var0_0 var0_2) == tf7 (tf7 var0_0 var0_2) var0_1
+Failed to prove plus (tf7 var0_0 var0_1) (plus var0_0 var0_0) == tf7 var0_0 (Cons var0_0 var0_1)
+Failed to prove tf7 (plus var0_0 var0_0) (Cons var0_0 var0_1) == tf7 var0_0 (Cons var0_0 var0_1)
+Failed to prove plus (plus var0_0 var0_0) (tf7 var0_0 var0_1) == tf7 var0_0 (Cons var0_0 var0_1)
+Failed to prove tf7 (tf7 var0_0 var0_1) (Cons Zero var0_1) == tf7 var0_0 var0_1
+[034m[1mProved tf7 Zero var0_0 == tf1 var0_0 by induction on var0_0[0m using Z3

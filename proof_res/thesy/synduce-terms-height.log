@@ -1,0 +1,93 @@
+11:45:26 [WARN] Collecting statistics
+11:45:26 [WARN]  ex is: true
+11:45:26 [WARN]  ex is: false
+11:45:26 [WARN]  ex is: null
+11:45:26 [WARN]  ex is: (aPlus autovar_Unit_0)
+11:45:26 [WARN]  ex is: (aMinus autovar_Unit_1)
+11:45:26 [WARN]  ex is: (aGt autovar_Unit_2)
+11:45:26 [WARN]  ex is: (bNot autovar_Unit_0)
+11:45:26 [WARN]  ex is: (bAnd autovar_Unit_1)
+11:45:26 [WARN]  ex is: (bOr autovar_Unit_2)
+11:45:26 [WARN]  ex is: (bEq autovar_Unit_3)
+11:45:26 [WARN]  ex is: zero
+11:45:26 [WARN]  ex is: (succ zero)
+11:45:26 [WARN]  ex is: (succ (succ zero))
+11:45:26 [WARN]  ex is: (tVar autovar_Nat_0)
+11:45:26 [WARN]  ex is: (tCInt autovar_Nat_1)
+11:45:26 [WARN]  ex is: (tCBool autovar_Bool_0)
+11:45:26 [WARN]  ex is: (tArithBin autovar_ArithOp_0 (tCBool autovar_Bool_0) (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tBoolBin autovar_BoolOp_0 (tCBool autovar_Bool_0) (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tArithUn autovar_ArithOp_1 (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tArithBin autovar_ArithOp_2 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)) (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (tBoolBin autovar_BoolOp_2 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)) (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (tArithUn autovar_ArithOp_3 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (tBoolUn autovar_BoolOp_3 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (opPlus autovar_Unit_0)
+11:45:26 [WARN]  ex is: (opMinus autovar_Unit_1)
+11:45:26 [WARN]  ex is: (opNot autovar_Unit_2)
+11:45:26 [WARN]  ex is: (opAnd autovar_Unit_3)
+11:45:26 [WARN]  ex is: (opOr autovar_Unit_4)
+11:45:26 [WARN]  ex is: (opGt autovar_Unit_5)
+11:45:26 [WARN]  ex is: (opEq autovar_Unit_6)
+11:45:26 [WARN]  ex is: (var autovar_Nat_0)
+11:45:26 [WARN]  ex is: (cInt autovar_Nat_1)
+11:45:26 [WARN]  ex is: (cBool autovar_Bool_0)
+11:45:26 [WARN]  ex is: (bin autovar_Op_0 (cBool autovar_Bool_0) (cBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (un autovar_Op_1 (cBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (bin autovar_Op_2 (un autovar_Op_1 (cBool autovar_Bool_0)) (un autovar_Op_1 (cBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (un autovar_Op_3 (un autovar_Op_1 (cBool autovar_Bool_0)))
+11:45:26 [WARN] Running exploration without proof mode, but goals were given
+11:45:26 [WARN] Proof mode: true
+11:45:26 [WARN]  ex is: true
+11:45:26 [WARN]  ex is: false
+11:45:26 [WARN]  ex is: null
+11:45:26 [WARN]  ex is: (aPlus autovar_Unit_0)
+11:45:26 [WARN]  ex is: (aMinus autovar_Unit_1)
+11:45:26 [WARN]  ex is: (aGt autovar_Unit_2)
+11:45:26 [WARN]  ex is: (bNot autovar_Unit_0)
+11:45:26 [WARN]  ex is: (bAnd autovar_Unit_1)
+11:45:26 [WARN]  ex is: (bOr autovar_Unit_2)
+11:45:26 [WARN]  ex is: (bEq autovar_Unit_3)
+11:45:26 [WARN]  ex is: zero
+11:45:26 [WARN]  ex is: (succ zero)
+11:45:26 [WARN]  ex is: (succ (succ zero))
+11:45:26 [WARN]  ex is: (tVar autovar_Nat_0)
+11:45:26 [WARN]  ex is: (tCInt autovar_Nat_1)
+11:45:26 [WARN]  ex is: (tCBool autovar_Bool_0)
+11:45:26 [WARN]  ex is: (tArithBin autovar_ArithOp_0 (tCBool autovar_Bool_0) (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tBoolBin autovar_BoolOp_0 (tCBool autovar_Bool_0) (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tArithUn autovar_ArithOp_1 (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (tArithBin autovar_ArithOp_2 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)) (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (tBoolBin autovar_BoolOp_2 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)) (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (tArithUn autovar_ArithOp_3 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (tBoolUn autovar_BoolOp_3 (tBoolUn autovar_BoolOp_1 (tCBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (opPlus autovar_Unit_0)
+11:45:26 [WARN]  ex is: (opMinus autovar_Unit_1)
+11:45:26 [WARN]  ex is: (opNot autovar_Unit_2)
+11:45:26 [WARN]  ex is: (opAnd autovar_Unit_3)
+11:45:26 [WARN]  ex is: (opOr autovar_Unit_4)
+11:45:26 [WARN]  ex is: (opGt autovar_Unit_5)
+11:45:26 [WARN]  ex is: (opEq autovar_Unit_6)
+11:45:26 [WARN]  ex is: (var autovar_Nat_0)
+11:45:26 [WARN]  ex is: (cInt autovar_Nat_1)
+11:45:26 [WARN]  ex is: (cBool autovar_Bool_0)
+11:45:26 [WARN]  ex is: (bin autovar_Op_0 (cBool autovar_Bool_0) (cBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (un autovar_Op_1 (cBool autovar_Bool_0))
+11:45:26 [WARN]  ex is: (bin autovar_Op_2 (un autovar_Op_1 (cBool autovar_Bool_0)) (un autovar_Op_1 (cBool autovar_Bool_0)))
+11:45:26 [WARN]  ex is: (un autovar_Op_3 (un autovar_Op_1 (cBool autovar_Bool_0)))
+11:45:26 [WARN] Running exploration without proof mode, but goals were given
+11:45:26 [WARN] Proof mode: true
+11:45:26 [WARN] proved: (tf7 ?ts_ph_Term2_0) => ?ts_ph_Term2_0
+11:45:26 [WARN] proved: (bAnd ?ts_ph_Unit_0) => (bAnd null)
+11:45:26 [WARN] proved: (bOr ?ts_ph_Unit_0) => (bOr null)
+11:45:26 [WARN] proved: (aPlus ?ts_ph_Unit_0) => (aPlus null)
+11:45:26 [WARN] proved: (bEq ?ts_ph_Unit_0) => (bEq null)
+11:45:26 [WARN] proved: (opNot ?ts_ph_Unit_0) => (opNot null)
+11:45:26 [WARN] proved: (aMinus ?ts_ph_Unit_0) => (aMinus null)
+11:45:26 [WARN] proved: (aGt ?ts_ph_Unit_0) => (aGt null)
+11:45:26 [WARN] proved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+11:45:26 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+11:45:26 [WARN] proved: (lq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false
+11:45:26 [WARN] proved: (ite6 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1

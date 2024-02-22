@@ -1,0 +1,49 @@
+
+Inductive Tree = leaf Int | node {Int, Tree, Tree};
+
+spec = fix (
+    \f: Int -> Tree -> Bool. \y: Int. \t: Tree. 
+    match t with
+      leaf a -> > y a
+    | node {a, l, r} -> 
+        let r1 = (f a l) in 
+            let r2 = (f a r) in 
+                and r1 (and r2 (> y a))
+    end
+);
+
+repr = fix (
+    \f: ({Int, Tree}) -> {Int, Tree}. \t: {Int, Tree}. 
+    match t with
+      {pre, leaf a} -> 
+        let tmp1 = {pre, leaf a} in 
+            tmp1
+    | {pre, node {a, l, r}} -> 
+        let lres = (f {a, l}) in 
+            let rres = (f {a, r}) in 
+                {pre, node {a, lres.2, rres.2}}
+    end
+);
+
+main = \key: Int. \t: Tree. 
+    let res = (repr {key, t}) in 
+        let tmp2 = (spec key) in 
+            tmp2 res.2;
+
+repr_ = fix (
+    \f: ({Int, Tree}) -> Bool. \t: {Int, Tree}. 
+    match t with
+      {pre, leaf a} -> 
+        let c0 = (- pre a) in 
+            < 0 c0
+    | {pre, node {a, l, r}} -> 
+        let lres = (f {a, l}) in 
+            let rres = (f {a, r}) in 
+                let c0 = (- pre a) in 
+                    and (and rres lres) (< 0 c0)
+    end
+);
+
+main_ = \key: Int. \t: Tree. 
+    let res = (repr_ {key, t}) in 
+        res;

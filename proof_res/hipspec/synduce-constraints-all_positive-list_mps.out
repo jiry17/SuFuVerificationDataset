@@ -1,0 +1,47 @@
+File processed.
+Depth 1: 19 terms, 100 tests, 446 evaluations, 16 classes, 3 raw equations.
+Depth 2: 285 terms, 100 tests, 18706 evaluations, 157 classes, 128 raw equations.
+Depth 3: 22021 terms, 400 tests, 2161738 evaluations, 8093 classes, 13928 raw equations.
+QuickSpec done, 8093 classes, 13928 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf3 (tf3 var0_0 var0_1) var0_2 == tf3 var0_0 (tf3 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf3 (Nil var0_0) var0_1 == var0_1 by induction on var0_1[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034mProved max var0_0 == var0_0 without induction[0m using Z3
+[034m[1mProved lq var0_0 (plus var0_0 var0_1) == lq Zero var0_1 by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_1) (plus var0_0 var0_2) == lq var0_1 var0_2 by induction on var0_2[0m using Z3
+Failed to prove lq Zero (plus var0_0 var0_1) == True
+[034m[1mProved lq (plus var0_0 var0_1) (Succ var0_1) == lq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+[034m[1mProved lq (Succ var0_0) (plus var0_0 var0_1) == lq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved lq (plus var0_0 var0_0) (plus var0_1 var0_1) == lq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+Failed to prove lq (plus var0_0 var0_1) (Succ Zero) == False
+[034mProved lq (plus var0_0 var0_0) (Succ Zero) == lq (plus var0_0 var0_1) (Succ var0_1) without induction[0m using Z3
+[034m[1mProved lq (Succ Zero) (plus var0_0 var0_0) == lq Zero var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus var0_0 (tf7 var0_1) == tf7 (Cons var0_0 var0_1) by induction on var0_0[0m using Z3
+[034m[1mProved tf7 (tf3 var0_0 var0_1) == tf7 (tf3 var0_1 var0_0) by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus (tf7 var0_0) (tf7 var0_1) == tf7 (tf3 var0_0 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved tf7 (tf5 var0_0) == tf11 var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ var0_0) var0_0 == True by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 (plus var0_0 var0_1) == False by induction on var0_0[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_1) var0_0 == gq var0_1 Zero by induction on var0_0[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_1) (plus var0_0 var0_2) == gq var0_1 var0_2 by induction on var0_0[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_1) (Succ var0_1) == gq (plus var0_0 var0_2) (Succ var0_2) by induction on var0_1[0m using Z3
+Failed to prove gq (plus var0_0 var0_1) Zero == True
+[034m[1mProved gq (Succ var0_0) (plus var0_0 var0_1) == gq (Succ var0_2) (plus var0_2 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved gq (plus var0_0 var0_0) (plus var0_1 var0_1) == gq var0_0 var0_1 by induction on var0_0,var0_1[0m using Z3
+Failed to prove gq (Succ Zero) (plus var0_0 var0_1) == False
+[034m[1mProved gq (plus var0_0 var0_0) (Succ Zero) == gq var0_0 Zero by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ Zero) (plus var0_0 var0_0) == gq (Succ var0_1) (plus var0_0 var0_1) by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 var0_1 == lq var0_1 var0_0 by induction on var0_0,var0_1[0m using Z3
+Failed to prove tf1 (Concat var0_0 var0_1) == tf1 (Concat var0_1 var0_0)
+Failed to prove tf1 (Concat var0_0 var0_0) == tf1 var0_0

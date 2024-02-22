@@ -1,0 +1,44 @@
+File processed.
+Depth 1: 14 terms, 100 tests, 427 evaluations, 11 classes, 3 raw equations.
+Depth 2: 131 terms, 100 tests, 9294 evaluations, 70 classes, 61 raw equations.
+Depth 3: 5673 terms, 400 tests, 473996 evaluations, 2617 classes, 3056 raw equations.
+QuickSpec done, 2617 classes, 3056 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+Failed to prove var0_0 == var0_1
+[034m[1mProved Null == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf1 (Nil var0_0) var0_1 == var0_1 by induction on var0_1[0m using Z3
+Failed to prove tf3 (tf3 var0_0) == var0_0
+[034m[1mProved tf1 (tf3 var0_0) (tf3 var0_1) == tf3 (tf1 var0_1 var0_0) by induction on var0_0[0m using Z3
+[034m[1mProved tf2 (tf3 var0_0) == var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf5 (tf1 var0_0 var0_1) == tf5 (tf1 var0_1 var0_0) by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus (tf5 var0_0) (tf5 var0_1) == tf5 (tf1 var0_0 var0_1) by induction on var0_1[0m using Z3
+[034m[1mProved tf5 (tf3 var0_0) == tf5 var0_0 by induction on var0_0[0m using Z3
+[034mProved main (Zip var0_0 var0_1) == tf5 (tf1 var0_0 var0_1) without induction[0m using Z3
+[034mProved plus (main var0_0) var0_1 == plus var0_1 (main var0_0) without induction[0m using Z3
+[034mProved plus (main var0_0) (main var0_1) == plus (main var0_1) (main var0_0) without induction[0m using Z3
+[034m[1mProved plus Zero (main var0_0) == main var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved plus (main var0_0) (Succ Zero) == Succ (main var0_0) by induction on var0_0[0m using Z3
+[034m[1mProved tf5 (tf6 var0_0) == main var0_0 by induction on var0_0[0m using Z3
+[034m[1mProved main var0_0 == tf10 var0_0 by induction on var0_0[0m using Z3
+Merry-go-round!
+[034m[1mProved optimize {- main inp0 == mainNew inp0 -} by induction on inp0[0m using Z3
+Proved:
+    main var0_0 == tf10 var0_0
+    tf5 (tf6 var0_0) == main var0_0
+    plus (main var0_0) (Succ Zero) == Succ (main var0_0)
+    plus Zero (main var0_0) == main var0_0
+    tf5 (tf3 var0_0) == tf5 var0_0
+    plus (tf5 var0_0) (tf5 var0_1) == tf5 (tf1 var0_0 var0_1)
+    tf5 (tf1 var0_0 var0_1) == tf5 (tf1 var0_1 var0_0)
+    plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2)
+    plus var0_0 var0_1 == plus var0_1 var0_0
+    tf2 (tf3 var0_0) == var0_0
+    tf1 (tf3 var0_0) (tf3 var0_1) == tf3 (tf1 var0_1 var0_0)
+    tf1 (Nil var0_0) var0_1 == var0_1
+    tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2)
+    Null == var0_0
+    optimize {- main inp0 == mainNew inp0 -}
+

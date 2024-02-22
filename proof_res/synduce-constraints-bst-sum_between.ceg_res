@@ -1,5 +1,0 @@
-Proving begin optimize: (main v0 v1 v2) === (mainNew v0 v1 v2)
-Property accepted by cvec analysis
-new lemma forall v0: Tree. v1: Nat. v2: Nat. v0 === (tf9 v1 (tf8 v1 v2) v2 v0)
-new lemma forall v0: Nat. (gq (Succ Zero) v0) === (leq v0 Zero)
-new lemma forall v0: Nat. v1: Nat. (gq v0 v1) === (lq v1 v0)

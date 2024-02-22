@@ -1,0 +1,37 @@
+File processed.
+Depth 1: 13 terms, 2 tests, 26 evaluations, 13 classes, 0 raw equations.
+Depth 2: 148 terms, 100 tests, 5585 evaluations, 115 classes, 33 raw equations.
+Depth 3: 9249 terms, 800 tests, 821848 evaluations, 4406 classes, 4843 raw equations.
+QuickSpec done, 4406 classes, 4843 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034m[1mProved plus var0_0 var0_1 == plus var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved plus var0_0 (plus var0_1 var0_2) == plus var0_1 (plus var0_0 var0_2) by induction on var0_2[0m using Z3
+[034m[1mProved tf7 (Bin var0_0 var0_1) == tf7 (Bin var0_1 var0_0) by induction on var0_1,var0_0[0m using Z3
+Failed to prove mainNew (Bin var0_0 var0_1) == mainNew (Bin var0_0 var0_2)
+[034mProved mainNew (Bin var0_0 var0_1) == mainNew (Bin var0_1 var0_0) without induction[0m using Z3
+Failed to prove mainNew (Bin var0_0 var0_1) == mainNew (Bin var0_1 var0_2)
+[034mProved mainNew (Tip var0_0) == Zero without induction[0m using Z3
+[034m[1mProved times var0_0 var0_1 == times var0_1 var0_0 by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved times var0_0 (times var0_1 var0_2) == times var0_1 (times var0_0 var0_2) by induction on var0_1,var0_0[0m using Z3
+[034m[1mProved times var0_0 (plus var0_1 var0_1) == times var0_1 (plus var0_0 var0_0) by induction on var0_0[0m using Z3
+Failed to prove times (times var0_0 var0_1) (times var0_0 var0_2) == times var0_0 (times var0_1 var0_2)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_0) == times var0_0 (times var0_1 var0_2)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_2) == times var0_0 (times var0_1 var0_2)
+Failed to prove times (times var0_0 var0_1) (times var0_0 var0_2) == times var0_0 (times var0_2 var0_1)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_0) == times var0_0 (times var0_2 var0_1)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_1) == times var0_0 (times var0_2 var0_1)
+Failed to prove times (times var0_0 var0_1) (times var0_1 var0_2) == times var0_0 (times var0_2 var0_1)
+Failed to prove times (times var0_0 var0_1) (times var0_1 var0_2) == times var0_1 (times var0_0 var0_2)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_1) == times var0_1 (times var0_0 var0_2)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_2) == times var0_1 (times var0_0 var0_2)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_1) == times var0_2 (times var0_0 var0_1)
+Failed to prove times (times var0_0 var0_1) (times var0_1 var0_2) == times var0_2 (times var0_0 var0_1)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_2) == times var0_2 (times var0_0 var0_1)
+Failed to prove times (times var0_0 var0_1) (times var0_1 var0_2) == times var0_1 (times var0_2 var0_0)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_1) == times var0_1 (times var0_2 var0_0)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_0) == times var0_1 (times var0_2 var0_0)
+Failed to prove times (times var0_0 var0_1) (times var0_0 var0_2) == times var0_1 (times var0_2 var0_0)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_0) == times var0_2 (times var0_1 var0_0)
+Failed to prove times (times var0_0 var0_1) (times var0_0 var0_2) == times var0_2 (times var0_1 var0_0)
+Failed to prove times (times var0_0 var0_1) (times var0_2 var0_2) == times var0_2 (times var0_1 var0_0)
+[034m[1mProved plus (times var0_0 var0_1) (times var0_0 var0_2) == times var0_0 (plus var0_1 var0_2) by induction on var0_2[0m using Z3

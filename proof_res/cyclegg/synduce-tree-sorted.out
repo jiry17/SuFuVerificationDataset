@@ -1,0 +1,10 @@
+Proving begin optimize: (main v0) === (mainNew v0)
+Property accepted by cvec analysis
+new lemma forall v0: Tree. v0 === (tf3 v0)
+new lemma forall v0: Tree. (fst1 (tf1 v0)) === (snd2 (tf5 v0))
+new lemma forall v0: Nat. v1: Tree. (lq v0 (fst1 (tf1 v1))) === (lq v0 (snd2 (tf5 v1)))
+new lemma forall v0: Tree. v1: Nat. (lq (fst1 (tf1 v0)) v1) === (lq (snd2 (tf5 v0)) v1)
+new lemma forall v0: Tree. v1: Nat. (lq (fst1 (tf1 v0)) v1) === (lq (snd2 (tf5 (tf3 v0))) v1)
+new lemma forall v0: Tree. v1: Nat. (lq (fst1 (tf1 (tf3 v0))) v1) === (lq (snd2 (tf5 v0)) v1)
+new lemma forall v0: Nat. v1: Tree. (lq v0 (fst1 (tf1 v1))) === (lq v0 (snd2 (tf5 (tf3 v1))))
+new lemma forall v0: Nat. v1: Tree. (lq v0 (fst1 (tf1 (tf3 v1)))) === (lq v0 (snd2 (tf5 v1)))

@@ -1,7 +1,0 @@
-Proving begin optimize: (main v0) === (mainNew v0)
-Property accepted by cvec analysis
-new lemma forall v0: Nat. v1: Nat. (ite (lq v0 v1) v1 v0) === (ite (lq v1 v0) v0 v1)
-prove lemma forall v0: Zipper. (main v0) === (mainNew v0)
-optimize uncyclic: VALID (1894 ms)
-Attempted 1 goals:
-  1 solved (no cyclic)

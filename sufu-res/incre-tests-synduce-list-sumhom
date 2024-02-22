@@ -1,0 +1,56 @@
+
+Inductive CList = cnil Unit | single Int | concat {CList, CList};
+
+Inductive List = nil Unit | cons {Int, List};
+
+cat = fix (
+    \f: List -> List -> List. \x: List. \y: List. 
+    match x with
+      cons {h, t} -> cons {h, f t y}
+    | nil _ -> y
+    end
+);
+
+repr = fix (
+    \f: CList -> List. \cl: CList. 
+    match cl with
+      cnil _ -> 
+        let tmp1 = (nil unit) in 
+            tmp1
+    | single h -> 
+        let tmp2 = (cons {h, nil unit}) in 
+            tmp2
+    | concat {l, r} -> 
+        let tmp3 = (f l) in 
+            let tmp4 = (f r) in 
+                cat tmp3 tmp4
+    end
+);
+
+spec = fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> + h (f t)
+    end
+);
+
+@Start main = \cl: CList. 
+    let tmp5 = (repr cl) in 
+        spec tmp5;
+
+repr_ = fix (
+    \f: CList -> Int. \cl: CList. 
+    match cl with
+      cnil _ -> 0
+    | single h -> h
+    | concat {l, r} -> 
+        let tmp3 = (f l) in 
+            let tmp4 = (f r) in 
+                + tmp3 tmp4
+    end
+);
+
+@Start main_ = \cl: CList. 
+    let tmp5 = (repr_ cl) in 
+        tmp5;

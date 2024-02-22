@@ -1,0 +1,37 @@
+10:57:58 [WARN] Collecting statistics
+10:57:58 [WARN]  ex is: true
+10:57:58 [WARN]  ex is: false
+10:57:58 [WARN]  ex is: null
+10:57:58 [WARN]  ex is: zero
+10:57:58 [WARN]  ex is: (succ zero)
+10:57:58 [WARN]  ex is: (succ (succ zero))
+10:57:58 [WARN]  ex is: (empty autovar_Unit_0)
+10:57:58 [WARN]  ex is: (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0))
+10:57:58 [WARN]  ex is: (node autovar_Nat_1 (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)) (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)))
+10:57:58 [WARN]  ex is: (top autovar_Unit_0)
+10:57:58 [WARN]  ex is: (left autovar_Nat_0 autovar_BTree_0 (top autovar_Unit_0))
+10:57:58 [WARN]  ex is: (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0))
+10:57:58 [WARN]  ex is: (left autovar_Nat_2 autovar_BTree_2 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:57:58 [WARN]  ex is: (right autovar_Nat_3 autovar_BTree_3 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:57:58 [WARN] Running exploration without proof mode, but goals were given
+10:57:58 [WARN] Proof mode: true
+10:57:58 [WARN]  ex is: true
+10:57:58 [WARN]  ex is: false
+10:57:58 [WARN]  ex is: null
+10:57:58 [WARN]  ex is: zero
+10:57:58 [WARN]  ex is: (succ zero)
+10:57:58 [WARN]  ex is: (succ (succ zero))
+10:57:58 [WARN]  ex is: (empty autovar_Unit_0)
+10:57:58 [WARN]  ex is: (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0))
+10:57:58 [WARN]  ex is: (node autovar_Nat_1 (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)) (node autovar_Nat_0 (empty autovar_Unit_0) (empty autovar_Unit_0)))
+10:57:58 [WARN]  ex is: (top autovar_Unit_0)
+10:57:58 [WARN]  ex is: (left autovar_Nat_0 autovar_BTree_0 (top autovar_Unit_0))
+10:57:58 [WARN]  ex is: (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0))
+10:57:58 [WARN]  ex is: (left autovar_Nat_2 autovar_BTree_2 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:57:58 [WARN]  ex is: (right autovar_Nat_3 autovar_BTree_3 (right autovar_Nat_1 autovar_BTree_1 (top autovar_Unit_0)))
+10:57:58 [WARN] Running exploration without proof mode, but goals were given
+10:57:58 [WARN] Proof mode: true
+10:57:58 [WARN] proved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+10:57:58 [WARN] proved: (max zero ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 zero)
+10:57:58 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => (max zero ?ts_ph_Nat_0)
+10:57:58 [WARN] proved: (ite2 ?ts_ph_Bool_0 zero zero) => zero

@@ -1,0 +1,50 @@
+10:22:25 [WARN] Collecting statistics
+10:22:25 [WARN]  ex is: true
+10:22:25 [WARN]  ex is: false
+10:22:25 [WARN]  ex is: zero
+10:22:25 [WARN]  ex is: (succ zero)
+10:22:25 [WARN]  ex is: (succ (succ zero))
+10:22:25 [WARN]  ex is: (tip autovar_Nat_0)
+10:22:25 [WARN]  ex is: (bin (tip autovar_Nat_0) (tip autovar_Nat_0))
+10:22:25 [WARN]  ex is: (bin (bin (tip autovar_Nat_0) (tip autovar_Nat_0)) (bin (tip autovar_Nat_0) (tip autovar_Nat_0)))
+10:22:25 [WARN]  ex is: (makeTuple1 autovar_Nat_0 autovar_Nat_1)
+10:22:25 [WARN]  ex is: (ptip autovar_Nat_0 autovar_Nat_1)
+10:22:25 [WARN]  ex is: (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1))
+10:22:25 [WARN]  ex is: (pbin (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)) (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)))
+10:22:25 [WARN] Running exploration without proof mode, but goals were given
+10:22:25 [WARN] Proof mode: true
+10:22:25 [WARN]  ex is: true
+10:22:25 [WARN]  ex is: false
+10:22:25 [WARN]  ex is: zero
+10:22:25 [WARN]  ex is: (succ zero)
+10:22:25 [WARN]  ex is: (succ (succ zero))
+10:22:25 [WARN]  ex is: (tip autovar_Nat_0)
+10:22:25 [WARN]  ex is: (bin (tip autovar_Nat_0) (tip autovar_Nat_0))
+10:22:25 [WARN]  ex is: (bin (bin (tip autovar_Nat_0) (tip autovar_Nat_0)) (bin (tip autovar_Nat_0) (tip autovar_Nat_0)))
+10:22:25 [WARN]  ex is: (makeTuple1 autovar_Nat_0 autovar_Nat_1)
+10:22:25 [WARN]  ex is: (ptip autovar_Nat_0 autovar_Nat_1)
+10:22:25 [WARN]  ex is: (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1))
+10:22:25 [WARN]  ex is: (pbin (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)) (pbin (ptip autovar_Nat_0 autovar_Nat_1) (ptip autovar_Nat_0 autovar_Nat_1)))
+10:22:25 [WARN] Running exploration without proof mode, but goals were given
+10:22:25 [WARN] Proof mode: true
+10:22:25 [WARN] proved: (times ?ts_ph_Nat_0 zero) => zero
+10:22:25 [WARN] proved: (plus ?ts_ph_Nat_0 zero) => ?ts_ph_Nat_0
+10:22:26 [WARN] proved: (succ (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1)) => (plus ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1))
+10:22:26 [WARN] proved: (plus ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1)) => (succ (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1))
+10:22:26 [WARN] proved: (times ?ts_ph_Nat_0 (succ zero)) => ?ts_ph_Nat_0
+10:22:26 [WARN] generalized case_split proof as: (plus (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) ?ts_ph_Nat_2) -- (plus ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_2))
+10:22:26 [WARN] proved: (plus (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) ?ts_ph_Nat_2) => (plus ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_2))
+10:22:26 [WARN] proved: (plus ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_2)) => (plus (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) ?ts_ph_Nat_2)
+10:22:26 [WARN] proved: (makeTuple1 (fst_1 ?ts_ph_Tuple1_0) (snd_1 ?ts_ph_Tuple1_0)) => ?ts_ph_Tuple1_0
+10:22:26 [WARN] proved: (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (plus ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+10:22:26 [WARN] proved: (plus ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (plus ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+10:22:26 [WARN] proved: (times ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1)) => (plus ?ts_ph_Nat_0 (times ?ts_ph_Nat_0 ?ts_ph_Nat_1))
+10:22:26 [WARN] proved: (plus ?ts_ph_Nat_0 (times ?ts_ph_Nat_0 ?ts_ph_Nat_1)) => (times ?ts_ph_Nat_0 (succ ?ts_ph_Nat_1))
+10:22:26 [WARN] proved: (times ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (times ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+10:22:26 [WARN] proved: (times ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (times ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+10:22:26 [WARN] proved: (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_0)) => (times ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_1))
+10:22:26 [WARN] proved: (times ?ts_ph_Nat_0 (plus ?ts_ph_Nat_1 ?ts_ph_Nat_1)) => (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_0))
+10:22:27 [WARN] proved: (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_2)) => (plus (times ?ts_ph_Nat_0 ?ts_ph_Nat_1) (times ?ts_ph_Nat_2 ?ts_ph_Nat_1))
+10:22:27 [WARN] proved: (plus (times ?ts_ph_Nat_0 ?ts_ph_Nat_1) (times ?ts_ph_Nat_2 ?ts_ph_Nat_1)) => (times ?ts_ph_Nat_1 (plus ?ts_ph_Nat_0 ?ts_ph_Nat_2))
+10:22:46 [WARN] proved: (times ?ts_ph_Nat_1 (times ?ts_ph_Nat_0 ?ts_ph_Nat_2)) => (times ?ts_ph_Nat_0 (times ?ts_ph_Nat_1 ?ts_ph_Nat_2))
+10:22:46 [WARN] proved: (times ?ts_ph_Nat_0 (times ?ts_ph_Nat_1 ?ts_ph_Nat_2)) => (times ?ts_ph_Nat_1 (times ?ts_ph_Nat_0 ?ts_ph_Nat_2))

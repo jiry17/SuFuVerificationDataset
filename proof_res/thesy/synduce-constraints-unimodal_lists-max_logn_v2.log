@@ -1,0 +1,48 @@
+10:19:25 [WARN] Collecting statistics
+10:19:25 [WARN]  ex is: true
+10:19:25 [WARN]  ex is: false
+10:19:25 [WARN]  ex is: zero
+10:19:25 [WARN]  ex is: (succ zero)
+10:19:25 [WARN]  ex is: (succ (succ zero))
+10:19:25 [WARN]  ex is: (uelt autovar_Nat_0)
+10:19:25 [WARN]  ex is: (usplit (uelt autovar_Nat_0) autovar_Nat_1 autovar_Nat_2 (uelt autovar_Nat_0))
+10:19:25 [WARN]  ex is: (usplit (usplit (uelt autovar_Nat_0) autovar_Nat_1 autovar_Nat_2 (uelt autovar_Nat_0)) autovar_Nat_3 autovar_Nat_4 (usplit (uelt autovar_Nat_0) autovar_Nat_1 autovar_Nat_2 (uelt autovar_Nat_0)))
+10:19:25 [WARN]  ex is: (elt autovar_Nat_0)
+10:19:25 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:19:25 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:19:25 [WARN] Running exploration without proof mode, but goals were given
+10:19:25 [WARN] Proof mode: true
+10:19:25 [WARN]  ex is: true
+10:19:25 [WARN]  ex is: false
+10:19:25 [WARN]  ex is: zero
+10:19:25 [WARN]  ex is: (succ zero)
+10:19:25 [WARN]  ex is: (succ (succ zero))
+10:19:25 [WARN]  ex is: (uelt autovar_Nat_0)
+10:19:25 [WARN]  ex is: (usplit (uelt autovar_Nat_0) autovar_Nat_1 autovar_Nat_2 (uelt autovar_Nat_0))
+10:19:25 [WARN]  ex is: (usplit (usplit (uelt autovar_Nat_0) autovar_Nat_1 autovar_Nat_2 (uelt autovar_Nat_0)) autovar_Nat_3 autovar_Nat_4 (usplit (uelt autovar_Nat_0) autovar_Nat_1 autovar_Nat_2 (uelt autovar_Nat_0)))
+10:19:25 [WARN]  ex is: (elt autovar_Nat_0)
+10:19:25 [WARN]  ex is: (cons autovar_Nat_1 (elt autovar_Nat_0))
+10:19:25 [WARN]  ex is: (cons autovar_Nat_2 (cons autovar_Nat_1 (elt autovar_Nat_0)))
+10:19:25 [WARN] Running exploration without proof mode, but goals were given
+10:19:25 [WARN] Proof mode: true
+10:19:25 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:19:25 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:19:25 [WARN] proved: (max zero ?ts_ph_Nat_0) => ?ts_ph_Nat_0
+10:19:25 [WARN] proved: (and ?ts_ph_Bool_0 ?ts_ph_Bool_0) => ?ts_ph_Bool_0
+10:19:25 [WARN] proved: (tf5 zero ?ts_ph_List_0) => false
+10:19:25 [WARN] proved: (lq zero ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 zero)
+10:19:25 [WARN] proved: (gq ?ts_ph_Nat_0 zero) => (lq zero ?ts_ph_Nat_0)
+10:19:25 [WARN] proved: (ite3 ?ts_ph_Bool_0 ?ts_ph_Nat_1 ?ts_ph_Nat_1) => ?ts_ph_Nat_1
+10:19:25 [WARN] proved: (ite4 ?ts_ph_Bool_0 ?ts_ph_UList_1 ?ts_ph_UList_1) => ?ts_ph_UList_1
+10:19:25 [WARN] generalized case_split proof as: (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_1 ?ts_ph_Bool_1) -- ?ts_ph_Bool_1
+10:19:25 [WARN] proved: (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_1 ?ts_ph_Bool_1) => ?ts_ph_Bool_1
+10:19:25 [WARN] proved: (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:19:25 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:19:25 [WARN] proved: (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_1 false) => (and ?ts_ph_Bool_1 ?ts_ph_Bool_0)
+10:19:25 [WARN] proved: (and ?ts_ph_Bool_1 ?ts_ph_Bool_0) => (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_1 false)
+10:19:25 [WARN] proved: (ite2 ?ts_ph_Bool_0 true ?ts_ph_Bool_1) => (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_0 ?ts_ph_Bool_1)
+10:19:25 [WARN] proved: (ite2 ?ts_ph_Bool_0 ?ts_ph_Bool_0 ?ts_ph_Bool_1) => (ite2 ?ts_ph_Bool_0 true ?ts_ph_Bool_1)
+10:19:25 [WARN] proved: (tf13 ?ts_ph_UList_0) => ?ts_ph_UList_0
+10:19:25 [WARN] proved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_1) => (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0)
+10:19:25 [WARN] proved: (lq ?ts_ph_Nat_1 ?ts_ph_Nat_0) => (gq ?ts_ph_Nat_0 ?ts_ph_Nat_1)
+10:19:25 [WARN] proved: (gq ?ts_ph_Nat_0 ?ts_ph_Nat_0) => false

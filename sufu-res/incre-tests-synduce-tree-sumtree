@@ -1,0 +1,42 @@
+
+Inductive Tree = nil Unit | node {Int, Tree, Tree};
+
+spec = fix (
+    \f: Int -> Tree -> Int. \w: Int. \t: Tree. 
+    match t with
+      nil _ -> w
+    | node {a, l, r} -> f (+ (f w l) a) r
+    end
+) 0;
+
+repr = fix (
+    \f: Tree -> Tree. \t: Tree. 
+    match t with
+      nil _ -> 
+        let tmp1 = (nil unit) in 
+            tmp1
+    | node {a, l, r} -> 
+        let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                node {a, tmp2, tmp3}
+    end
+);
+
+main = \t: Tree. 
+    let tmp4 = (repr t) in 
+        spec tmp4;
+
+repr_ = fix (
+    \f: Tree -> Int. \t: Tree. 
+    match t with
+      nil _ -> 0
+    | node {a, l, r} -> 
+        let tmp2 = (f l) in 
+            let tmp3 = (f r) in 
+                + tmp3 (+ tmp2 a)
+    end
+);
+
+main_ = \t: Tree. 
+    let tmp4 = (repr_ t) in 
+        tmp4;

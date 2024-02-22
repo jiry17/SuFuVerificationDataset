@@ -1,0 +1,29 @@
+File processed.
+Depth 1: 24 terms, 4 tests, 67 evaluations, 24 classes, 0 raw equations.
+Depth 2: 502 terms, 157 tests, 26352 evaluations, 326 classes, 176 raw equations.
+Depth 3: 100499 terms, 800 tests, 8481985 evaluations, 51907 classes, 48592 raw equations.
+QuickSpec done, 51907 classes, 48592 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034mProved MakeTuple4 (fst4 var0_0) (snd4 var0_0) (third4 var0_0) == var0_0 without induction[0m using Z3
+[034m[1mProved tf12 var0_0 == var0_0 by induction on var0_0[0m using Z3
+[034mProved tf13 (tf13 var0_0 var0_1) var0_2 == tf13 var0_0 (tf13 var0_1 var0_2) without induction[0m using Z3
+Failed to prove tf13 (Ncons var0_0 var0_1) (tf13 var0_2 var0_1) == tf13 (Ncons var0_0 var0_2) (tf13 var0_2 var0_1)
+Failed to prove tf13 (Ncons var0_0 var0_1) (tf13 var0_1 var0_2) == tf13 (Ncons var0_0 var0_2) (tf13 var0_1 var0_2)
+Failed to prove tf13 (tf13 var0_0 var0_1) (tf13 var0_0 var0_2) == tf13 var0_1 (tf13 var0_0 var0_2)
+Failed to prove tf13 (tf13 var0_0 var0_1) (tf13 var0_2 var0_0) == tf13 var0_1 (tf13 var0_2 var0_0)
+[034mProved tf13 (tf13 var0_0 var0_1) (tf13 var0_2 var0_1) == tf13 var0_0 (tf13 var0_2 var0_1) without induction[0m using Z3
+[034mProved MakeTuple6 (fst6 var0_0) (snd6 var0_0) == var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_1 == and var0_1 var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved ite5 var0_0 var0_1 == ite5 var0_1 var0_0 without induction[0m using Z3
+[034mProved ite5 var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved ite5 var0_0 (ite5 var0_1 var0_2) == ite5 var0_1 (ite5 var0_0 var0_2) without induction[0m using Z3
+[034mProved and var0_0 var0_1 == ite5 var0_0 var0_1 without induction[0m using Z3
+[034mProved ite2 var0_0 var0_1 var0_1 == var0_1 without induction[0m using Z3
+[034mProved ite2 var0_0 var0_1 (ite2 var0_0 var0_2 var0_0a) == ite2 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 var0_1 (ite2 var0_2 var0_1 var0_0a) == ite2 var0_2 var0_1 (ite2 var0_0 var0_1 var0_0a) without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_1 var0_2 var0_0a) var0_2 == ite2 var0_1 var0_2 (ite2 var0_0 var0_0a var0_2) without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_1 var0_2 var0_0a) var0_0a == ite2 var0_1 (ite2 var0_0 var0_2 var0_0a) var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 (ite2 var0_0 var0_1 var0_2) var0_0a == ite2 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite2 var0_0 (Succ var0_1) (Succ var0_2) == Succ (ite2 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034mProved ite2 (ite5 var0_0 var0_1) var0_2 var0_0a == ite2 var0_0 (ite2 var0_1 var0_2 var0_0a) var0_0a without induction[0m using Z3

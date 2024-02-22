@@ -1,0 +1,72 @@
+File processed.
+Depth 1: 14 terms, 6 tests, 44 evaluations, 14 classes, 0 raw equations.
+Depth 2: 297 terms, 100 tests, 10605 evaluations, 229 classes, 68 raw equations.
+Depth 3: 37728 terms, 200 tests, 3026086 evaluations, 18939 classes, 18789 raw equations.
+QuickSpec done, 18939 classes, 18789 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034mProved mainNew (Single var0_0) == True without induction[0m using Z3
+[034mProved MakeTuple2 (fst2 var0_0) (snd2 var0_0) (third2 var0_0) == var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_1 == and var0_1 var0_0 without induction[0m using Z3
+[034mProved and var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (and var0_1 var0_2) == and var0_1 (and var0_0 var0_2) without induction[0m using Z3
+[034mProved or var0_0 var0_1 == or var0_1 var0_0 without induction[0m using Z3
+[034mProved or var0_0 var0_0 == var0_0 without induction[0m using Z3
+[034mProved or var0_0 (or var0_1 var0_2) == or var0_1 (or var0_0 var0_2) without induction[0m using Z3
+[034mProved or var0_0 (and var0_0 var0_1) == var0_0 without induction[0m using Z3
+[034mProved and var0_0 (or var0_0 var0_1) == var0_0 without induction[0m using Z3
+[034mProved or (and var0_0 var0_1) (and var0_0 var0_2) == and var0_0 (or var0_1 var0_2) without induction[0m using Z3
+[034mProved and (or var0_0 var0_1) (or var0_0 var0_2) == or var0_0 (and var0_1 var0_2) without induction[0m using Z3
+[034mProved not (not var0_0) == var0_0 without induction[0m using Z3
+[034mProved or var0_0 (not var0_0) == True without induction[0m using Z3
+[034mProved and var0_0 (not var0_0) == False without induction[0m using Z3
+[034mProved or (not var0_0) (not var0_1) == not (and var0_0 var0_1) without induction[0m using Z3
+[034mProved and (not var0_0) (not var0_1) == not (or var0_0 var0_1) without induction[0m using Z3
+[034m[1mProved tf1 (tf1 var0_0 var0_1) var0_2 == tf1 var0_0 (tf1 var0_1 var0_2) by induction on var0_2[0m using Z3
+[034mProved main (Single var0_0) == True without induction[0m using Z3
+[034mProved or (main var0_0) var0_1 == or var0_1 (main var0_0) without induction[0m using Z3
+[034mProved or (main var0_0) (main var0_1) == or (main var0_1) (main var0_0) without induction[0m using Z3
+[034mProved or False (main var0_0) == main var0_0 without induction[0m using Z3
+[034mProved or True (main var0_0) == True without induction[0m using Z3
+[034mProved or (main var0_0) (main var0_0) == main var0_0 without induction[0m using Z3
+[034mProved and (main var0_0) var0_1 == and var0_1 (main var0_0) without induction[0m using Z3
+[034mProved and (main var0_0) (main var0_1) == and (main var0_1) (main var0_0) without induction[0m using Z3
+[034mProved and False (main var0_0) == False without induction[0m using Z3
+[034mProved and True (main var0_0) == main var0_0 without induction[0m using Z3
+[034mProved and (main var0_0) (main var0_0) == main var0_0 without induction[0m using Z3
+Failed to prove main var0_0 == mainNew var0_0
+Failed to prove MakeTuple2 var0_0 var0_1 (main var0_2) == MakeTuple2 var0_0 var0_1 (mainNew var0_2)
+Failed to prove MakeTuple2 var0_0 (main var0_1) var0_2 == MakeTuple2 var0_0 (mainNew var0_1) var0_2
+Failed to prove MakeTuple2 (main var0_0) var0_1 var0_2 == MakeTuple2 (mainNew var0_0) var0_1 var0_2
+Failed to prove main (Concat var0_0 var0_1) == mainNew (Concat var0_0 var0_1)
+Failed to prove MakeTuple2 var0_0 var0_0 (main var0_1) == MakeTuple2 var0_0 var0_0 (mainNew var0_1)
+Failed to prove MakeTuple2 var0_0 (main var0_1) var0_0 == MakeTuple2 var0_0 (mainNew var0_1) var0_0
+Failed to prove MakeTuple2 (main var0_0) var0_1 var0_1 == MakeTuple2 (mainNew var0_0) var0_1 var0_1
+Failed to prove Cons (main var0_0) var0_1 == Cons (mainNew var0_0) var0_1
+Failed to prove Elt (main var0_0) == Elt (mainNew var0_0)
+Failed to prove Single (main var0_0) == Single (mainNew var0_0)
+Failed to prove main (Concat var0_0 var0_0) == mainNew (Concat var0_0 var0_0)
+Failed to prove MakeTuple2 var0_0 (mainNew var0_1) (main var0_2) == MakeTuple2 var0_0 (mainNew var0_1) (mainNew var0_2)
+Failed to prove MakeTuple2 var0_0 (main var0_1) (mainNew var0_2) == MakeTuple2 var0_0 (mainNew var0_1) (mainNew var0_2)
+Failed to prove MakeTuple2 var0_0 (main var0_1) (main var0_2) == MakeTuple2 var0_0 (mainNew var0_1) (mainNew var0_2)
+Failed to prove MakeTuple2 (mainNew var0_0) var0_1 (main var0_2) == MakeTuple2 (mainNew var0_0) var0_1 (mainNew var0_2)
+Failed to prove MakeTuple2 (main var0_0) var0_1 (mainNew var0_2) == MakeTuple2 (mainNew var0_0) var0_1 (mainNew var0_2)
+Failed to prove MakeTuple2 (main var0_0) var0_1 (main var0_2) == MakeTuple2 (mainNew var0_0) var0_1 (mainNew var0_2)
+Failed to prove Cons (main var0_0) (tf1 var0_1 var0_2) == Cons (mainNew var0_0) (tf1 var0_1 var0_2)
+Failed to prove Cons (main var0_0) (Cons var0_1 var0_2) == Cons (mainNew var0_0) (Cons var0_1 var0_2)
+Failed to prove MakeTuple2 (mainNew var0_0) (main var0_1) var0_2 == MakeTuple2 (mainNew var0_0) (mainNew var0_1) var0_2
+Failed to prove MakeTuple2 (main var0_0) (mainNew var0_1) var0_2 == MakeTuple2 (mainNew var0_0) (mainNew var0_1) var0_2
+Failed to prove MakeTuple2 (main var0_0) (main var0_1) var0_2 == MakeTuple2 (mainNew var0_0) (mainNew var0_1) var0_2
+Failed to prove MakeTuple2 var0_0 False (main var0_1) == MakeTuple2 var0_0 False (mainNew var0_1)
+Failed to prove MakeTuple2 var0_0 True (main var0_1) == MakeTuple2 var0_0 True (mainNew var0_1)
+Failed to prove MakeTuple2 False var0_0 (main var0_1) == MakeTuple2 False var0_0 (mainNew var0_1)
+Failed to prove MakeTuple2 True var0_0 (main var0_1) == MakeTuple2 True var0_0 (mainNew var0_1)
+Failed to prove MakeTuple2 var0_0 (mainNew var0_1) (main var0_1) == MakeTuple2 var0_0 (mainNew var0_1) (mainNew var0_1)
+Failed to prove MakeTuple2 var0_0 (main var0_1) False == MakeTuple2 var0_0 (mainNew var0_1) False
+Failed to prove MakeTuple2 var0_0 (main var0_1) True == MakeTuple2 var0_0 (mainNew var0_1) True
+Failed to prove MakeTuple2 var0_0 (main var0_1) (mainNew var0_1) == MakeTuple2 var0_0 (mainNew var0_1) (mainNew var0_1)
+Failed to prove MakeTuple2 var0_0 (main var0_1) (main var0_1) == MakeTuple2 var0_0 (mainNew var0_1) (mainNew var0_1)
+Failed to prove MakeTuple2 (mainNew var0_0) var0_1 (main var0_0) == MakeTuple2 (mainNew var0_0) var0_1 (mainNew var0_0)
+Failed to prove MakeTuple2 (main var0_0) var0_1 False == MakeTuple2 (mainNew var0_0) var0_1 False
+Failed to prove MakeTuple2 (main var0_0) var0_1 True == MakeTuple2 (mainNew var0_0) var0_1 True
+Failed to prove MakeTuple2 (main var0_0) var0_1 (mainNew var0_0) == MakeTuple2 (mainNew var0_0) var0_1 (mainNew var0_0)
+Failed to prove MakeTuple2 (main var0_0) var0_1 (main var0_0) == MakeTuple2 (mainNew var0_0) var0_1 (mainNew var0_0)

@@ -1,0 +1,57 @@
+
+Inductive List = cons {Bool, List} | nil Unit;
+
+single_pass = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> List. \xs: List. 
+    match xs with
+      nil _ -> xs
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            cons {h, tmp1}
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            v tmp2;
+
+inf = 100;
+
+dropwhile = fix (
+    \f: Int -> List -> Int. \i: Int. \xs: List. 
+    match xs with
+      nil _ -> i
+    | cons {h, t} -> if (h) then i
+        else f (+ 1 i) t
+    end
+) 0;
+
+main = single_pass dropwhile;
+
+@Combine @Align al_true = true;
+
+@Combine @Align al_false = false;
+
+@Extract @Align al_head = \xs: List. 
+    match xs with
+      nil _ -> al_false
+    | cons {h, _} -> h
+    end
+;
+
+single_pass_ = \v: List -> Int. 
+    let run = (fix (
+    \f: List -> Int. \xs: List. 
+    match xs with
+      nil _ -> 0
+    | cons {h, t} -> 
+        let tmp1 = (f t) in 
+            if (not h) then + 1 tmp1
+            else 0
+    end
+)) in 
+        \xs: List. 
+        let tmp2 = (run xs) in 
+            tmp2;
+
+main_ = single_pass_ dropwhile;

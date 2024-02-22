@@ -1,0 +1,59 @@
+File processed.
+Depth 1: 15 terms, 4 tests, 43 evaluations, 15 classes, 0 raw equations.
+Depth 2: 285 terms, 200 tests, 15890 evaluations, 182 classes, 103 raw equations.
+Depth 3: 23111 terms, 400 tests, 2346197 evaluations, 7943 classes, 15168 raw equations.
+QuickSpec done, 7943 classes, 15168 equations.
+Failed to prove optimize {- main inp0 == mainNew inp0 -}
+[034m[1mProved tf5 var0_0 == var0_0 by induction on var0_0[0m using Z3
+[034mProved MakeTuple2 (fst2 var0_0) (snd2 var0_0) == var0_0 without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 var0_1 == var0_1 without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 (ite1 var0_0 var0_2 var0_0a) == ite1 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 var0_1 (ite1 var0_2 var0_1 var0_0a) == ite1 var0_2 var0_1 (ite1 var0_0 var0_1 var0_0a) without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_2 == ite1 var0_1 var0_2 (ite1 var0_0 var0_0a var0_2) without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_1 var0_2 var0_0a) var0_0a == ite1 var0_1 (ite1 var0_0 var0_2 var0_0a) var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 (ite1 var0_0 var0_1 var0_2) var0_0a == ite1 var0_0 var0_1 var0_0a without induction[0m using Z3
+[034mProved ite1 var0_0 (Succ var0_1) (Succ var0_2) == Succ (ite1 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034m[1mProved gq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 (Succ var0_0) == False by induction on var0_0[0m using Z3
+[034m[1mProved gq (Succ var0_0) var0_0 == True by induction on var0_0[0m using Z3
+[034mProved gq (ite1 var0_0 var0_1 var0_2) var0_1 == gq var0_2 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 var0_1 var0_2) var0_2 == gq var0_1 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) var0_2 var0_2 == var0_2 without induction[0m using Z3
+[034m[1mProved ite1 (gq var0_0 var0_1) var0_1 var0_0 == ite1 (gq var0_1 var0_0) var0_0 var0_1 by induction on var0_0[0m using Z3
+[034mProved ite1 (gq var0_0 var0_1) var0_0 var0_1 == ite1 (gq var0_1 var0_0) var0_1 var0_0 without induction[0m using Z3
+[034mProved gq (ite1 var0_0 var0_1 Zero) var0_2 == gq var0_1 (ite1 var0_0 var0_2 var0_1) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 Zero var0_1) var0_2 == gq var0_1 (ite1 var0_0 var0_1 var0_2) without induction[0m using Z3
+[034mProved gq (Succ var0_0) (ite1 var0_1 var0_2 Zero) == gq (Succ var0_0) (ite1 var0_1 var0_2 var0_0) without induction[0m using Z3
+[034mProved gq (Succ var0_0) (ite1 var0_1 Zero var0_2) == gq (Succ var0_0) (ite1 var0_1 var0_0 var0_2) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 var0_1 Zero) (Succ var0_2) == gq (ite1 var0_0 var0_1 var0_2) (Succ var0_2) without induction[0m using Z3
+[034mProved gq (ite1 var0_0 Zero var0_1) (Succ var0_2) == gq (ite1 var0_0 var0_2 var0_1) (Succ var0_2) without induction[0m using Z3
+[034mProved ite1 (gq var0_0 Zero) var0_1 Zero == ite1 (gq var0_0 Zero) var0_1 var0_0 without induction[0m using Z3
+[034mProved ite1 (gq var0_0 Zero) var0_1 (Succ Zero) == ite1 (gq var0_0 Zero) var0_1 (Succ var0_0) without induction[0m using Z3
+[034m[1mProved lq var0_0 var0_0 == False by induction on var0_0[0m using Z3
+[034mProved lq var0_0 Zero == False without induction[0m using Z3
+[034m[1mProved lq var0_0 (Succ var0_0) == True by induction on var0_0[0m using Z3
+[034m[1mProved lq (Succ var0_0) var0_0 == False by induction on var0_0[0m using Z3
+[034m[1mProved gq var0_0 var0_1 == lq var0_1 var0_0 by induction on var0_1[0m using Z3
+Failed to prove tf1 var0_0 (Node var0_1 var0_2 var0_0a) == tf1 var0_0 (Node var0_1 var0_0a var0_2)
+Failed to prove tf1 (tf1 var0_0 var0_1) var0_2 == tf1 (tf1 var0_0 var0_2) var0_1
+Failed to prove tf1 (tf1 var0_0 var0_1) var0_1 == tf1 var0_0 var0_1
+Failed to prove tf1 var0_0 (Node Zero var0_1 var0_2) == tf1 var0_0 (Node Zero var0_2 var0_1)
+Failed to prove tf1 (tf1 var0_0 var0_1) (Leaf var0_2) == tf1 var0_0 (Node var0_2 var0_1 var0_1)
+Failed to prove tf1 (MakeTuple2 var0_0 var0_0) (Leaf var0_1) == tf1 (MakeTuple2 var0_1 var0_1) (Leaf var0_0)
+[034mProved tf1 (MakeTuple2 var0_0 var0_0) (Leaf var0_0) == MakeTuple2 var0_0 var0_0 without induction[0m using Z3
+[034mProved tf1 (MakeTuple2 var0_0 var0_1) (Leaf Zero) == MakeTuple2 Zero var0_1 without induction[0m using Z3
+Failed to prove tf1 (tf1 var0_0 var0_1) (Leaf Zero) == tf1 var0_0 (Node Zero var0_1 var0_1)
+Failed to prove tf1 (MakeTuple2 var0_0 Zero) (Leaf var0_1) == tf1 (MakeTuple2 var0_0 var0_1) (Leaf var0_1)
+Failed to prove tf1 (MakeTuple2 Zero var0_0) (Leaf var0_1) == tf1 (MakeTuple2 Zero var0_1) (Leaf var0_0)
+[034mProved tf1 (MakeTuple2 var0_0 Zero) (Leaf var0_0) == MakeTuple2 var0_0 var0_0 without induction[0m using Z3
+[034mProved tf1 (MakeTuple2 Zero var0_0) (Leaf var0_0) == MakeTuple2 Zero var0_0 without induction[0m using Z3
+[034m[1mProved tf1 (MakeTuple2 Zero Zero) (Leaf var0_0) == MakeTuple2 Zero var0_0 by induction on var0_0[0m using Z3
+Failed to prove tf0 var0_0 (Node var0_1 var0_2 var0_0a) == tf1 var0_0 (Node var0_1 var0_0a var0_2)
+Failed to prove tf0 (tf1 var0_0 var0_1) var0_2 == tf1 (tf1 var0_0 var0_2) var0_1
+Failed to prove tf0 (tf1 var0_0 var0_1) var0_1 == tf1 var0_0 var0_1
+Failed to prove tf0 var0_0 (Node Zero var0_1 var0_2) == tf1 var0_0 (Node Zero var0_2 var0_1)
+Failed to prove tf0 (tf1 var0_0 var0_1) (Leaf var0_2) == tf1 var0_0 (Node var0_2 var0_1 var0_1)
+Failed to prove tf0 (MakeTuple2 var0_0 var0_0) (Leaf var0_1) == tf1 (MakeTuple2 var0_1 var0_1) (Leaf var0_0)
+Failed to prove tf0 (tf1 var0_0 var0_1) (Leaf Zero) == tf1 var0_0 (Node Zero var0_1 var0_1)
+Failed to prove tf0 (MakeTuple2 var0_0 Zero) (Leaf var0_1) == tf1 (MakeTuple2 var0_0 var0_1) (Leaf var0_1)
+Failed to prove tf0 (MakeTuple2 Zero var0_0) (Leaf var0_1) == tf1 (MakeTuple2 Zero var0_1) (Leaf var0_0)
