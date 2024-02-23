@@ -21,6 +21,7 @@ def compare(xname, yname):
 	print("\ncompare", xname, "with", yname)
 	print("%7s %3d %.3f" % (xname, xs_solved, -1 if len(xs_time) == 0 else sum(xs_time) / len(xs_time)))
 	print("%7s %3d %.3f" % (yname, ys_solved, -1 if len(ys_time) == 0 else sum(ys_time) / len(ys_time)))
+	print(sorted(ys_time))
 
 compare("cyclegg", "thesy")
 compare("cyclegg", "hipspec")

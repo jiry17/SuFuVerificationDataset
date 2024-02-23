@@ -17,9 +17,9 @@ def split_suffix(file):
 	names = file.split(".")
 	return ".".join(names[:-1]), names[-1]
 
-dataset_root = "/root/ISTool/runner/"
+dataset_root = "/home/jiry/SuFuVerificationDataset/"
 output_root = os.path.join(dataset_root, "proof_res")
-cyclegg_path = "/root/cyclegg/"
+cyclegg_path = "/home/jiry/cyclegg/"
 thesy_path = "/root/TheSy/"
 hipspec_path = "/root/hipspec/hipspec"
 
@@ -91,6 +91,31 @@ def run_cvc5(task_name, output_path):
 	print(command)
 	print("Unexpected output", line, os.path.basename(task_name))
 
+def run_cvc4(task_name, output_path):
+	oup_file = switch_dir(task_name, output_path) + ".out"
+	inp_file = task_name + ".smt2"
+	create_path(oup_file)
+	
+	command = ["timeout " + str(timeout), "cvc4-magic", '--quant-ind', '--quant-cf', '--full-saturate-quant', '--stats', inp_file, ">", oup_file, "2>/dev/null"]
+	command = " ".join(command)
+	start_time = time.time()
+	os.system(command)
+	end_time = time.time()
+
+	with open(oup_file, "r") as res:
+		line = "\n".join(res.readlines())
+	line = "".join(filter(lambda char: not char.isspace(), line))
+
+	if len(line) == 0 or line == "unknown":
+		return False, None 
+	if line == "sat":
+		print(command)
+		print("Invalid property", os.path.basename(task_name))
+	if line == "unsat":
+		return True, end_time - start_time
+	print(command)
+	print("Unexpected output", line, os.path.basename(task_name))
+
 def run_thesy(file, output_path):
 	oup_file = switch_dir(file, output_path) + ".out"
 	json_file = switch_dir(file, output_path) + ".stats.json"
@@ -117,11 +142,6 @@ def run_thesy(file, output_path):
 		print(res)
 		return False, None
 	return True, res["total_time"]["secs"] + res["total_time"]["nanos"] * (10 ** -9)
-
-#my_res = load_cache(os.path.join(output_root, "cyclegg_res.json"))
-#solved_tasks = []
-#for name, status in my_res.items():
-#	if status["status"]: solved_tasks.append(name)
 
 def run(exp_name, dataset_name, runner, expected_suffix):
 	all_files = []
@@ -150,7 +170,7 @@ def run(exp_name, dataset_name, runner, expected_suffix):
 		save_cache(cache_path, cache, is_cover)
 		is_cover = True
 
-run("cyclegg", "ceg", run_cyclegg, "ceg")
-run("thesy", "th", run_thesy, "th")
-run("hipspec", "hip", run_hipspec, "hs")
-run("cvc5", "cvc5", run_cvc5, "smt2")
+#run("cyclegg", "ceg", run_cyclegg, "ceg")
+#run("thesy", "th", run_thesy, "th")
+#run("hipspec", "hip", run_hipspec, "hs")
+run("cvc4", "cvc4", run_cvc4, "smt2")
